@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEET Vault | Mistake Notebook</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="nav-placeholder"></div>
+    
+    <div style="margin-bottom: 2rem;">
+      <h1>Mistake Notebook 📓</h1>
+      <p class="text-muted">“Every wrong answer is a future mark waiting to be recovered.” Log and review errors systematically.</p>
+    </div>
+
+    <!-- Top section: Add Mistake Form -->
+    <div class="card" style="margin-bottom: 2.5rem;">
+      <h2>Log a New Mistake</h2>
+      <form id="mistake-form">
+        <div class="grid grid-cols-4">
+          <div class="form-group">
+            <label>Paper Source</label>
+            <select id="m-paper" required>
+              <!-- Populated dynamically -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Question Number</label>
+            <input type="text" id="m-qnumber" placeholder="e.g. 42" required style="margin-bottom: 0;">
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <select id="m-subject" required>
+              <option value="Physics">Physics</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="Botany">Botany</option>
+              <option value="Zoology">Zoology</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Chapter / Unit</label>
+            <input type="text" id="m-chapter" placeholder="e.g. Ray Optics" required style="margin-bottom: 0;">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3">
+          <div class="form-group">
+            <label>Mistake Type</label>
+            <select id="m-type" required>
+              <option value="Concept not clear">Concept not clear</option>
+              <option value="Forgot fact">Forgot fact</option>
+              <option value="Formula error">Formula error</option>
+              <option value="Calculation error">Calculation error</option>
+              <option value="Silly mistake">Silly mistake</option>
+              <option value="Time pressure">Time pressure</option>
+              <option value="Guessed wrongly">Guessed wrongly</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Priority level</label>
+            <select id="m-priority" required>
+              <option value="High">🔴 High Priority</option>
+              <option value="Medium" selected>🟡 Medium Priority</option>
+              <option value="Low">🔵 Low Priority</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Retest Date</label>
+            <input type="date" id="m-retest" style="margin-bottom: 0;">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Correct Concept (Write what you need to remember next time)</label>
+          <textarea id="m-concept" rows="2" placeholder="e.g. Snells law is n1 sin(i) = n2 sin(r). Watch out for denser-to-rarer medium angles." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="float: right;">💾 Add to Notebook</button>
+        <div style="clear: both;"></div>
+      </form>
+    </div>
+
+    <!-- Bottom section: Filter Panel & Mistakes List -->
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+        <h2>Mistake Log</h2>
+        <!-- Filters panel -->
+        <div class="filters-panel">
+          <select id="filter-paper">
+            <option value="all">All Papers</option>
+            <!-- Populated dynamically -->
+          </select>
+          <select id="filter-subject">
+            <option value="all">All Subjects</option>
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Botany">Botany</option>
+            <option value="Zoology">Zoology</option>
+          </select>
+          <select id="filter-priority">
+            <option value="all">All Priorities</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+          <select id="filter-status">
+            <option value="all">All Statuses</option>
+            <option value="Open" selected>Open</option>
+            <option value="Revised">Revised</option>
+            <option value="Fixed">Fixed</option>
+          </select>
+          <select id="filter-retest">
+            <option value="all">Any Retest Date</option>
+            <option value="due-week">Due This Week</option>
+            <option value="past-due">Past Due (Open)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Q. Number & Paper</th>
+              <th>Subject & Chapter</th>
+              <th>Type</th>
+              <th>Priority</th>
+              <th>Correct Concept</th>
+              <th>Retest Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="mistakes-tbody">
+            <!-- Injected via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNav();
+      initMistakes();
+      
+      // Check for query parameters to pre-set retest filter
+      const params = new URLSearchParams(window.location.search);
+      const retestFilterVal = params.get('retest');
+      if (retestFilterVal) {
+        document.getElementById('filter-retest').value = retestFilterVal;
+        // Also ensure status shows all if we are looking for due retests
+        document.getElementById('filter-status').value = 'all';
+        renderMistakesTable();
+      }
+    });
+  </script>
+</body>
+</html>

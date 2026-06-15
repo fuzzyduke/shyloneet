@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+sqlalchemy
+pymupdf
+pydantic
+python-dotenv

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Review - NEET Vault AI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .review-card {
+            background: var(--surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .option-box {
+            background: var(--background);
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .meta-info {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">📚 NEET Vault Admin</a>
+    </header>
+    
+    <main class="container">
+        <h1>Question Classification Review</h1>
+        <p class="text-muted">Review low-confidence AI mappings and approve them for student tests.</p>
+        
+        <div id="review-container" style="margin-top: 2rem;">
+            <p>Loading questions for review...</p>
+        </div>
+    </main>
+
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        let chapters = [];
+
+        async function init() {
+            // Fetch chapters for the dropdown
+            try {
+                const chapRes = await fetch(`${API_BASE}/api/chapters`);
+                chapters = await chapRes.json();
+                
+                // Fetch questions for review
+                const qRes = await fetch(`${API_BASE}/admin/questions/review`);
+                const questions = await qRes.json();
+                
+                renderQuestions(questions);
+            } catch (e) {
+                document.getElementById('review-container').innerHTML = `<p style="color:red">Error connecting to backend API. Is the server running?</p>`;
+            }
+        }
+
+        function renderQuestions(questions) {
+            const container = document.getElementById('review-container');
+            if (questions.length === 0) {
+                container.innerHTML = `<p>No questions currently require manual review. Good job!</p>`;
+                return;
+            }
+
+            const chapterOptions = chapters.map(c => `<option value="${c.id}">${c.chapter_name}</option>`).join('');
+
+            container.innerHTML = questions.map(q => `
+                <div class="review-card" id="card-${q.mapping_id}">
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <h3 style="margin-top:0">Question ID: <span style="font-size: 0.8rem; font-family: monospace;">${q.question_id.split('-')[0]}...</span></h3>
+                        <span class="badge ${q.confidence < 0.7 ? 'priority-high' : 'priority-medium'}">
+                            AI Confidence: ${(q.confidence * 100).toFixed(1)}%
+                        </span>
+                    </div>
+                    
+                    <p style="font-size: 1.1rem; margin: 1rem 0;">${q.question_text.replace(/\\n/g, '<br>')}</p>
+                    
+                    <div class="options-grid">
+                        <div class="option-box"><strong>A.</strong> ${q.options.A || 'N/A'}</div>
+                        <div class="option-box"><strong>B.</strong> ${q.options.B || 'N/A'}</div>
+                        <div class="option-box"><strong>C.</strong> ${q.options.C || 'N/A'}</div>
+                        <div class="option-box"><strong>D.</strong> ${q.options.D || 'N/A'}</div>
+                    </div>
+                    
+                    <div style="margin-top: 1.5rem; background: var(--background); padding: 1rem; border-radius: 8px;">
+                        <h4 style="margin-top:0;">AI Classification</h4>
+                        <p><strong>Suggested Chapter:</strong> ${q.suggested_chapter}</p>
+                        <p><strong>Reasoning:</strong> <em>${q.reason}</em></p>
+                        
+                        <div style="margin-top: 1rem;">
+                            <label><strong>Confirm Primary Chapter:</strong></label>
+                            <select id="select-${q.mapping_id}" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                                <option value="">-- Select Chapter --</option>
+                                ${chapterOptions}
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="meta-info">
+                        Source: ${q.source_pdf} | Page: ${q.page_number}
+                    </div>
+                    
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <button onclick="approveMapping('${q.mapping_id}')" class="btn btn-primary" style="flex: 2;">✅ Approve & Publish</button>
+                        <button onclick="rejectMapping('${q.mapping_id}', true)" class="btn btn-outline" style="flex: 1; border-color: #fca5a5; color: #dc2626;">🗑️ Bad Extraction</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function approveMapping(mappingId) {
+            const select = document.getElementById(`select-${mappingId}`);
+            const chapterId = select.value;
+            
+            if (!chapterId) {
+                alert("Please select a chapter before approving.");
+                return;
+            }
+            
+            await fetch(`${API_BASE}/admin/questions/approve`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    mapping_id: mappingId,
+                    primary_chapter_id: chapterId,
+                    is_bad_extraction: false,
+                    is_duplicate: false
+                })
+            });
+            
+            document.getElementById(`card-${mappingId}`).style.display = 'none';
+        }
+
+        async function rejectMapping(mappingId, isBad) {
+            await fetch(`${API_BASE}/admin/questions/approve`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    mapping_id: mappingId,
+                    primary_chapter_id: "",
+                    is_bad_extraction: isBad,
+                    is_duplicate: false
+                })
+            });
+            
+            document.getElementById(`card-${mappingId}`).style.display = 'none';
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

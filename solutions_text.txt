@@ -1,0 +1,3935 @@
+
+--- PAGE 27 ---
+NEET
+Hints & Solutions
+Q1
+Text Solution:
+Q2
+Text Solution:
+Q3
+Text Solution:
+For zero lorentz force E must be perpendicular to
+B
+,
+Q4
+Text Solution:
+Thought for 8 seconds
+ (smooth)
+ (rough)
+Q5
+Text Solution:
+From WET.
+.
+Q6
+Text Solution:
+Resistance of 
+ ia removed as it is balanced
+wheatstone bridge 
+Q7
+Text Solution:
+At point P
+Using energy conservation between lowest point
+and P.
+From i
+Q8
+Text Solution:
+A
+B
+C
+D
+Y
+0
+0
+1
+1
+1
+0
+1
+0
+0
+0
+1
+0
+0
+0
+0
+1
+1
+0
+0
+0
+So it is a NOR gate.
+Q9
+Text Solution:
+.
+Phase is 
+ ⇒ propagation along 
+.
+So B is along Y–axis 
+  
+    |   
+    |   
+= Sz. dθ = (dx)zρgy
+Fy
+= weight   of    liquid    lifted. ...... (1)
+tanθ ≃θ =
+dy
+dx
+⇒
+=
+dθ
+dx
+y
+d2
+dx2
+dθ =
+. dx            . ...... (2)
+y
+d2
+dx2
+from    equations   (1)   and   (2)
+Sz (
+. dx) = (dx)zρgy
+y
+d2
+dx2
+=
+. y
+y
+d2
+dx2
+ρg
+S
+m =
+ 
+=
+ 
+= 20 × 6.25 = 125
+L
+fo
+D
+fe
+40
+2
+25
+4
+qE = qvB
+v = c/100 = 3 ×
+ 
+106 m s−1
+B = 9 ×
+ T
+10−4
+E = vB = (3 ×
+)(9 ×
+) = 27
+106
+10−4
+×
+ 
+102 V m−1
+= g sin
+as
+45∘
+= g sin
+−
+g cos
+ar
+45∘
+μk
+45∘
+=
+= 2   ⟹  
+=
+tr
+ts
+as
+ar
+−−
+−
+√
+ar
+as
+4
+g sin
+−
+g cos
+=
+  
+45∘
+μk
+45∘
+g sin 45∘
+4
+⟹  
+=
+=
+tan
+= 0.75
+μk
+3 sin 45∘
+4 cos 45∘
+3
+4
+45∘
+F = KE
+s
+= 100/1000 = 0.10  N,   
+= 225/1500
+FA
+FB
+= 0.15  N
+/
+= 0.10/0.15 =
+FA FB
+2
+3
+6Ω
+=
+=
+Ω
+RBE
+4×8
+4+8
+8
+3
+= (
++ 1.5 + 5.5 +
+)Ω
+RTotal
+8
+3
+1
+3
+= 10 Ω
+V = i Rotal
+5 = i × 10
+i = 0.5 A
+mg  sin θ = mv2
+l
+v =
+..... (i)
+gl  sin θ
+−
+−
+−−−−
+√
+m
+=
+m
++ mg  (l + l  sin θ).... (ii)
+1
+2
+v2
+0
+1
+2
+v2
+=
+v0
+3g l  sin θ + 2gl
+−
+−
+−−−−−−−−−
+√
+=
+v
+v0
+sin θ
+2+3 sin θ
+−
+−
+−−−−
+√
+= 60 cos(5x + 1.5 ×
+t) V 
+Ez
+109
+m−1
+=
+/c = 60/(3 ×
+) = 2 ×
+ T
+B0
+E0
+108
+10−7
+kx + ωt
+−xˆ
+Android App
+iOS App
+PW Website
+[27]
+[Contd...
+
+--- PAGE 28 ---
+NEET
+Q10
+Text Solution:
+Initial speed just before impact
+(downward).
+Rebound speed (to reach 10 m)
+(upward).
+Impulse 
+ (units: kg m s⁻¹ = N
+s).
+Q11
+Text Solution:
+The potential drop across an inductor is 
+;
+across a resistor it is 
+; the ideal battery adds
+its emf. Summing these gives the net potential
+difference 
+.
+Q12
+Text Solution:
+ for a circular coil.
+With the same current (2 A) and equal single
+turns,
+magnetic moment is proportional to the square
+of the coil’s radius, so doubling the radius
+quadruples the moment.
+Q13
+Text Solution:
+For thin lenses in contact, powers add:
+.
+Each lens gives linear magnification 
+;
+successive elements multiply, so the overall
+magnification is
+ (dimensionless).
+Hence the combination has power 
+ and
+magnification 
+.
+ 
+ and 
+ — follows from the additive power
+law for co‑axial lenses and the multiplicative rule
+for successive magnifications.
+Q14
+Text Solution:
+Use 
+ (ideal gas,
+).
+Before withdrawal 
+.
+After withdrawal  Gauge 
+ ⇒
+absolute 
+.
+Moles removed 
+.
+Mass withdrawn
+.
+ideal-gas relation gives the number of moles
+remaining; their difference times molar mass
+yields the mass of oxygen taken out.
+Q15
+Text Solution:
+Velocity
+Acceleration
+Q16
+Text Solution:
+null
+(current lags, net inductive)
+current 
+, phase angle 
+; results follow
+directly from the series-RLC impedance and
+phase relations.
+Q17
+Text Solution:
+Angular momentum about the axis is conserved
+(no external torque).
+When the radius doubles: 
+.
+  
+    |   
+    |   
+= 2 ×
+cos(5x + 1.5 ×
+t) T
+By
+10−7
+109
+=
+=
+= 28  
+vi
+2gh
+−−
+−
+√
+2(9.8)(40)
+−
+−
+−−−−−−
+√
+m s−1
+=
+=
+= 14  
+vf
+2gh′
+−−
+−−
+√
+2(9.8)(10)
+−
+−
+−−−−−−
+√
+m s−1
+J = m (
+−(−)) = m (
++
+)
+vf
+vi
+vf
+vi
+= 0.5 (14 + 28) = 21  N s
+Elements from A→B:  Inductor (L = 1 H)  ,
+  Battery 5 V ( + on A-side )  ,
+  Resistor (R = 2 Ω)
+VAB=
++
++
+Vind
+Vbat
+VR
+= L
++ 5 V + IR
+di
+dt
+= 1 H (1 
+) + 5 V + (2 A)(2 Ω)
+A s−1
+= 1 V + 5 V + 4 V = 10 V
+L di/dt
+IR
+−
+VA
+VB
+m = NIA
+=
+=
+=
+=
+.
+m1
+m2
+A1
+A2
+πr2
+1
+πr2
+2
+(
+)
+1
+2
+2
+1
+4
+=
++
++
++
+= 4p
+Pcomb
+P1
+P2
+P3
+P4
+m
+M = m × m × m × m = m4
+4p
+m4
+4p
+m4
+PV = nRT
+R = 100/12 J mol−1K−1
+= 18.20 mol
+ni
+P = 11 atm
+= 12(1.01 ×
+) Pa
+Pf
+105
+=
+=
+nf
+V
+Pf
+RT
+12(1.01 ×
+)(0.03)
+105
+(
+)(300)
+100
+12
+≈14.55 mol
+=
+−
+≈3.65 mol
+nw
+ni
+nf
+m =
+= 3.65 × 32 g ≈0.116 kg
+nwMO2
+v =
+=
+=
+.
+dx
+dt
+(
+)
+dt
+dx
+−1
+1
+2x + 1
+a =
+=
+ 
+ (Chain Rule)
+dv
+dt
+dv
+dx
+dx
+dt
+= [−
+]  
+= −
+.
+2
+(2x+1)2
+1
+2x+1
+2
+(2x+1)3
+= V /Z = 220/28.3 ≈7.8  A
+Irms
+ϕ =
+ ((
+−
+)/R) =
+(1)
+tan−1
+XL
+XC
+tan−1
+= 45∘
+7.8  A
+45∘
+=
+,
+I1ω1
+I2ω2
+I =
+M
+ (uniform solid sphere)
+2
+5
+R2
+= 4
+I2
+I1
+Android App
+iOS App
+PW Website
+[28]
+[Contd...
+
+--- PAGE 29 ---
+NEET
+period scales as 
+ for uniform-density spheres
+under angular-momentum conservation.
+Q18
+Text Solution:
+For uniform circular motion
+Current in the orbit
+Magnetic moment
+Q19
+Text Solution:
+Steady heat current (rods all length L):
+Let that common value be .
+From the two end equalities:
+  ⇒ 
+    ⇒ 
+Insert into 
+:
+Thus 
+.
+Q20
+Text Solution:
+equivalent capacitance (series):
+multiply by 8
+ 
+Q21
+Text Solution:
+Let bus speed = 
+; buses leave each
+city every 
+ min.
+Spacing between successive buses in either lane
+ km.
+Same direction (girl overtaken every 30 min = 0.5
+h):
+Opposite direction (bus meets her every 10 min =
+ h):
+Equating 
+ from (i) and (ii):
+Putting the value of V in (ii):
+Answer: 15 min period, 120 km h⁻¹ bus speed .
+Q22
+Text Solution:
+Weight
+.
+  
+    |   
+    |   
+=
+     ⟹    
+=
+= 4
+ω2
+ω1
+4
+T2
+2π
+ω2
+T1
+= 4 × 27 days = 108 days
+T2
+R2
+ϕ = BA
+B π
+= n ,   n = 1   ⇒  
+=
+r2
+h
+e
+r2
+h
+πeB
+evB =
+   ⇒  v =
+mv2
+r
+eBr
+m
+I =
+=
+=
+e
+T
+ev
+2πr
+B
+e2
+2πm
+μ = IA = Iπ
+=
+ π
+=
+ 
+r2
+B
+e2
+2πm
+r2
+B
+e2
+2πm
+h
+eB
+=
+he
+2πm
+2KA
+= KA
+= 2KA
+  .
+3T−T1
+L
+−
+T1
+T2
+L
+−T
+T2
+L
+2(3T −
+) =
+−
+= 2(
+−T).
+T1
+T1
+T2
+T2
+J
+J = 2(3T −
+)
+T1
+= 3T −
+T1
+J
+2
+J = 2(
+−T)
+T2
+= T +
+T2
+J
+2
+−
+= J
+T1
+T2
+(3T −
+) −(T +
+) = J     ⟹    J = T.
+J
+2
+J
+2
+=
+,   
+=
+T1
+5T
+2
+T2
+3T
+2
+=
+T1
+T2
+5
+3
+=
+=
+=
+(
+)
+C1
+A
+K1∈0
+t1
+A
+K1∈0
+3d
+8
+8
+3K1
+∈ A
+0
+d
+= 8
+3K1C0
+=
+=
+= 2
+(
+)
+C2
+A
+K2∈0
+t2
+A
+K2∈0
+(
+)
+d
+2
+K2
+ A
+∈0
+d
+= 2K2C0
+=
+=
+= 8 (
+) = 8
+Cair
+1(
+A)
+∈0
+t3
+ A
+∈0
+(
+)
+d
+8
+  A
+∈0
+d
+C0
+=
++
++
+1
+Cnew
+1
+C1
+1
+C2
+1
+Cair
+=
++
++
+1
+Cnew
+1
+8
+3 K1C0
+1
+2K2C0
+1
+8C0
+= [
++
++
+] ×
+1
+Cnew
+3
+8K1
+1
+2K2
+1
+8
+1
+C0
+∴
+= 2
+Cnew
+C0
+=
++
++
+1
+2
+3
+8K1
+1
+2K2
+1
+8
+−
+=
++
+1
+2
+1
+8
+3
+8K1
+1
+2K2
+=
++
+3
+8
+3
+8K1
+4
+8K2
+3 =
++
+3
+K1
+4
+K2
+= 1.25,
+= ( ).
+K1
+K2
+5
+4
+K2
+3 = 12+20
+5K2
+[
+=
+]
+K2
+32
+15
+=
+=
+=
+K1
+5
+4K2
+160
+60
+16
+6
+=
+K1
+8
+3
+≈2.667
+K1
+V  km h−1
+T
+s = V  (T/60)
+= 0.5   ⟹  
+= 0.5.
+s
+V −60
+V T
+60(V −60)
+(i)
+1/6
+=
+   ⟹  
+=
+.
+s
+V +60
+1
+6
+V T
+60(V +60)
+1
+6
+(ii)
+T
+30 ×
+= 10 ×
+   ⇒  3(V −60)
+V −60
+V
+V +60
+V
+= V + 60   ⇒  V = 120 
+.
+km h−1
+T = 10 ×
+= 10 ×
+= 15 min.
+V +60
+V
+180
+120
+W = mg = 20 kg × 10
+= 200N
+ m s−2
+Android App
+iOS App
+PW Website
+[29]
+[Contd...
+
+--- PAGE 30 ---
+NEET
+Rod angle with horizontal
+.
+Equilibrium
+Torque about O (anticlockwise = clockwise):
+Hence friction 
+.
+Q23
+Text Solution:
+For a spring – mass oscillator 
+.
+Sand leaks out ⇒ mass 
+ gradually
+decreases ⇒ 
+ increases with
+time.
+as every grain that leaves, so the total
+mechanical energy falls and the amplitude
+ decreases steadily.
+The only sketch showing ω(t) rising while A(t) falls
+is.
+Q24
+Text Solution:
+Excess pressure in a spherical balloon
+Outlet speed (Bernoulli)
+Volume flow through the small hole equals the
+loss of balloon volume:
+Hence
+So 
+ with
+Q25
+Text Solution:
+Least count
+.
+Observed reading = MSR + (VSD × LC)
+= 5 cm + (8 × 0.01 cm)
+= 5.08 cm
+Corrected reading = Observed reading - Zero
+error
+= 5.08 cm – (+ 0.1 cm)
+= 4.98 cm
+ 
+ 
+ 
+Q26
+Text Solution:
+Since A and 
+are constant, the desplacement
+current 
+ is constant and uniform between the
+plates.
+  
+    |   
+    |   
+θ =
+−
+=
+90∘
+60∘
+30∘
+Horizontal equilibrium:  f =
+,
+Nw
+Vertical equilibrium.:  
+= W.
+Nf
+ l sin θ = W (l/2) cos θ   ⟹  
+Nw
+Nw
+=
+cot θ.
+W
+2
+=
+cot
+= 100 
+  N.
+Nw
+200
+2
+30∘
+3–
+√
+f =
+= 100
+ N
+Nw
+3–
+√
+ω =
+k/m
+−−
+−−
+√
+m(t)
+ω(t) ∝1/
+m
+−−
+√
+A(t)
+Δp =
+(surface‐tension law).
+2S
+r
+ρ
+≃Δp   ⟹  v(r) ∝
+     ⇒  v
+1
+2 v2
+S
+ρ r
+−−
+−
+√
+∝
+,   a = −.
+ra
+1
+2
+A v = −
+= −4π
+⟹  
+   =   
+dV
+dt
+r2 dr
+dt
+dr
+dt
+−
+ 
+ 
+.
+A
+4π S 1/2ρ−1/2 r−5/2
+dt =
+ 
+ 
+dr.
+4π
+A S −1/2ρ1/2 r5/2
+T =
+dt =
+ 
+dr
+∫
+R
+0
+4π
+A S −1/2ρ1/2 ∫
+R
+0
+r5/2
+∝
+.
+S −1/2A−1ρ1/2R7/2
+T ∝S αAβργRδ
+a = −
+,
+α = −
+,
+β = −1,
+γ =
+,
+1
+2
+1
+2
+1
+2
+δ =
+.
+7
+2
+LC = 1 MSD −1 VSD = 0.10 −
+× 0.10
+9
+10
+= 0.01 cm
+E =
+σ
+∈0
+= E. A = (
+). A
+ϕE
+σ
+∈0
+=
+(
+) =
+×
+[(
+) × A]
+Id
+∈0
+dϕ∈
+dt
+∈0
+d
+dt
+σ
+∈0
+=
+.
+.
+∈0
+A
+∈0
+dσ
+dt
+dσ
+dt
+Id
+Android App
+iOS App
+PW Website
+[30]
+[Contd...
+
+--- PAGE 31 ---
+NEET
+. Between the plates, I
+= 0
+Inside (r < R)
+So, B is zero at the center (r = 0) and increase
+linerly with r, reaching maximum at r = R
+Outside (r > R)
+(total displacement current)
+So, B decreases as 
+ outside the plate.
+Hence B is non-zero both inside and outside,
+rising to a maximum at r = R (the cylindrical
+surface through the rims) and then decreasing.
+non-zero 
+everywhere, 
+maximum 
+on 
+the
+imaginary cylinder joining the plate peripheries.
+ 
+ 
+Q27
+Text Solution:
+.
+At Brewster’s angle:
+incidence = reflection ≈ 60° (air → medium).
+reflected beam is completely plane-polarised
+(electric field ⟂ plane of incidence).
+angle of refraction 
+         
+           
+(partially polarised)          
+So, reflected light is fully polarised and the angle
+of reflection is ~60°.
+Q28
+Text Solution:
+After each contact identical spheres share charge
+equally.
+1. When C touches A (q) → each gets 
+.
+.
+2. When C (q/2) touches B (q) → each gets 
+.
+Initial force 
+.
+Q29
+Text Solution:
+Before mixing
+Equilibrium pressure ≈ 1.6 atm.
+Q30
+Text Solution:
+Centripetal balance with the constant inward
+force 
+:
+Then 
+.
+Q31
+Text Solution:
+Kepler’s third law: 
+.
+ (nearest value 88
+days).
+Q32
+Text Solution:
+At height 
+ above Earth’s surface the
+distance from Earth’s centre is
+Gravitational force varies as the inverse square of
+this distance:
+  
+    |   
+    |   
+∮B. dl =
+(
++
+)
+μ0 IC
+Id
+C
+∮B. dl = B. (2πr)
+=
+×
+Id(enclosed)
+Id
+r2
+R2
+B × 2πr =
+.
+× (
+)
+μ0 Id
+r2
+R2
+B = (
+) × r
+.
+μ0 Id
+2πr2
+∮B ⋅dl = B ⋅(2πr)
+=
+Id(enclosed)
+Id
+B × 2πr =
+.
+μ0 Id
+B = μ0Id
+2πr
+1
+r
+tan
+=
+/
+= 1.73 ⇒
+≈
+θB
+n2 n1
+θB
+60∘
+(
+) : −
+θr
++
+= 90º
+θB
+θr
+= 30º
+θr
+q/2
+= q/2,   
+= q/2
+QA
+QC
+3q
+4
+= 3q/4,   
+= 3q/4
+QB
+QC
+F = k
+/
+q2 r2
+=
+=
+(
+) (
+) =
+F ′
+kQAQB
+r2
+k
+r2
+q
+2
+3q
+4
+3
+8
+kq2
+r2
+=
+.
+3F
+8
+=
+=
+= 0.40 
+T1
+p1V1
+R
+n1
+1×2
+5R
+L-atm
+R
+=
+=
+= 1.50 
+T2
+p2V2
+R
+n2
+2×3
+4R
+L-atm
+R
+=
+=
+Tf
++
+n1T1
+n2T2
++
+n1
+n2
+5(0.40)+4(1.50)
+9
+= 0.888  L-atm
+R
+V = 2 + 3 = 5 L
+=
+=
+= 1.6 atm
+Pf
+nRTf
+V
+9(0.888 R)
+5
+F
+= F   ⟹  v =
+.
+mv2
+r
+ r
+F
+m
+−−
+−−
+√
+mvr = nh
+2π
+m(
+ 
+)r =
+    
+F/m
+−−
+−−
+√
+r1/2
+nh
+2π
+⇒    m
+  
+=
+     ⇒    
+∝n  
+F/m
+−−
+−−
+√
+r3/2
+nh
+2π
+r3/2
+⟹  
+.
+ r ∝n2/3
+v ∝
+∝
+r
+√
+n1/3
+∝
+T 2
+r3
+=
+= (4
+= 64  
+(
+)
+TMars
+TMercury
+2
+(
+)
+rMars
+rMercury
+3
+)3
+⟹  
+=
+.
+TMercury
+TMars
+8
+= 687/8 ≈86 days
+TMercury
+h = R
+3
+r = R + h = R +
+=
+.
+R
+3
+4R
+3
+Android App
+iOS App
+PW Website
+[31]
+[Contd...
+
+--- PAGE 32 ---
+NEET
+Q33
+Text Solution:
+Each small piece: 
+.
+Parallel of 4 pieces
+Two such 
+ are then in series
+Q34
+Text Solution:
+ with 
+.
+:
+Answer ≈ 0.67 nm.
+Q35
+Text Solution:
+Potential energy of a dipole: 
+.
+initially (
+) 
+after rotation by 
+ 
+Q36
+Text Solution:
+Consider loop ACDEA, 
+Consider loop CBFDC,
+From (1)
+i  = 3i              ...(1)
+Consider loop EDFGH,
+–3i  – 4 (i  + i ) + 50 = 0
+50= 7i  + 4i
+50= 7(3i ) + 4i
+i  = 2 A 
+Q37
+Text Solution:
+Photon: 
+Electron (non-relativistic): 
+Q38
+Text Solution:
+Photoelectric current depends on intensity of
+light as given
+photoelectric current 
+ intensity of light (for
+prequency of light above threshold frequencey).
+Q39
+Text Solution:
+Small cut sphere 
+.
+Large sphere 
+.
+Remaining mass 
+.
+Moments of inertia about Y-axis:
+Large sphere (axis through its centre):
+.
+Small sphere: centre is at distance 
+from Y-axis.
+.
+Remaining portion:
+.
+Q40
+Text Solution:
+At 
+,
+Negative half-cycle ⇒ the upper end of the
+secondary is −, the lower end is +.
+  
+    |   
+    |   
+F = 48 ×
+= 48
+= 48 ×
+(
+)
+R
+4R
+3
+2
+( )
+3
+4
+2
+9
+16
+= 27N.
+= R/8
+Rpiece
+=
+=
+.
+Rp
+R/8
+4
+R
+32
+Rp
+=
++
+=
++
+=
+.
+Rnet
+Rp
+Rp
+R
+32
+R
+32
+R
+16
+=
+rn
+n2a0
+= 0.052  nm
+a0
+= 4
+= 4(0.052) = 0.208  nm.
+r2
+a0
+2π
+= nλ
+rn
+λ =
+=
+  nm ≈0.65  nm.
+2πr2
+n
+2π(0.208)
+2
+U = −pE cos θ
+=
+θi
+0∘
+= −pE
+Ui
+60∘
+= −pE cos
+= −pE
+Uf
+60∘
+1
+2
+ΔU =
+−
+= −pE −(−pE) =
+pE
+Uf
+Ui
+1
+2
+1
+2
+p = 5 ×
+ C-m,   E = 4 ×
+ 
+10−6
+105 N C−1
+ΔU =
+=
+= 1.0 J
+pE
+2
+(5×
+)(4×
+)
+10−6
+105
+2
+= 3           ...(1)
+i1
+i2
+3
++ 2
+−
+= 0        ...(2)
+i3
+i2
+i1
+2
+3
+2
+2
+3
+2
+3
+3
+3
+3
+E = hc/
+   ⇒  
+=
+λγ
+λγ
+hc
+E
+E =
+/2m   ⇒  p =
+,   
+=
+p2
+2mE
+−−
+−−
+√
+λe
+h
+p
+=
+h
+2mE
+−−
+−−
+√
+=
+= c
+λγ
+λe
+hc/E
+ h/
+2mE
+−−
+−−
+√
+2m
+E
+−−
+−−
+√
+∝
+=
+π
+ρ
+ms
+4
+3 R3
+M =
+π(2R
+ρ = 8
+4
+3
+)3
+ms
+= 8
+−
+= 7
+mr
+ms
+ms
+ms
+=
+M(2R
+=
+IL
+2
+5
+)2
+64
+5 msR2
+d = R
+=
++
+=
++
+Is
+2
+5msR2
+msd2
+2
+5msR2
+msR2
+= 7
+5msR2
+=
+−
+= (
+−
+)
+Ir
+IL
+Is
+64
+5
+7
+5 msR2
+= 57
+5 msR2
+=
+=
+.
+Is
+Ir
+7
+5
+57
+5
+7
+57
+t = 15 ms
+= 220 sin(100πt) = 220 sin
+Vin
+(100π × 0.015) = 220 sin(1.5π) = −220 V
+Android App
+iOS App
+PW Website
+[32]
+[Contd...
+
+--- PAGE 33 ---
+NEET
+: P type at −ve, N type (0 V) → reverse
+biased
+: P type at +ve, N type (0 V) → forward
+biased
+ 
+ reverse biased, 
+ forward biased.
+Q41
+Text Solution:
+Equal heats at constant pressure give equal
+internal energy changes:
+With a movable piston, 
+.
+Q42
+Text Solution:
+Relative (percentage) error adds with the
+absolute value of the exponents:
+ 
+Q43
+Text Solution:
+First polaroid → polarised light 
+.
+Middle sheet at 
+ to this axis:
+.
+Second polaroid is crossed with the first, hence
+ from the sheet’s axis:
+.
+Transmitted intensity = 
+.
+Q44
+Text Solution:
+Maximum speed in SHM:
+.
+Equal masses 
+; equal 
+:
+Q45
+Text Solution:
+Initial pipe: open–open, length 
+Half-submerged → the air column has length
+ now with the water surface acting as a
+closed end ⇒ open–closed pipe.
+New fundamental frequency:
+Fundamental frequency remains .
+Q46
+Text Solution:
+For hydrogen, 
+. Absorbed photon energy is
+. Thus
+2 → 3: 
+;  4 → 6:
+.
+Since 
+,
+. Hence option 4 is
+the correct answer.
+Q47
+Text Solution:
+Electronegativity of N and Cl is equal (3.0, so B
+false.
+Gallium melts at 29.8 °C, close to Cs 28.5 °C; A
+false.
+Ar, K⁺, Cl⁻, Ca²⁺, S²⁻ all have 18 e⁻, hence C true.
+radius Cs > Rb > Li; E true.
+First‑IE trend is Si > Mg > Al > Na, so D false.
+Q48
+Text Solution:
+Group number in cation analysis
+Grou
+p I
+Pb
+Grou
+p III
+Al ,
+Fe
+Grou
+p IV
+Cu ,
+Ni ,
+Zn
+Grou
+p VI
+Mg
+ 
+Q49
+Text Solution:
+  
+    |   
+    |   
+D1
+D2
+D1
+D2
+= ΔU + PΔ
+=
+= ΔU
+QA
+VA
+QB
++ PΔ
+   ⟹  Δ
+= Δ
+.
+VB
+VA
+VB
+ΔV = (π
+) Δx
+r2
+π
+(16 cm) = π
+(9 cm) 
+r2
+A
+r2
+B
+⇒    
+=
+     ⇒    
+r2
+A
+r2
+B
+9
+16
+=
+rA
+rB
+3
+4
+(%) = 3(Δa%) + 2(Δb%) + 1(Δc%)
+ΔP
+P
++
+(Δd%)
+1
+2
+3(1) + 2(3) + 1(2) +
+(4) = 3 + 6 + 2 + 2
+1
+2
+= 13%.
+I0
+22.5∘
+=
+I1
+I0cos222.5∘
+−
+=
+90∘
+22.5∘
+67.5∘
+=
+=
+I2
+I1cos267.5∘
+I0cos222.5∘sin222.5∘
+θ
+θ =
+2θ;
+θ =
+   ⇒  2θ
+cos2 sin2
+1
+4sin2
+22.5∘
+=
+,   sin
+=
+45∘
+45∘
+1
+2
+√
+=
+=
+( ) =
+.
+I2
+I0
+4 (
+)
+1
+2
+√
+2
+I0
+4
+1
+2
+I0
+8
+/8
+I0
+= ωA =
+  A
+vmax
+k
+m
+−−
+−
+√
+m
+vmax
+ 
+=
+ 
+   ⟹  
+=
+.
+k1
+m
+−−
+−
+√
+AP
+k2
+m
+−−
+−
+√
+AQ
+AQ
+AP
+k1
+k2
+−−
+−
+√
+=
+AQ
+AP
+/
+k1 k2
+−
+−
+−−−
+√
+L
+f =
+(
+= 2L)
+v
+2L
+λ1
+L/2
+=
+=
+= f.
+f ′
+v
+4(L/2)
+v
+2L
+f
+= −
+/
+En
+RH n2
+ΔE =
+(1/
+−1/
+)
+RH
+n2
+1
+n2
+2
+Δ
+=
+⋅5/36
+E1
+RH
+Δ
+=
+⋅5/144
+E2
+RH
+λ ∝1/ΔE
+/
+= Δ
+/Δ
+= 1/4
+λ1 λ2
+E2
+E1
+2+
+3+
+3+
+2+
+2+
+2+
+2+
+Android App
+iOS App
+PW Website
+[33]
+[Contd...
+
+--- PAGE 34 ---
+NEET
+Q50
+Text Solution:
+For hydrogen‑like ions,
+total energy
+ and
+orbit radius
+For 
+, He⁺ 
+ gives
+ J and 
+ pm,
+while Li²⁺ 
+ gives
+ J and 
+ pm.
+Q51
+Text Solution:
+Cl⁻ and H₂O are weak‑field; Ni²⁺ (d⁸) therefore
+remains high‑spin: [NiCl₄]²⁻ is tetrahedral,
+[Ni(H₂O)₆]²⁺ octahedral, each retaining two
+unpaired electrons and hence paramagnetic. CO
+and PPh₃ give Ni(0) d¹⁰ (Ni(CO)₄, Ni(PPh₃)₄) ⇒
+diamagnetic. Strong‑field CN⁻ forces
+square‑planar low‑spin d⁸ in [Ni(CN)₄]²⁻, also
+diamagnetic. Thus only A and D are clearly
+paramagnetic.
+Q52
+Text Solution:
+All the elements of group 15 form hybrides of
+the type EH  where E=N, P, As, Sb or Br.
+All the elements of group-15 form two type of
+oxides: 
+Q53
+Text Solution:
+Main group = elements whose valence shell
+involves only s or p subshells (Groups 1 – 2, 13 –
+ 18). Configuration A ([Ne] 3s¹) corresponds to Na,
+an s‑block metal; configuration C
+([Kr] 4d¹⁰ 5s² 5p⁵) is I, a p‑block halogen.
+Configurations B and D possess 3d electrons,
+and E (Th) has 6d/5f involvement, so none are
+main‑group. Therefore the only main‑group
+configurations listed are A and C, making
+Option 2 the correct choice.
+Q54
+Text Solution:
+Dalton's theory could explain the laws of
+chemical combinations. However, it could not
+explain the laws of gaseous volumes.
+Q55
+Text Solution:
+In KO₂ the superoxide ion O₂⁻ carries an overall –
+1 charge; potassium therefore shows a +1
+oxidation state. Hydrogen peroxide has the
+peroxide linkage O₂²⁻, so each oxygen is –1. For
+neutral H₂SO₄, 2(+1) + S + 4(–2)=0; solving gives
+sulphur an oxidation state of +6.
+Q56
+Text Solution:
+Q57
+Text Solution:
+The crystal field splitting 
+, depends upon the
+field produced by the ligand and charge on the
+metal ion.
+Ligand can be arranged in the increasing field
+strength 
+ as given below:
+A higher charge on the metal ion leads to a large
+splitting and a higher 
+.
+Sequence of wavelength
+B < A < D < C
+Q58
+Text Solution:
+Geometric 
+(cis-trans) 
+isomerism 
+requires
+restricted rotation and two different substituents
+on each stereogenic centre. Pent-1-ene and 2-
+methylhex-2-ene possess identical groups on one
+carbon. 1,1-Dimethylcyclopropane holds both
+methyls 
+on 
+the 
+same 
+carbon. 
+In 
+1,2-
+Dimethylcyclohexane C-1 and C-2 can occupy the
+same or opposite faces, producing distinct cis-
+and trans-isomers.
+Q59
+Text Solution:
+(A) 
+  
+    |   
+    |   
+= −
+ 
+/
+En
+RH Z2 n2
+=
+ 
+/Z
+rn
+a0 n2
+n = 1
+(Z = 2)
+E = −8.72  ×  10‑18
+r = 26.4
+(Z = 3)
+E = −19.62  ×  10‑18
+r = 17.6
+3
+  and  
+E2O3
+E2O5
+Kt = 2. 303 log
+a
+a−x
+× t = 2. 303 log
+0.693
+t1/2
+100
+100−99.9
+× t = 2. 303 log
+0.693
+1
+100
+0.1
+t =
+log
+2.303
+0.693
+103
+t =
+× 3 log 10
+2.303
+0.693
+t = 10  min
+Δ0
+Δ0
+>
+>
+O
+CN−
+NH3
+H2
+Δ0
+>
+>
+(Order   of  
+)
+Co3+
+Ti3+
+Cu2+
+Δ0
+λ absorbed ∝
+1
+Δ0
+P
+ 
+H3 O4 ⇌
+−H⊕
+H2 PO−
+4
+Ka1
+P
+ 
+H2 O4 ⇌
+−H+
+HPO2−
+4
+Ka2
+HP
+ 
+O2−
+4
+⇌
+−H+
+PO3−
+4
+Ka3
+P
+3
++
+ K
+H3 O4⇌H+
+PO3−
+4
+¯
+¯
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+K =
+×
+×
+Ka1
+Ka2
+Ka3
+logK =
++
++
+logKa1
+logKa2
+logKa3
+Android App
+iOS App
+PW Website
+[34]
+[Contd...
+
+--- PAGE 35 ---
+NEET
+(B) Yes, H PO  is a stronger acid than both 
+ and 
+ as acidic strength
+decreases as you remove hydrogen from 
+ has three potential hydrogen
+ions to donate.
+(C) In H PO , Ka  is  greater than Ka  and ka  is
+greater than Ka  because it becomes increasingly
+difficult to remove a proton from negatively
+charged ion Hence, A, B and C are correct.
+Q60
+Text Solution:
+(1) 
+(2) 
+(3) 
+(4) 
+Q61
+Text Solution:
+For weak electrolytes, degree of dissociation  = 
+. The limiting molar conductivity of the
+monobasic acid is 
+ = 349.6 +
+50.4 = 400.0 Scm  mol
+. With observed 
+ at 0.050 M
+Q62
+Text Solution:
+A stable moleucle can not have zero bond order.
+A bond order of zero indicates that the molecule
+does not exist hence statement 1 is false.
+As bond order increases, bond length decreases
+because bond length and bond order are
+inversely related. Hence statement 2 is also false.
+Q63
+Text Solution:
+Since conductance is directly proportional to the
+number of ions, the compound that produces the
+least number of ions will have the minimum
+conductance. Option 1 and 2 forms an overall
+neutral complex: no counte ions are released in
+water. So these will contain minimum
+conductance in solution.
+Q64
+Text Solution:
+XeO
+sp , pyramidal
+XeF
+sp d, linear
+XeOF
+sp d , square
+pyramidal
+XeF
+sp d , distorted
+octahedral
+Q65
+Text Solution:
+Formation of CH₄ from graphite and H₂ is an
+exothermic reaction (ΔH = –74.8 kJ mol⁻¹).
+Therefore products must lie 74.8 kJ below
+reactants; the energy diagram should display an
+activation‑energy peak and then a lower product
+plateau, with a downward vertical arrow labelled
+74.8 kJ connecting reactants to products. Only
+diagram 1 depicts all these features accurately.
+Q66
+Text Solution:
+Humidity is water vapour in air, a liquid‑in‑gas
+system. Alloys are homogeneous metallic
+mixtures, classified as solid‑in‑solid solutions.
+Amalgams contain liquid mercury dissolved in a
+solid metal, giving liquid‑in‑solid dispersions.
+Smoke comprises fine solid particles suspended
+in air, hence solid‑in‑gas. Thus the correct
+sequence is A‑II, B‑I, C‑IV, D‑III.
+Q67
+Text Solution:
+Aliphatic amines are stronger bases than
+aromatic amines because the lone pair on N is
+localised. Among aliphatic amines, greater +I and
+hyperconjugation raise electron density:
+secondary (‑N(Et)₂) > primary (‑NHEt). In anilines,
+conjugation with the benzene ring withdraws
+electron density; a methyl group slightly offsets
+this, so N‑methylaniline > aniline. Thus
+N‑ethylethanamine > ethanamine > N‑methylanilin
+e > benzenamine.
+Q68
+Text Solution:
+Moles present: Na₂CO₃ = 212 ÷ 106  = 2 mol;
+Na₂O = 248 ÷ 62 = 4 mol; NaOH = 240 ÷ 40 = 6 mol;
+H₂ = 12 ÷ 2  = 6 mol; CO₂ = 220 ÷ 44  = 5 mol.
+Total atoms = moles × N  × atomicity
+Na₂CO₃ → 2 mol × 6 = 12 N ;
+Na₂O → 4 mol × 3 = 12 N ; H₂ → 6 mol × 2 = 12 N ;
+NaOH 
+ 6 mol × 3 = 18 N ; CO  
+ 5 mol × 3 =
+15 N
+  
+    |   
+    |   
+3
+4
+H2 PO−
+4
+HPO2−
+4
+.
+H3 PO4 H3 PO4
+3
+4
+1
+2
+2
+3
+α
+/
+Λm Λ0m
+=
++
+Λ0m
+Λ0
++
+Λ0
+−
+2
+–2
+= 90 S 
+ 
+Λm
+cm2 mol−1
+α =
+= 0. 225
+90
+400
+3
+3
+2
+3
+4
+3
+2
+6
+3
+3
+A
+A
+A
+A
+→
+A
+2 →
+A
+Android App
+iOS App
+PW Website
+[35]
+[Contd...
+
+--- PAGE 36 ---
+NEET
+Thus A, B and D contain equal numbers of atoms.
+Q69
+Text Solution:
+Vitamin B₁₂ deficiency causes pernicious anaemia;
+vitamin D deficiency causes rickets; riboflavin (B₂)
+shortage produces cheilosis; pyridoxine (B₆)
+deficiency leads to convulsions.
+Q70
+Text Solution:
+Alkyl groups exert a +I effect that destabilises the
+carboxylate anion, lowering acidity. Formic acid
+(no alkyl) is strongest, followed by acetic acid
+(one CH₃). Isobutyric acid bears two methyl
+groups, pivalic acid three, giving progressively
+weaker acids. Hence the order is
+HCOOH > CH₃COOH > (CH₃)₂CHCOOH
+ > (CH₃)₃CCOOH.
+Q71
+Text Solution:
+Ferromagnetism arises when unpaired spins align
+parallel throughout a solid and it is an extreme
+form of paramagnetism, so Statement I is correct.
+Cr²⁺ has configuration [Ar] 3d⁴ with four unpaired
+electrons, while Nd³⁺ is [Xe] 4f³ with three
+unpaired electrons, so their counts differ;
+Statement II is incorrect.
+Q72
+Text Solution:
+Simple 
+distillation 
+separates
+chloroform (61 °C)/aniline because of their
+wide boiling gap.
+Crude oil in petroleum industry is fractionated
+by fractional distillation.
+High‑boiling 
+glycerol 
+is 
+obtained 
+from
+spent‑lye 
+via 
+distillation 
+under 
+reduced
+pressure.
+Aniline becomes steam‑volatile, so aniline–
+water is removed by steam distillation.
+Q73
+Text Solution:
+For the elementary reversible reaction A ⇌ 2B,
+the equilibrium constant in concentration units is
+the ratio of rate constants:
+.
+Because Δn  = (2 – 1) = 1, 
+.
+At 1000 K, 
+.
+Thus 
+.
+Q74
+Text Solution:
+Diazotization: aniline + nitrous acid at 273 – 278 K
+yields highly unstable benzenediazonium
+chloride; the dry salt can explode, so Statement I
+is true. Direct iodination is reversible; instead, KI
+displaces N₂⁺ in the diazonium salt
+(Finkelstein/Sandmeyer) to give iodobenzene,
+confirming Statement II.
+Q75
+Text Solution:
+Q76
+Text Solution:
+Acetylenic C–H (sp, 50 % s‑character) holds
+electron density closest to the nucleus, giving
+the strongest σ‑bond and the highest
+bond‑dissociation energy. Aryl C–H (sp², 33 % s)
+is weaker. Cyclopropane carbon is effectively sp³
+(25 % s); ring strain adds little, so its C–H bond is
+the weakest.
+Q77
+Text Solution:
+Bromine water is decolourised by compounds
+that undergo electrophilic addition to the C=C
+bond or rapid electrophilic substitution on an
+activated aromatic ring. Phenol and aniline
+activate the ring toward Br₂, while styrene’s vinyl
+double bond adds Br₂. Saturated cyclohexane
+lacks both unsaturation and ring activation, so it
+fails to decolourise bromine water.
+Q78
+Text Solution:
+Q79
+Text Solution:
+  
+    |   
+    |   
+=
+/
+= 1/2500 = 4.0  ×  
+Kc
+kf kb
+10‑4
+g
+=
+(RT
+Kp
+Kc
+)Δng
+RT = 0.0831  ×  1000 = 83.1
+= 4.0  ×  
+× 83.1 ≈0.033
+Kp
+10‑4
+Android App
+iOS App
+PW Website
+[36]
+[Contd...
+
+--- PAGE 37 ---
+NEET
+Boiling‑point elevation (ΔTb) ∝ i m, where i is the
+van’t Hoff factor and m the molarity (≈ molality
+for these dilute solutions). Urea and glucose are
+non‑electrolytes (i = 1). KNO₃ gives two ions (i ≈ 2).
+Na₂SO₄ dissociates into 2 Na⁺ + SO₄²⁻ (i ≈ 3), so
+ΔTb—and therefore the boiling point—is highest
+for the Na₂SO₄ solution.
+Q80
+Text Solution:
+Haber process uses finely divided Fe catalyst.
+Wacker oxidation converts alkenes to aldehydes
+with PdCl₂/CuCl₂.
+Wilkinson catalyst, [(PPh₃)₃RhCl], enables
+homogeneous hydrogenation.
+Ziegler–Natta polymerisation employs TiCl₄
+partnered with Al(CH₃)₃.
+A - I
+B - II
+C - III
+D - IV
+Q81
+Text Solution:
+Raoult’s law predicts
+.
+Measured pressure = 70 torr which is lower than
+ideal. A reduced vapour pressure signals stronger
+X-Y attraction than like-like interactions, giving a
+negative deviation from ideality.
+Q82
+Text Solution:
+Natural honey contains equal amounts of
+D‑glucose and D‑fructose; the latter is a
+ketohexose, hence a keto‑sugar. In aqueous
+solution it cyclises to fructofuranose and
+fructopyranose, giving α‑ and β‑anomeric pairs.
+The specific rotation of D‑fructose is –92°, making
+it laevorotatory.
+Q83
+Text Solution:
+LiAlH₄ furnishes alcohol, NaBH₄ fails with esters,
+and Rosenmund reduction (H₂/Pd‑BaSO₄) works
+only on acid chlorides, not esters.
+Q84
+Text Solution:
+Rate of SN2 reaction depends on leaving group
+tendency. 1‑Iodobutane reacts faster than
+1‑chlorobutane because I⁻ leaves more readily.
+Iodide’s larger, more polarizable anion disperses
+negative charge better than chloride, making it a
+significantly superior leaving group;
+Q85
+Text Solution:
+Ba²⁺(aq) + SO₄²⁻(aq) → BaSO₄(s)  ΔH° = ΔH°
+ = –
+4.5 kcal mol⁻¹.
+Using Hess’s law:
+ΔH° [BaSO₄(s)] = ΔH° [Ba²⁺(aq)] + ΔH°
+[SO₄²⁻(aq)] + ΔH°
+–349 = ΔH° [Ba²⁺] + (–216) + (–4.5)
+⇒ ΔH° [Ba²⁺] = –128.5 kcal mol⁻¹.
+Q86
+Text Solution:
+Cyclic‑ether skeletons for C₄H₈O are:
+(i)  
+ 
+(ii) 
+ 
+(iii) 
+(iv) 
+(v)  
+(vi)  
+Total stereochemical variants: 1 + 1 + 2 + 3 + 1 + 2 = 10
+isomers.
+Q87
+Text Solution:
+• Dipole moments:
+H₂O (1.85 D) > NH₃ (1.47 D) > CHCl₃ (≈1.04 D), so A is
+true.
+• Lone‑pair counts: XeF₂ (3) > XeF₄ (2) > XeO₃ (1),
+opposite to B, so B is false.
+• Bond lengths: O–H (96 pm) < C–H (110 pm) < N–
+  
+    |   
+    |   
+=
++
+Pideal
+χXP∘x
+χYP°Y
+=
+× 63 +
+× 78 = 73 torr
+5
+15
+10
+15
+crys.
+f 
+f 
+f
+crys.
+f 
+f 
+Android App
+iOS App
+PW Website
+[37]
+[Contd...
+
+--- PAGE 38 ---
+NEET
+O ≈(136 pm); C therefore incorrect.
+• Bond enthalpies:
+N≡N (946 kJ mol⁻¹) > O=O (498 kJ mol⁻¹) > H–
+H (436 kJ mol⁻¹), D is true.
+Q88
+Text Solution:
+The reaction is strongly endothermic
+(+180.7 kJ mol⁻¹), so raising the temperature shifts
+equilibrium toward NO. Le Chatelier’s principle
+also predicts that increasing the concentration of
+either reactant (N₂ or O₂) drives the equilibrium
+forward to re‑establish balance. Lower
+temperature would favour the exothermic
+reverse step, giving less NO.
+Q89
+Text Solution:
+For a first‑order reaction 
+ and
+.
+Initial 
+; final 
+.
+;
+.
+.
+Q90
+Text Solution:
+Lassaigne fusion converts hetero‑atoms of an
+organic compound into water‑soluble sodium
+salts: NaCN for C + N, Na₂S for S, and NaX for
+halogens, enabling their qualitative detection.
+The CuO–carbon reduction is a metallurgical
+reaction, unrelated to the sodium‑fusion method;
+hence it is excluded from Lassaigne’s test.
+Q91
+Text Solution:
+Complex II of the mitochondrial electron
+transport 
+chain 
+is 
+known 
+as 
+Succinate
+dehydrogenase. It catalyzes the oxidation of
+succinate to fumarate in the Krebs cycle and
+transfers electrons to ubiquinone (coenzyme Q).
+Q92
+Text Solution:
+In Polymerase chain reaction, each cycle of
+amplification doubles the amount of DNA. So, if
+we start with one molecule of DNA, after:
+1 cycle → 2 molecules
+2 cycles → 4 molecules
+3 cycles → 8 molecules
+…and so on.
+This pattern is exponential and follows the
+formula:
+Therefore, amount of DNA after n cycles=2  
+Where n = number of cycles 
+And 2  = fold increase in DNA quantity
+Q93
+Text Solution:
+The potential drawbacks in adoption of the in-
+vitro fertilisation methods are;
+1. Expensive instruments and reagents as the
+assisted reproductive techniques require
+extremely high precision handling by
+specialised professionals and expensive
+instrumentation. 
+2. Less adoption of orphans as in India we have
+so many orphaned and destitute children, who
+would probably not survive till maturity,
+unless taken care of. The in-vitro fertilisation
+methods reduce the chances of legal adoption
+of orphan children.
+There is always a possibility that early embryos
+formed by in-vitro fertilisation methods do not
+survive.
+Q94
+Text Solution:
+The blood from the heart of frog is carried to all
+the parts of the body through the arteries and
+the veins collect deoxygenated blood from the
+different parts of the body to the heart of frog.
+Therefore the correct answer is venacava.
+Q95
+Text Solution:
+Reductionist Biology seeks to understand living
+systems by studying their molecular, physical,
+and chemical properties. It explains biological
+functions in terms of the interactions of
+molecules and biophysical processes.
+ 
+Q96
+Text Solution:
+RNA was the first genetic material.RNA used to
+act as a genetic material as well as a catalyst
+(there are some important biochemical reactions
+in living systems that are catalysed by RNA
+catalysts and not by protein enzymes). But, RNA
+being a catalyst was reactive and hence unstable.
+DNA has evolved from RNA with chemical
+  
+    |   
+    |   
+k = 0.03 s‑1
+t =
+log  
+2.303
+k
+[R]0
+[R]
+[R
+= 7.2 
+]0
+mol L
+‑1
+[R] = 0.9 mol L
+‑1
+= 8
+[R]0
+[R]
+log 8 = 3 log 2 = 3(0.301) = 0.903
+t =
+× 0.903 ≈69.3 s
+2.303
+0.03
+n
+n
+Android App
+iOS App
+PW Website
+[38]
+[Contd...
+
+--- PAGE 39 ---
+NEET
+modifications that make it more stable. DNA
+being 
+double 
+stranded 
+and 
+having
+complementary strand further resists changes by
+evolving a process of repair.
+Q97
+Text Solution:
+In commensalism, one species benefits while the
+other is neither harmed nor benefited. Epiphytes
+growing on mango branches gain physical
+support and access to sunlight, while the mango
+tree is unaffected. This is a classic example of
+commensalism.
+ 
+Q98
+Text Solution:
+A. ✔️ True — Eukaryotic ribosomes are 80S,
+and prokaryotic ribosomes are 70S.
+B. ✔️ True — Each ribosome consists of two
+subunits.
+C. ✔️ True — 80S ribosome = 60S + 40S, and
+70S ribosome = 50S + 30S.
+D. ❌ Incorrect — 20S is not a known subunit
+of ribosomes.
+E. ❌ Incorrect — 80S subunits are 60S and
+40S, not 60S and 30S.
+ 
+Q99
+Text Solution:
+Ex-situ conservation involves protecting an
+endangered species by removing part of the
+population from a threatened habitat and placing
+it in a new location. Zoos and botanical gardens
+are prime examples, where organisms are
+conserved outside their natural habitat.
+ 
+Q100
+Text Solution:
+Statement I is correct- Solar energy is the
+primary source of energy in an ecosystem.
+Statement II is incorrect- The rate of production
+of organic matter during photosynthesis is gross
+primary productivity.
+Q101
+Text Solution:
+Emphysema – Damaged alveolar walls and
+decreased respiratory surface
+Angina pectoris – Acute chest pain when not
+enough oxygen is reaching to heart muscle
+Glomerulonephritis – Inflammation of glomeruli
+of kidney
+Tetany – Rapid spasms in muscle due to low Ca
+in body fluid
+Q102
+Text Solution:
+Assertion is true- Both wind and water pollinated
+flowers are not very colourful and do not
+produce nectar.
+Reason is also correct- In wind and water
+pollination, pollen reaching the stigma is a
+chance factor. To compensate for this, flowers
+produce a large number of pollen grains
+compared to the number of ovules.
+But reason is not a correct explanation of
+assertion.
+Q103
+Text Solution:
+Wine and beer are produced without distillation
+whereas whisky, brandy and rum are produced
+by distillation of the fermented broth.
+Q104
+Text Solution:
+Statement I is incorrect while statement II is
+correct.
+⊕ for actinomorphic and % for zygomorphic
+nature of flower. G for superior ovary and 
+ for
+inferior ovary.
+Q105
+Text Solution:
+Streptokinase produced by the bacterium
+Streptococcus is used as a ‘clot buster’ for
+removing clots from the blood vessels of patients
+who have undergone myocardial infarction
+leading to heart attack.
+Q106
+Text Solution:
+Chromosome 1 has most genes (2968), and the Y
+has the fewest (231).
+Q107
+Text Solution:
+Male frogs can be distinguished from the female
+frog by the presence of copulatory pad on the
+first digit of the fore limbs. This structure helps
+the male hold onto the female during
+reproduction.
+Q108
+Text Solution:
+Cytokinins promote nutrient mobilisation which
+helps in the delay of leaf senescence.
+Q109
+Text Solution:
+In certain animals, the body cavity is not fully
+lined by mesoderm. Instead, the mesoderm exists
+as scattered pouches between the ectoderm and
+endoderm and generally the mesoderm lines
+  
+    |   
+    |   
+++
+G
+¯¯¯
+Android App
+iOS App
+PW Website
+[39]
+[Contd...
+
+--- PAGE 40 ---
+NEET
+only the body wall (it's present next to the
+ectoderm), and does not surround the alimentary
+canal. 
+Eg- Aschelminthes.
+Q110
+Text Solution:
+Head
+Genetic material
+Middle piece
+Energy
+Acrosome
+Enzyme
+Tail
+Sperm motility
+Q111
+Text Solution:
+In pteridophytes, the main plant body is a
+sporophyte which is differentiated into true root,
+stem and leaves. The sporophytes bear sporangia
+that are subtended by leaf-like appendages
+called sporophylls. The sporangia produce spores
+by meiosis in spore mother cells. The spores
+germinate to give rise to inconspicuous, small but
+multicellular, free-living, mostly photosynthetic
+thalloid gametophytes called prothallus. The
+gametophytes bear male and female sex organs
+called antheridia and archegonia, respectively.
+Water is required for transfer of antherozoids –
+the male gametes released from the antheridia,
+to the mouth of archegonium. Fusion of male
+gamete with the egg present in the archegonium
+result in the formation of zygote. Zygote
+thereafter 
+produces 
+a 
+multicellular 
+well-
+differentiated sporophyte which is the dominant
+phase of the pteridophytes.
+Q112
+Text Solution:
+Cardiac activities of heart are regulated by
+Nodal tissue- SA node (sinoatrial node):
+pacemaker, AV node (atrioventricular node),
+Bundle of His and Purkinje fibers.
+A Special tissue in the medulla oblongata.
+Adrenal medullary hormone- Adrenaline and
+nor-adrenaline
+Q113
+Text Solution:
+The nodules on the roots of leguminous plants
+are formed by the symbiotic association of
+Rhizobium. 
+These 
+bacteria 
+fix 
+atmospheric
+nitrogen into organic forms, which is used by the
+plant as
+nutrient. Other bacteria can fix atmospheric
+nitrogen while free-living in the soil (examples
+Azospirillum and Azotobacter), thus enriching
+the nitrogen content of the soil. Cyanobacteria
+are autotrophic microbes widely distributed in
+aquatic and terrestrial environments many of
+which 
+can 
+fix 
+atmospheric 
+nitrogen, 
+e.g.
+Anabaena, Nostoc, Oscillatoria, etc.
+Q114
+Text Solution:
+tRNA interacts with mRNA during translation by
+matching its anticodon to the mRNA codon.
+rRNA is part of the ribosome and helps in
+aligning mRNA and tRNA, facilitating protein
+synthesis.
+RNA interference (RNAi) takes place in all
+eukaryotic organisms as a method of cellular
+defence.
+Q115
+Text Solution:
+In insertional inactivation process, a recombinant
+DNA is inserted into the β-galactosidase gene,
+which inactivates the enzyme.
+When no insert is present, the enzyme works,
+and colonies turn blue due to a chromogenic
+substrate.
+When the insert is present, the enzyme is
+inactivated, and white(no colour) appears,
+identifying the colonies as recombinant.
+Q116
+Text Solution:
+Eli Lilly, a pharmaceutical company, was the first
+to commercialise genetically engineered human
+insulin under the brand name Humulin.
+Scientists inserted the human insulin gene into
+plasmids, which were then introduced into
+genetically engineered Escherichia coli bacteria
+(a type of bacterium).
+Q117
+Text Solution:
+S–G + S# → S + S#–G
+Where:
+G is a group other than hydrogen,
+S and S# are substrates.
+The transfer of a functional group (G) from one
+molecule (S) to another (S#).
+Such reactions are catalyzed by Transferases,
+which are enzymes that transfer functional
+groups from one molecule to another.
+Q118
+Text Solution:
+In a monocot stem,
+  
+    |   
+    |   
+Android App
+iOS App
+PW Website
+[40]
+[Contd...
+
+--- PAGE 41 ---
+NEET
+The hypodermis is sclerenchymatous, not
+parenchymatous.
+ Vascular bundles are scattered.
+ Vascular bundles are conjoint and closed.
+ Phloem parenchyma is absent.
+ 
+ 
+Q119
+Text Solution:
+The correct sequence of events in the life cycle
+of bryophytes is:
+B: Attachment of gametophyte to substratum
+E: Release of antherozoids into water
+A: Fusion of antherozoid with egg
+D: Formation of sporophyte
+C: Reduction division to produce haploid
+spores
+This 
+sequence 
+reflects 
+the 
+alternation 
+of
+generations in bryophytes, where the dominant
+gametophyte generation gives rise to the
+sporophyte after fertilization.
+ 
+Q120
+Text Solution:
+Computed tomography and magnetic resonance
+imaging detect cancers of internal organs.
+Several chemotherapeutic drugs are used to kill
+cancerous 
+cells. 
+The 
+patients 
+are 
+given
+substances called biological response modifiers
+such as α-interferon which activates their immune
+system and helps in destroying the tumor.
+Increased cell counts are found in the case of
+leukemias.
+Q121
+Text Solution:
+A.
+Centromere
+II.
+Cell division (site
+where spindle
+fibres attach during
+mitosis)
+B.
+Cilium
+III.
+Cell movement
+(helps in
+locomotion or
+movement of
+substances)
+C.
+Cristae
+I.
+Mitochondrion
+(infoldings of the
+inner mitochondrial
+membrane)
+D.
+Cell
+membrane
+IV.
+Phospholipid
+bilayer (basic
+structure of the
+plasma membrane)
+Q122
+Text Solution:
+A chromatographic separation of the leaf
+pigments shows that the colour that we see in
+leaves is          not due to a single pigment but
+due to four pigments:
+Chlorophyll a (bright or blue green in the
+chromatogram), chlorophyll b (yellow
+green), xanthophylls (yellow) and carotenoids
+(yellow to yellow-orange).
+These pigments are involved in capturing light
+energy during photosynthesis, and each has a
+characteristic colour based on its light
+absorption spectrum.
+Q123
+Text Solution:
+By the end of 12 weeks (first trimester), most of
+the major organ systems are formed.
+Q124
+Text Solution:
+In the seeds of cereals such as maize the seed
+coat is membranous and generally fused with the
+fruit wall. The endosperm is bulky and stores
+food. The outer covering of endosperm separates
+the embryo by a proteinous layer called aleurone
+layer.
+Q125
+Text Solution:
+Q126
+Text Solution:
+  
+    |   
+    |   
+Android App
+iOS App
+PW Website
+[41]
+[Contd...
+
+--- PAGE 42 ---
+NEET
+Q127
+Text Solution:
+Assertion (A) is true: A mature angiosperm
+embryo sac is 8-nucleate and 7-celled (3
+antipodals, 2 synergids, 1 egg cell, and 1
+central cell with 2 polar nuclei).
+Reason (R) is false: The egg apparatus
+contains 1 egg cell and 2 synergids, not 2
+polar nuclei. The 2 polar nuclei are present in
+the central cell, not the egg apparatus.
+ 
+Q128
+Text Solution:
+Mesosomes are specialized infoldings of the
+plasma membrane in prokaryotic cells. They
+assist in:
+Cell wall formation
+DNA replication
+Respiration
+ 
+Q129
+Text Solution:
+The post-transcriptional events in a eukaryotic
+cell include:
+B. Removal of introns and joining of exons
+(splicing)
+C. Addition of a methyl guanosine cap at the
+5′ end of hnRNA (capping)
+D. Addition of adenine residues at the 3′ end
+(poly-A tailing)
+A is incorrect because transport to cytoplasm
+occurs after splicing, and E (base pairing of two
+complementary RNAs) is not a typical post-
+transcriptional modification.
+ 
+Q130
+Text Solution:
+Polygenic traits are controlled by multiple genes,
+each contributing a small additive effect. These
+traits do not follow Mendel’s laws of inheritance
+and exhibit continuous variation (e.g., skin color,
+height), hence they follow a non-Mendelian
+inheritance pattern.
+ 
+Q131
+Text Solution:
+In peroxidase and catalase enzyme, which
+catalyze the breakdown of hydrogen peroxide to
+water and oxygen, haem is the prosthetic group.
+Q132
+Text Solution:
+Explanation (Increasing order of body complexity
+based on Whittaker’s 5 Kingdom classification):
+C. Prokaryotes with cell wall (Kingdom
+Monera) – simplest
+E. Eukaryotes with cellular body organization
+(Kingdom Protista)
+A. Multicellular heterotrophs with chitinous
+cell wall (Kingdom Fungi)
+D. Eukaryotic autotrophs with tissue/organ
+level (Kingdom Plantae)
+B. Heterotrophs with tissue/organ/organ
+system (Kingdom Animalia) – most complex
+This sequence reflects increasing levels of
+structural and functional complexity.
+ 
+Q133
+Text Solution:
+Ramdeo Misra is regarded as the Father of
+Ecology in India for his pioneering work in the
+field of ecology and environmental science,
+especially ecosystem analysis and conservation
+biology.
+ 
+Q134
+Text Solution:
+A.
+Alfred
+Hershey
+and Martha
+Chase
+IV.
+DNA as genetic
+material
+confirmation
+B.
+Euchromati
+n
+III.
+Loosely packed
+and light-stained
+C.
+Frederick
+Griffith
+I.
+Streptococcus
+pneumoniae
+D.
+Heterochro
+matin
+II.
+Densely packed
+and dark-stained
+Q135
+Text Solution:
+The malignant tumors are a mass of proliferating
+cells called neoplastic or tumor cells. These cells
+grow very rapidly, invading and damaging the
+surrounding normal tissues.
+  
+    |   
+    |   
+Android App
+iOS App
+PW Website
+[42]
+[Contd...
+
+--- PAGE 43 ---
+NEET
+On the other hand, Benign tumors normally
+remain confined to their original location and do
+not spread to other parts of the body and cause
+little damage.
+Q136
+Text Solution:
+The DNA fragments extracted from the gel
+electrophoresis can be used in the
+construction of recombinant DNA molecules
+by joining them with cloning vectors.
+Since DNA fragments are negatively charged
+molecules, therefore  they can be separated
+by forcing them to move towards the anode
+under an electric field through a
+medium/matrix.
+The DNA fragments separate according to
+their size through sieving effect provided by
+the agarose gel. Hence, the smaller the
+fragment size, the farther it moves. 
+Therefore, smaller fragments will be observed
+at the anode whereas the larger DNA
+fragments near the wells in agarose gel.
+Q137
+Text Solution:
+List -I
+List -II
+Adenosine
+Nucleoside
+Adenylic acid
+Nucleotide
+Adenine
+Nitrogenous base
+Alanine
+Amino acid
+Q138
+Text Solution:
+The reduction division for the human female
+gametogenesis starts earlier than that of male
+gametogenesis as in females the reduction
+division is started before the birth of female
+baby.i.e., during the embryonic stages whereas
+in males, spermatogenesis begins at puberty.
+The gap between the first meiotic division and
+second meiotic division is much shorter for
+males as compared to females because in
+females, oogonia cells start division during
+embryonic stages and enter into prophase-I of
+the meiotic division and get temporarily
+arrested at that stage, called primary oocytes. 
+Once puberty is attained in females, the
+primary oocytes complete prophase-I of first
+meiotic division to form secondary oocytes.
+The first meiotic division in females is an
+unequal division resulting in the formation of a
+large haploid secondary oocyte and a tiny
+first polar body.
+ Degeneration of corpus luteum in the
+absence of fertilisation, causes disintegration
+of the endometrium lining of the uterus
+leading to menstruation.
+Q139
+Text Solution:
+ All living members of the class Cyclostomata are
+ectoparasites on some fishes.
+Q140
+Text Solution:
+Assertion (A): True – The Golgi apparatus
+functions to package and sort materials from
+the 
+ER 
+and 
+delivers 
+them 
+to 
+various
+destinations.
+Reason 
+(R): 
+True 
+– 
+Vesicles 
+from 
+the
+endoplasmic reticulum fuse with the cis face
+of the Golgi, and after processing, materials
+are released from the trans face.
+ 
+Q141
+Text Solution:
+A. Scutellum – II. Cotyledon of monocot seed
+B. Non-albuminous seed – III. Groundnut (no
+residual endosperm)
+C. Epiblast – IV. Rudimentary cotyledon (found
+in monocots)
+D. Perisperm – I. Persistent nucellus (e.g., in
+black pepper, beet)
+Q142
+Text Solution:
+The members of subphylum Vertebrata possess
+notochord during the embryonic period. 
+The notochord is replaced by a cartilaginous or
+bony vertebral column in the adult. Thus all
+vertebrates are chordates but all chordates are
+not vertebrates.
+Q143
+Text Solution:
+Each antibody molecule has four peptide
+chains, two small called light chains and two
+longer called heavy chains.
+The antigen binding site is present at the N-
+terminal region of the antibody molecule.
+Constant regions of heavy and light chains are
+located at the C-terminal of the antibody
+molecule.
+Q144
+Text Solution:
+  
+    |   
+    |   
+Android App
+iOS App
+PW Website
+[43]
+[Contd...
+
+--- PAGE 44 ---
+NEET
+RNA interference (RNAi) takes place in all
+eukaryotic organisms as a method of cellular
+defense. 
+This method involves silencing of a specific
+mRNA due to a complementary dsRNA
+molecule that binds to and prevents
+translation of the mRNA and thereby silencing
+the specific mRNA.
+Q145
+Text Solution:
+When RRYY (round yellow) is crossed with rryy
+(wrinkled green), the F  hybrids (RrYy) are all
+round yellow. Selfing of the F  results in F  with
+phenotypic ratio of 9 round yellow : 3 round
+green : 3 wrinkled yellow : 1 wrinkled green.
+Q146
+Text Solution:
+Histones are rich in lysine and arginine.
+Q147
+Text Solution:
+The first menstruation in females begins at
+puberty and is called menarche.
+Q148
+Text Solution:
+Heart – Atrial natriuretic factor
+kidney – Erythropoietin
+Gastro-intestinal tract – Secretin
+Adrenal Cortex – Aldosterone
+Q149
+Text Solution:
+The protein portion of the enzyme is called the
+apoenzyme.
+Q150
+Text Solution:
+Productivity is expressed in terms of gm  yr  or
+(kcal m ) yr .
+Q151
+Text Solution:
+Potato is a stem modification (tuber) while Sweet
+potato is a root modification (root tuber). Both
+store food and perform similar functions, but
+have different origins. This means they are
+analogous organs (similar function, different
+origin), which arises due to Convergent evolution
+i.e. unrelated organisms independently evolve
+similar traits as a result of having to adapt to
+similar environments or ecological niches.
+Q152
+Text Solution:
+This pedigree shows an X-linked recessive
+disorder:
+Females with one mutant allele (X X) are
+carriers.
+Males with the mutant X  are affected (as they
+have only one X chromosome).
+The probability of a child being a carrier (i.e. X X)
+and unaffected in the F  generation;
+The F  couple (carrier female X X and unaffected
+male XY):
+Possible gametes from unaffected male XY are
+having: X and Y
+Possible gametes from carrier female X X  are
+having:  X  and Y
+ 
+X
+X
+X
+X X
+X X
+Y
+X Y
+XY
+Possible offspring in F  generation;
+X X  → unaffected female
+X X → carrier female
+XY → unaffected male
+X Y → affected male
+Out of 4, only 1 child (X X) is a carrier and
+unaffected.
+So, the probability = 1/4
+ 
+Q153
+Text Solution:
+Assertion is true- Cells of the tapetum possess
+dense cytoplasm and generally have more than
+one nucleus.
+But reason is false- The innermost wall layer is
+the tapetum which nourishes the developing
+pollen grains.
+Q154
+Text Solution:
+Megasporogenesis : The process of formation of
+megaspores from the megaspore mother cell is
+called 
+megasporogenesis. 
+Ovules 
+generally
+differentiate a single megaspore mother cell
+(MMC) in the micropylar region of the nucellus. It
+is a large cell containing dense cytoplasm and a
+prominent nucleus. The MMC undergoes meiotic
+division. In a majority of flowering plants, one of
+the megaspores is functional while the other
+three 
+degenerate. 
+Only 
+the 
+functional
+megaspore 
+develops 
+into 
+the 
+female
+gametophyte (embryo sac). The nucleus of the
+functional megaspore divides mitotically to form
+two nuclei which move to the opposite poles,
+forming the 2-nucleate embryo sac. Two more
+sequential mitotic nuclear divisions result in the
+  
+    |   
+    |   
+1
+1
+2
+-2
+-1
+-2
+-1
+c
+c
+c
+3
+2
+c
+c
+c
+c
+c
+c
+c
+c
+c
+3
+c
+c
+c
+c
+c
+Android App
+iOS App
+PW Website
+[44]
+[Contd...
+
+--- PAGE 45 ---
+NEET
+formation of the 4-nucleate and later the 8-
+nucleate stages of the embryo sac.
+Q155
+Text Solution:
+In symmetry, the flower may be actinomorphic
+(radial symmetry) or zygomorphic (bilateral
+symmetry). When a flower can be divided into
+two equal radial halves in any radial plane
+passing through the centre, it is said to be
+actinomorphic, e.g., mustard, datura, chilli. When
+it can be divided into two similar halves only in
+one particular vertical plane, it is zygomorphic,
+e.g., pea, gulmohur, bean, Cassia.
+Q156
+Text Solution:
+Primary lymphoid organs: Bone marrow and
+thymus are the sites where immature
+lymphocytes differentiate into antigen-sensitive
+lymphocytes.
+After maturation, lymphocytes migrate to
+secondary lymphoid organs like Spleen, Lymph
+nodes, Tonsils, Peyer’s patches (small intestine),
+Appendix
+ Secondary organs are the sites of antigen–
+lymphocyte interaction. On encountering an
+antigen, lymphocytes proliferate and form
+effector cells.
+Q157
+Text Solution:
+In many species of fig trees, there is a tight one-
+to-one relationship with the pollinator species of
+wasp. It means that a given fig species can be
+pollinated only by its ‘partner’ wasp species and
+no other species. Fig flower is pollinated by wasp.
+Wasp lays eggs in a fig fruit. The female wasp
+uses the fruit not only as an oviposition (egg-
+laying) site but uses the developing seeds within
+the fruit for nourishing its larvae. The wasp
+pollinates the fig inflorescence while searching
+for suitable egg-laying sites. In return for the
+favour of pollination the fig offers the wasp some
+of its developing seeds, as food for the
+developing wasp larvae.
+Q158
+Text Solution:
+Small disc-shaped structures at the surface of
+the centromeres are called kinetochores. These
+structures serve as the sites of attachment of
+spindle fibres to the chromosomes. At the onset
+of anaphase, each chromosome arranged at the
+metaphase plate is split simultaneously and the
+two daughter chromatids, now referred to as
+daughter chromosomes of the future daughter
+nuclei, begin their migration towards the two
+opposite poles. This is assisted by simultaneous
+elongation of spindle fibres. 
+Q159
+Text Solution:
+The gymnosperms (gymnos : naked, sperma :
+seeds) are plants in which the ovules are not
+enclosed by any ovary wall and remain exposed,
+both before and after fertilisation. The seeds that
+develop post-fertilisation, are not covered, i.e.,
+are naked.
+Q160
+Text Solution:
+Adrenal medullary hormone are adrenaline and
+nor-adrenaline it causes pupillary dilation,
+hyperglycemia, piloerection(erection of hair) and
+increase strength of heart contraction
+Q161
+Text Solution:
+Insulin is a protein hormone, and when taken
+orally, it gets broken down by digestive enzymes
+in the stomach and small intestine, just like any
+other dietary protein. As a result, it loses its
+structure and function before it can enter the
+bloodstream.
+ To ensure it works properly, insulin is given
+through injections, allowing it to directly enter
+the bloodstream and perform its function of
+regulating glucose levels in diabetic patients.
+Q162
+Text Solution:
+Salvia 
+is 
+an 
+angiosperm. 
+Ginkgo 
+is 
+a
+gymnosperm. Polytrichum is a moss (bryophyte).
+Salvinia is a pteridophyte. 
+Q163
+Text Solution:
+It was George Gamow, a physicist, who argued
+that since there are only 4 bases and if they have
+to code for 20 amino acids, the code should
+constitute a combination of bases. He suggested
+that in order to code for all the 20 amino acids,
+the code should be made up of three
+nucleotides. This was a very bold proposition,
+because a permutation combination of 43 (4 × 4
+× 4) would generate 64 codons; generating many
+more codons than required.
+Q164
+Text Solution:
+Causes of biodiversity losses: The accelerated
+rates of species extinctions that the world is
+  
+    |   
+    |   
+Android App
+iOS App
+PW Website
+[45]
+[Contd...
+
+--- PAGE 46 ---
+NEET
+facing now are largely due to human activities.
+There are four major causes (‘ The Evil Quartet
+’ is the sobriquet used to describe them)
+In recent years ex situ conservation has
+advanced beyond keeping threatened species
+in enclosures. Now gametes of threatened
+species can be preserved in viable and fertile
+condition 
+for 
+long 
+periods 
+using
+cryopreservation techniques.
+Familiar with the environmental damage
+caused and threat posed to our native species
+by invasive weed species like carrot grass
+(Parthenium), Lantana and water hyacinth
+(Eicchornia).
+Some examples of recent extinctions include
+the 
+dodo 
+(Mauritius), 
+quagga 
+(Africa),
+thylacine 
+(Australia), 
+Steller’s 
+Sea 
+Cow
+(Russia).
+Q165
+Text Solution:
+Neurohypophysis (pars nervosa) also known as
+posterior pituitary, stores and releases two
+hormones called oxytocin and vasopressin (anti-
+diuretic hormone), which are actually synthesised
+by the hypothalamus and are transported
+axonally to neurohypophysis. 
+Q166
+Text Solution:
+The most distinctive feature of echinoderms is
+the presence of water vascular system which
+helps in locomotion, capture and transport of
+food and respiration.
+Q167
+Text Solution:
+Innate immunity is non-specific type of defence,
+that is present at the time of birth.
+Q168
+Text Solution:
+Asexual reproduction in liverworts takes place by
+fragmentation of thalli, or by the formation of
+specialised structures called gemmae (sing.
+gemma). 
+Gemmae 
+are 
+green, 
+multicellular,
+asexual buds, which develop in small receptacles
+called gemma cups located on the thalli. The
+gemmae become detached from the parent
+body and germinate to form new individuals.
+Q169
+Text Solution:
+Special venous connection between the kidney
+and lower parts of the body is present in frogs.
+This is called renal portal system.
+Q170
+Text Solution:
+Ecosystems are not exempt from the Second Law
+of thermodynamics. They need a constant supply
+of energy to synthesise the molecules they
+require, to counteract the universal tendency
+toward increasing disorderliness.
+Q171
+Text Solution:
+Carboxylation is the most crucial step of the
+Calvin cycle where CO  is utilised for the
+carboxylation of RuBP. This reaction is catalysed
+by the enzyme RuBP carboxylase which results in
+the formation of two molecules of 3-PGA. Since
+this enzyme also has an oxygenation activity it
+would be more correct to call it RuBP
+carboxylase-oxygenase or RuBisCO. RuBisCO has
+a much greater affinity for CO  when the CO : O
+is nearly equal
+Q172
+Text Solution:
+The enzymes essential for gene cloning are: 
+Restriction enzyme - It recognises a specific
+sequence of nucleotides in double stranded DNA
+and cuts the DNA at a specific location.
+DNA ligase - They join broken pieces of DNA
+strand together during DNA replication.
+DNA polymerase - They function by replicating
+DNA by synthesizing new DNA strands using
+existing DNA strands as templates.
+ 
+DNA mutase and DNA recombinase are not
+essential for gene cloning. As DNA mutase are
+enzymes that catalyse the movement of a
+functional group within a single molecule,
+effectively rearranging the molecular structure.
+DNA recombinase facilitates the exchange of
+DNA strands between two segments that share
+partial sequence homology.
+Q173
+Text Solution:
+A. True – Auxins can induce parthenocarpy
+(formation of seedless fruits).
+B. True – Plant growth regulators can be
+involved in promotion as well as inhibition of
+growth.
+C. True – Dedifferentiation is necessary before
+a cell can re-differentiate.
+D. Incorrect – Abscisic acid (ABA) is a growth
+inhibitor, not a promoter.
+E. Incorrect – Apical dominance (due to auxin)
+inhibits lateral bud growth.
+  
+    |   
+    |   
+2
+2
+2
+2
+Android App
+iOS App
+PW Website
+[46]
+[Contd...
+
+--- PAGE 47 ---
+NEET
+ 
+Q174
+Text Solution:
+The rho (ρ) factor is essential for the termination
+of transcription in prokaryotes. It binds to the
+RNA and causes the RNA polymerase to
+dissociate from the DNA template, ending
+transcription.
+ 
+Q175
+Text Solution:
+Frog respires in water by skin (cutaneous
+respiration) whereas on land the buccal cavity,
+skin and lungs act as the respiratory organs.
+Q176
+Text Solution:
+In the question the twins given are a boy and a
+girl. This shows these are developed from two
+separate fertilized eggs i,e each have individual
+sperm and ovum. This type of twins are fraternal
+twins or dizygotic twins.
+Q177
+Text Solution:
+A. Aspergillus niger – Used industrially for
+citric acid production, not for household
+products
+B. Lactobacillus – Used in curd formation
+C. Trichoderma polysporum – Produces
+immunosuppressive drug (Cyclosporin A), not
+used in household products
+D. Saccharomyces cerevisiae – Used in baking
+and alcohol fermentation
+E. Propionibacterium sharmanii – Used in Swiss
+cheese production
+So, A and C are NOT involved in household
+product preparation.
+Q178
+Text Solution:
+Progesterone is secreted from corpus luteum.
+Relaxin is secreted from the ovary.
+Melanocyte stimulating hormone is secreted
+from Pars intermedia.
+The adrenal medulla secretes two hormones
+called adrenaline or epinephrine and
+noradrenaline or norepinephrine. These are
+commonly called as catecholamines.
+Q179
+Text Solution:
+Selectable markers have been developed which
+differentiate recombinants from non-
+recombinants on the basis of their ability to
+produce colour in the presence of a chromogenic
+substrate. In this, a recombinant DNA is inserted
+within the coding sequence of an enzyme, β-
+galactosidase. This results into inactivation of the
+gene for synthesis of this enzyme, which is
+referred to as insertional
+Inactivation. The presence of a chromogenic
+substrate gives blue coloured colonies if the
+plasmid in the bacteria does not have an insert.
+Presence of insert results into insertional
+inactivation of the
+β-galactosidase gene and the colonies do not
+produce any colour, these are identified as
+recombinant colonies.
+Q180
+Text Solution:
+This is the Verhulst-Pearl Logistic Growth
+equation, where:
+N = population size
+r = intrinsic rate of natural increase
+K = carrying capacity
+ = rate of change in population size
+It describes population growth that slows as the
+population reaches the carrying capacity (K).
+ 
+  
+    |   
+    |   
+= rN (
+)
+dN
+dt
+K−N
+K
+dN
+dt
+Android App
+iOS App
+PW Website
+[47]
+[Contd...
+
+--- PAGE 48 ---
+NEET
+  
+    |   
+    |   
+Android App
+iOS App
+PW Website
+[48]

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEET Vault | Paper Detail & Practice</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="nav-placeholder"></div>
+    
+    <div style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 id="paper-title">Loading...</h1>
+        <p class="text-muted">NEET exam is a full single paper. Split only score inputs and mistakes.</p>
+      </div>
+      <div style="display: flex; gap: 0.5rem;">
+        <a id="qp-link" href="#" target="_blank" class="btn btn-outline">📄 Open Question Paper</a>
+        <a id="ak-link" href="#" target="_blank" class="btn btn-outline">🔑 Open Answer Key</a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2">
+      <!-- Left Column: Timer & Shortcuts -->
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div class="card" style="text-align: center;">
+          <h2>⏱️ Exam Timer</h2>
+          <p class="text-muted" style="font-size: 0.9rem;">NEET Limit: 3 hours 20 minutes (200 minutes)</p>
+          <div class="timer-container" id="timer-display">00:00:00</div>
+          <div class="timer-controls">
+            <button class="btn btn-primary" onclick="startTimer()">▶ Start</button>
+            <button class="btn btn-outline" onclick="pauseTimer()">⏸ Pause</button>
+            <button class="btn btn-outline" onclick="resetTimer()" style="border-color: #fca5a5; color: #dc2626;">🔁 Reset</button>
+          </div>
+        </div>
+
+        <div class="card" style="background-color: var(--accent-light); border-color: rgba(220,161,52,0.2);">
+          <h2>💡 Next Step: Analyze Mistakes</h2>
+          <p style="margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--text-muted);">After checking your answers, log your incorrect answers in the mistakes notebook to build your cockpit stats.</p>
+          <a href="#" id="log-mistake-shortcut" class="btn btn-primary" style="width: 100%; background-color: var(--accent); color: white; box-shadow: 0 4px 12px rgba(220,161,52,0.2);">
+            ⚠️ Log Mistakes for This Paper &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Progress & Score Entry Form -->
+      <div class="card">
+        <h2>📝 Score & Practice Log</h2>
+        <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 0.9rem;">Enter your results. Biology total and overall score will auto-calculate.</p>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>Paper Status</label>
+            <select id="status-select">
+              <option value="not-attempted">Not Attempted</option>
+              <option value="attempted">Attempted</option>
+              <option value="reviewed">Reviewed</option>
+              <option value="reattempt">Re-attempt Needed</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Planned Retest Date</label>
+            <input type="date" id="retest-date">
+          </div>
+        </div>
+
+        <h3 style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.25rem; font-size: 1.1rem; color: var(--primary);">Subject Scores</h3>
+        
+        <!-- Score grid -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>Physics Score (Max 180)</label>
+            <input type="number" id="score-physics" max="180" min="0" placeholder="0 - 180">
+          </div>
+          <div class="form-group">
+            <label>Chemistry Score (Max 180)</label>
+            <input type="number" id="score-chemistry" max="180" min="0" placeholder="0 - 180">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Botany Score (Max 180)</label>
+            <input type="number" id="score-botany" max="180" min="0" placeholder="0 - 180">
+          </div>
+          <div class="form-group">
+            <label>Zoology Score (Max 180)</label>
+            <input type="number" id="score-zoology" max="180" min="0" placeholder="0 - 180">
+          </div>
+        </div>
+
+        <div class="form-row" style="background-color: var(--primary-light); padding: 0.75rem; border-radius: 10px; margin-bottom: 1.25rem;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label style="color: var(--primary);">Biology Total (Botany + Zoology)</label>
+            <input type="number" id="score-biology" readonly placeholder="Auto-calculated (Max 360)" style="font-weight: 700; background-color: transparent; border: none; margin-bottom: 0; padding: 0.25rem;">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label style="color: var(--primary);">Overall Score (Max 720)</label>
+            <input type="number" id="score-total" readonly placeholder="Auto-calculated (Max 720)" style="font-weight: 700; background-color: transparent; border: none; margin-bottom: 0; padding: 0.25rem;">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Weak Chapters Identified</label>
+          <input type="text" id="weak-chapters-input" placeholder="e.g. Current Electricity, Plant Physiology (separated by commas)">
+        </div>
+
+        <div class="form-group">
+          <label>Notes & Thoughts</label>
+          <textarea id="notes-input" rows="3" placeholder="Write notes on your time management, silly mistakes or facts to revise..."></textarea>
+        </div>
+
+        <button class="btn btn-primary" id="save-btn" style="width: 100%;">💾 Save Practice Log</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNav();
+      initPaperDetail();
+    });
+  </script>
+</body>
+</html>

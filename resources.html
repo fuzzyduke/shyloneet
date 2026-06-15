@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEET Vault | Study Resources</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .resources-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+
+    /* Link Cards styling */
+    .link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .resource-link-card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+    }
+    
+    .resource-link-card:hover {
+      border-color: var(--primary);
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgba(157, 92, 52, 0.05);
+    }
+
+    .link-info h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+      color: var(--text-color);
+    }
+
+    .link-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* PDF Upload Area */
+    .upload-zone {
+      border: 2px dashed var(--primary);
+      background-color: var(--primary-light);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-bottom: 1.5rem;
+    }
+    
+    .upload-zone:hover {
+      background-color: #ebdcd0;
+    }
+
+    .upload-zone p {
+      font-size: 0.95rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    .pdf-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .pdf-item {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pdf-details h5 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+      word-break: break-all;
+    }
+
+    .pdf-details span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .resources-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Nav Bar -->
+    <div id="nav-placeholder"></div>
+    
+    <div style="margin-bottom: 2rem;">
+      <h1>NEET Study Resources 📚</h1>
+      <p class="text-muted">Save textbook PDFs, reference materials, and useful learning portals locally in your browser cockpit.</p>
+    </div>
+
+    <div class="resources-grid">
+      <!-- Left Column: Important Links -->
+      <div class="card">
+        <h2 class="section-title">🔗 Important Preparation Links</h2>
+        <p class="text-muted" style="margin-bottom: 1.5rem;">Quick shortcuts to top study networks and books.</p>
+        
+        <div class="link-list" id="links-container">
+          <!-- Static / Dynamic links will go here -->
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Add Custom Link</h3>
+        <form id="add-link-form">
+          <div class="form-row">
+            <div class="form-group" style="margin-bottom: 0.75rem;">
+              <label>Website Name</label>
+              <input type="text" id="link-title" placeholder="e.g. NTA Official Site" required>
+            </div>
+            <div class="form-group" style="margin-bottom: 0.75rem;">
+              <label>URL</label>
+              <input type="url" id="link-url" placeholder="https://..." required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm" style="width: 100%; margin-top: 0.5rem;">➕ Save Link</button>
+        </form>
+      </div>
+
+      <!-- Right Column: PDF Textbook Vault -->
+      <div class="card">
+        <h2 class="section-title">📂 PDF Book Vault (IndexedDB)</h2>
+        <p class="text-muted" style="margin-bottom: 1.5rem;">Upload textbook PDFs (like NCERT) to store them locally and read them anytime.</p>
+        
+        <div class="upload-zone" onclick="triggerFileInput()">
+          <span style="font-size: 2.5rem;">📥</span>
+          <p>Click here or drag-and-drop a PDF textbook to add</p>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">Stored directly in browser storage</span>
+          <input type="file" id="pdf-file-input" accept="application/pdf" style="display: none;" onchange="handleFileSelect(event)">
+        </div>
+
+        <h3>Your Uploaded Books</h3>
+        <div style="margin-top: 1rem;">
+          <ul class="pdf-list" id="pdf-list-container">
+            <!-- Injected via JS -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Predefined Links
+    const PREDEFINED_LINKS = [
+      { title: "Vedantu NEET Portal", url: "https://www.vedantu.com/neet", desc: "Vedantu's dedicated learning materials, prep schedules, and mock tests." },
+      { title: "Physics Wallah NEET", url: "https://www.pw.live/neet/", desc: "Physics Wallah courses, mock papers, and practice sets." },
+      { title: "NTA Official Website", url: "https://nta.ac.in/", desc: "Official National Testing Agency website for registrations and notifications." },
+      { title: "NCERT Textbook Downloads", url: "https://ncert.nic.in/textbook.php", desc: "Official NCERT e-books portal for Class 11 and 12 textbooks." }
+    ];
+
+    // IndexedDB setup for PDF Vault
+    const DB_NAME = 'neetVaultResourcesDB';
+    const DB_VERSION = 1;
+    const STORE_NAME = 'pdfs';
+    let db = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNav();
+      renderLinks();
+      initDB();
+    });
+
+    // Link Management
+    function getCustomLinks() {
+      const stored = localStorage.getItem('neetVaultCustomLinks');
+      return stored ? JSON.parse(stored) : [];
+    }
+
+    function saveCustomLinks(links) {
+      localStorage.setItem('neetVaultCustomLinks', JSON.stringify(links));
+    }
+
+    function renderLinks() {
+      const container = document.getElementById('links-container');
+      const customLinks = getCustomLinks();
+      const allLinks = [...PREDEFINED_LINKS, ...customLinks];
+
+      container.innerHTML = allLinks.map((link, index) => {
+        const isPredefined = index < PREDEFINED_LINKS.length;
+        const displayDesc = link.desc || link.url;
+        
+        return `
+          <div class="resource-link-card">
+            <div class="link-info">
+              <h4>${link.title}</h4>
+              <p>${displayDesc}</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <a href="${link.url}" target="_blank" class="btn btn-outline btn-sm" style="padding: 0.4rem 0.6rem;">🌐 Open</a>
+              ${!isPredefined ? `
+                <button onclick="deleteCustomLink(${index - PREDEFINED_LINKS.length})" class="btn btn-outline btn-sm" style="border-color: #fca5a5; color: #dc2626; padding: 0.4rem 0.6rem;">&times;</button>
+              ` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    document.getElementById('add-link-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const title = document.getElementById('link-title').value;
+      const url = document.getElementById('link-url').value;
+
+      const links = getCustomLinks();
+      links.push({ title, url, desc: "Custom Saved Link" });
+      saveCustomLinks(links);
+
+      document.getElementById('add-link-form').reset();
+      renderLinks();
+    });
+
+    window.deleteCustomLink = function(idx) {
+      showCustomConfirm("Delete Link?", "Are you sure you want to delete this custom link?", () => {
+        const links = getCustomLinks();
+        links.splice(idx, 1);
+        saveCustomLinks(links);
+        renderLinks();
+      });
+    };
+
+    // IndexedDB Operations
+    function initDB() {
+      const request = indexedDB.open(DB_NAME, DB_VERSION);
+      request.onerror = (event) => console.error("Database error:", event.target.error);
+      
+      request.onsuccess = (event) => {
+        db = event.target.result;
+        renderPDFs();
+      };
+      
+      request.onupgradeneeded = (event) => {
+        const dbInstance = event.target.result;
+        dbInstance.createObjectStore(STORE_NAME, { keyPath: 'id' });
+      };
+    }
+
+    window.triggerFileInput = function() {
+      document.getElementById('pdf-file-input').click();
+    };
+
+    window.handleFileSelect = function(e) {
+      const file = e.target.files[0];
+      if (!file || file.type !== 'application/pdf') {
+        showCustomAlert("Invalid File", "Please select a valid PDF file.");
+        return;
+      }
+      
+      // Limit file size to 100MB to be safe for IndexedDB
+      if (file.size > 100 * 1024 * 1024) {
+        showCustomAlert("File Too Large", "File size exceeds 100MB. Please use smaller NCERT chapters or booklets.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const arrayBuffer = event.target.result;
+        savePDFToDB(file.name, file.size, arrayBuffer);
+      };
+      reader.readAsArrayBuffer(file);
+    };
+
+    function savePDFToDB(name, size, buffer) {
+      if (!db) return;
+      const tx = db.transaction(STORE_NAME, 'readwrite');
+      const store = tx.objectStore(STORE_NAME);
+      
+      const item = {
+        id: 'pdf-' + Date.now(),
+        name: name,
+        size: size,
+        date: new Date().toLocaleDateString(),
+        data: buffer
+      };
+      
+      store.put(item);
+      tx.oncomplete = () => {
+        renderPDFs();
+        showCustomAlert("Book Added", `Successfully saved "${name}" to your Book Vault!`);
+      };
+      tx.onerror = (e) => {
+        console.error("Save error:", e.target.error);
+        showCustomAlert("Save Failed", "Failed to save PDF to browser database.");
+      };
+    }
+
+    function renderPDFs() {
+      if (!db) return;
+      const tx = db.transaction(STORE_NAME, 'readonly');
+      const store = tx.objectStore(STORE_NAME);
+      const request = store.getAll();
+      
+      const container = document.getElementById('pdf-list-container');
+      
+      request.onsuccess = () => {
+        const list = request.result;
+        if (list.length === 0) {
+          container.innerHTML = `<li style="text-align: center; color: var(--text-muted); padding: 1.5rem;">No books uploaded yet.</li>`;
+          return;
+        }
+        
+        container.innerHTML = list.map(item => {
+          const mbSize = (item.size / (1024 * 1024)).toFixed(2);
+          return `
+            <li class="pdf-item">
+              <div class="pdf-details">
+                <h5>📖 ${item.name}</h5>
+                <span>${mbSize} MB | Added: ${item.date}</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <button onclick="openPDF('${item.id}')" class="btn btn-outline btn-sm">📖 Read</button>
+                <button onclick="deletePDF('${item.id}')" class="btn btn-outline btn-sm" style="border-color: #fca5a5; color: #dc2626;">&times;</button>
+              </div>
+            </li>
+          `;
+        }).join('');
+      };
+    }
+
+    window.openPDF = function(id) {
+      if (!db) return;
+      const tx = db.transaction(STORE_NAME, 'readonly');
+      const store = tx.objectStore(STORE_NAME);
+      const request = store.get(id);
+      
+      request.onsuccess = () => {
+        const item = request.result;
+        if (item) {
+          // Convert arrayBuffer back to Blob
+          const blob = new Blob([item.data], { type: 'application/pdf' });
+          const url = URL.createObjectURL(blob);
+          window.open(url, '_blank');
+        }
+      };
+    };
+
+    window.deletePDF = function(id) {
+      showCustomConfirm("Delete Book?", "Are you sure you want to delete this PDF textbook?", () => {
+        const tx = db.transaction(STORE_NAME, 'readwrite');
+        const store = tx.objectStore(STORE_NAME);
+        store.delete(id);
+        tx.oncomplete = () => {
+          renderPDFs();
+        };
+      });
+    };
+  </script>
+</body>
+</html>

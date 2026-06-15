@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEET Vault | NEET UG 2025 Code 45 Mock Test</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Additional custom styles for premium test interface */
+    .test-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    
+    .question-viewer {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .question-card {
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .question-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    
+    .subject-badge {
+      background-color: var(--primary-light);
+      color: var(--primary);
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 8px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    
+    .question-image-container {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .question-image-container img {
+      max-width: 100%;
+      max-height: 450px;
+      height: auto;
+      object-fit: contain;
+      image-rendering: -webkit-optimize-contrast;
+    }
+    
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .option-btn {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      background: white;
+      cursor: pointer;
+      font-weight: 600;
+      transition: var(--transition);
+      font-size: 1.05rem;
+    }
+    
+    .option-btn:hover {
+      border-color: var(--primary);
+      background-color: var(--primary-light);
+    }
+    
+    .option-btn.selected {
+      border-color: var(--primary);
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .option-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid currentColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.75rem;
+      font-size: 0.9rem;
+    }
+    
+    .navigation-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.25rem;
+    }
+    
+    /* Palette Styles */
+    .palette-card {
+      position: sticky;
+      top: 2rem;
+      max-height: calc(100vh - 4rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.4rem;
+      overflow-y: auto;
+      max-height: 380px;
+      padding-right: 0.25rem;
+      margin-top: 1rem;
+    }
+    
+    .palette-btn {
+      aspect-ratio: 1;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      background: #f3f4f6;
+      color: var(--text-color);
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: var(--transition);
+    }
+    
+    .palette-btn:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Palette color states */
+    .palette-btn.answered {
+      background-color: var(--success);
+      color: white;
+      border-color: var(--success);
+    }
+    
+    .palette-btn.marked {
+      background-color: #8b5cf6; /* purple */
+      color: white;
+      border-color: #8b5cf6;
+    }
+    
+    .palette-btn.marked.answered {
+      background-color: #8b5cf6;
+      color: white;
+      border-color: #8b5cf6;
+    }
+    
+    .palette-btn.marked.answered::after {
+      content: '';
+      position: absolute;
+      bottom: 3px;
+      right: 3px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #10b981; /* green dot */
+    }
+    
+    .palette-btn.active {
+      outline: 3px solid var(--primary);
+      outline-offset: 1px;
+    }
+    
+    .palette-legend {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    
+    .legend-box {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+    }
+    
+    /* Result Review Styling */
+    .result-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .result-card {
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: 16px;
+    }
+    
+    .review-tabs {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+    
+    .tab-link {
+      background: none;
+      border: none;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    
+    .tab-link.active, .tab-link:hover {
+      background-color: var(--primary-light);
+      color: var(--primary);
+    }
+    
+    .review-q-item {
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      background: white;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+    
+    .review-verdict {
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+    }
+    
+    .verdict-correct { background-color: var(--success-light); color: var(--success); }
+    .verdict-wrong { background-color: #fee2e2; color: #dc2626; }
+    .verdict-unattempted { background-color: #f3f4f6; color: #4b5563; }
+    
+    /* Modal styles for Mistake Dialog */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    
+    .modal-content {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border: 1px solid var(--border-color);
+    }
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+    
+    .close-modal-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+    
+    .timer-alert {
+      color: #dc2626 !important;
+      animation: blinker 1s linear infinite;
+    }
+    
+    @keyframes blinker {
+      50% { opacity: 0; }
+    }
+    
+    @media (max-width: 992px) {
+      .test-layout {
+        grid-template-columns: 1fr;
+      }
+      .palette-card {
+        position: static;
+        max-height: none;
+      }
+      .result-summary-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" style="max-width: 1300px;">
+    <!-- Nav Bar -->
+    <div id="nav-placeholder"></div>
+    
+    <!-- Test Dashboard Area -->
+    <div id="test-app">
+      <div style="text-align: center; padding: 3rem;">
+        <h2>Loading NEET UG 2025 mock test paper...</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mistake Logging Modal -->
+  <div id="mistake-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">Log Mistake for Q1</h2>
+        <button class="close-modal-btn" onclick="closeMistakeModal()">&times;</button>
+      </div>
+      <form id="modal-mistake-form">
+        <input type="hidden" id="modal-q-num">
+        <input type="hidden" id="modal-subject">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>Paper Source</label>
+            <input type="text" value="NEET UG 2025 Code 45" readonly>
+          </div>
+          <div class="form-group">
+            <label>Question Number</label>
+            <input type="text" id="modal-q-display" readonly>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" id="modal-subject-display" readonly>
+          </div>
+          <div class="form-group">
+            <label>Incorrect Option Selected</label>
+            <input type="text" id="modal-selected-display" readonly>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>Mistake Type</label>
+            <select id="modal-type" required>
+              <option value="Concept not clear">Concept not clear</option>
+              <option value="Forgot fact">Forgot fact</option>
+              <option value="Formula error">Formula error</option>
+              <option value="Calculation error">Calculation error</option>
+              <option value="Silly mistake">Silly mistake</option>
+              <option value="Time pressure">Time pressure</option>
+              <option value="Guessed wrongly">Guessed wrongly</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Priority level</label>
+            <select id="modal-priority" required>
+              <option value="High">🔴 High Priority</option>
+              <option value="Medium" selected>🟡 Medium Priority</option>
+              <option value="Low">🔵 Low Priority</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Chapter / Unit</label>
+            <input type="text" id="modal-chapter" placeholder="e.g. Current Electricity" required>
+          </div>
+          <div class="form-group">
+            <label>Retest Date</label>
+            <input type="date" id="modal-retest" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Correct Concept (Write what you need to remember next time)</label>
+          <textarea id="modal-concept" rows="3" required placeholder="Pre-populated solution text. Add your personal takeaways..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="float: right;">💾 Add to Mistakes Notebook</button>
+        <button type="button" class="btn btn-outline" style="float: right; margin-right: 0.5rem;" onclick="closeMistakeModal()">Cancel</button>
+        <div style="clear: both;"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    // State management for the test-taking engine
+    let questions = [];
+    let testState = {
+      answers: {},
+      markedForReview: [],
+      timeRemaining: 12000, // 3h 20m in seconds
+      submitted: false
+    };
+    
+    let currentQIdx = 0;
+    timerInterval = null;
+    const STATE_STORAGE_KEY = 'shylo_neet_2025_045_attempt';
+
+    // NEET Grading rules
+    const Q_COUNT = 180;
+    const SUBJECT_RANGES = {
+      Physics: [1, 45],
+      Chemistry: [46, 90],
+      Biology: [91, 180]
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNav();
+      loadTestPaper();
+    });
+
+    async function loadTestPaper() {
+      try {
+        const res = await fetch('papers/neet-2025-045/neet-2025-045.json');
+        questions = await res.json();
+        
+        // Recover state
+        const stored = localStorage.getItem(STATE_STORAGE_KEY);
+        if (stored) {
+          testState = JSON.parse(stored);
+        } else {
+          // Initialize state
+          testState = {
+            answers: {},
+            markedForReview: [],
+            timeRemaining: 12000,
+            submitted: false
+          };
+          saveLocalState();
+        }
+
+        // Check query parameters
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('result') === 'true') {
+          testState.submitted = true;
+        }
+
+        if (testState.submitted) {
+          renderResults();
+        } else {
+          renderTestMode();
+          startTestTimer();
+        }
+      } catch (err) {
+        console.error("Failed to load mock paper", err);
+        document.getElementById('test-app').innerHTML = `
+          <div class="card" style="text-align: center; padding: 2rem;">
+            <h2>⚠️ Error Loading Paper</h2>
+            <p>Could not load the question paper data. Please verify the setup.</p>
+          </div>
+        `;
+      }
+    }
+
+    function saveLocalState() {
+      localStorage.setItem(STATE_STORAGE_KEY, JSON.stringify(testState));
+    }
+
+    // Timer Implementation
+    function startTestTimer() {
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        if (testState.timeRemaining <= 0) {
+          clearInterval(timerInterval);
+          submitTestAuto();
+        } else {
+          testState.timeRemaining--;
+          updateTimerDisplay();
+          // Auto-save every 10 seconds
+          if (testState.timeRemaining % 10 === 0) {
+            saveLocalState();
+          }
+        }
+      }, 1000);
+      updateTimerDisplay();
+    }
+
+    function updateTimerDisplay() {
+      const display = document.getElementById('test-timer');
+      if (!display) return;
+      
+      const t = testState.timeRemaining;
+      const h = Math.floor(t / 3600).toString().padStart(2, '0');
+      const m = Math.floor((t % 3600) / 60).toString().padStart(2, '0');
+      const s = (t % 60).toString().padStart(2, '0');
+      
+      display.innerText = `${h}:${m}:${s}`;
+      
+      // Highlight in red if time is less than 15 mins (900 seconds)
+      if (t < 900) {
+        display.classList.add('timer-alert');
+      } else {
+        display.classList.remove('timer-alert');
+      }
+    }
+
+    // 1. Render Test Mode
+    function renderTestMode() {
+      const app = document.getElementById('test-app');
+      app.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h1>NEET UG 2025 Code 45 Mock</h1>
+            <p class="text-muted">Single full-length exam loop (180 questions)</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <div class="card" style="padding: 0.5rem 1.5rem; text-align: center; border-radius: 12px; margin-bottom: 0;">
+              <div style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted);">Time Remaining</div>
+              <div id="test-timer" style="font-size: 1.75rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--primary);">03:20:00</div>
+            </div>
+            <button class="btn btn-primary" onclick="confirmSubmitTest()">Submit Exam &rarr;</button>
+          </div>
+        </div>
+
+        <div class="test-layout">
+          <!-- Left side: Question display panel -->
+          <div class="question-viewer" id="current-question-container">
+            <!-- Populated via Javascript -->
+          </div>
+
+          <!-- Right side: Question Palette -->
+          <div class="card palette-card">
+            <div>
+              <h3>Question Palette</h3>
+              
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                <div>Answered: <strong id="pal-answered-count" style="color: var(--success);">0</strong></div>
+                <div>Marked: <strong id="pal-marked-count" style="color: #8b5cf6;">0</strong></div>
+                <div>Remaining: <strong id="pal-unattempted-count">180</strong></div>
+              </div>
+
+              <div class="palette-grid" id="palette-buttons-grid">
+                <!-- 180 Buttons injected here -->
+              </div>
+            </div>
+
+            <div>
+              <div class="palette-legend">
+                <div class="legend-item"><div class="legend-box" style="background: #f3f4f6; border: 1px solid var(--border-color);"></div><span>Unvisited</span></div>
+                <div class="legend-item"><div class="legend-box" style="background: var(--success);"></div><span>Answered</span></div>
+                <div class="legend-item"><div class="legend-box" style="background: #8b5cf6;"></div><span>Marked</span></div>
+                <div class="legend-item"><div class="legend-box" style="background: #8b5cf6; position: relative;"><div style="position: absolute; bottom: 2px; right: 2px; width: 4px; height: 4px; border-radius: 50%; background: #10b981;"></div></div><span>Marked & Ans</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      renderQuestion();
+      renderPalette();
+    }
+
+    function renderQuestion() {
+      const container = document.getElementById('current-question-container');
+      if (questions.length === 0) return;
+
+      const q = questions[currentQIdx];
+      const qNum = q.questionNumber;
+      
+      // Determine Subject
+      let subject = "Physics";
+      if (qNum >= 46 && qNum <= 90) subject = "Chemistry";
+      else if (qNum >= 91) subject = "Biology";
+
+      const selectedOpt = testState.answers[qNum] || null;
+      const isMarked = testState.markedForReview.includes(qNum);
+
+      container.innerHTML = `
+        <div class="card question-card">
+          <div>
+            <div class="question-meta">
+              <span class="subject-badge">${subject}</span>
+              <span style="font-weight: 700;">Question ${qNum} of 180</span>
+            </div>
+            
+            <div class="question-image-container">
+              <img src="${q.questionImage}" alt="Question ${qNum}">
+            </div>
+
+            <h3 style="margin-bottom: 1rem;">Select Answer:</h3>
+            <div class="options-grid">
+              ${[1, 2, 3, 4].map(opt => `
+                <button class="option-btn ${selectedOpt === String(opt) ? 'selected' : ''}" onclick="selectOption('${qNum}', '${opt}')">
+                  <div class="option-number">${opt}</div>
+                  Option ${opt}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="navigation-controls">
+            <button class="btn btn-outline" onclick="prevQuestion()" ${currentQIdx === 0 ? 'disabled' : ''}>&larr; Previous</button>
+            <button class="btn btn-outline" style="border-color: #8b5cf6; color: #8b5cf6; background: ${isMarked ? '#ede9fe' : 'transparent'};" onclick="toggleMarkForReview(${qNum})">
+              🔖 ${isMarked ? 'Unmark Review' : 'Mark for Review'}
+            </button>
+            <button class="btn btn-primary" onclick="nextQuestion()">${currentQIdx === questions.length - 1 ? 'Finish review' : 'Next &rarr;'}</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderPalette() {
+      const grid = document.getElementById('palette-buttons-grid');
+      if (!grid) return;
+
+      let answeredCount = 0;
+      let markedCount = 0;
+
+      grid.innerHTML = Array.from({length: 180}, (_, i) => {
+        const qNum = i + 1;
+        const isAnswered = testState.answers[qNum] !== undefined && testState.answers[qNum] !== null;
+        const isMarked = testState.markedForReview.includes(qNum);
+
+        if (isAnswered) answeredCount++;
+        if (isMarked) markedCount++;
+
+        let classes = ['palette-btn'];
+        if (isAnswered) classes.push('answered');
+        if (isMarked) classes.push('marked');
+        if (currentQIdx === i) classes.push('active');
+
+        return `
+          <button class="${classes.join(' ')}" onclick="jumpToQuestion(${i})">
+            ${qNum}
+          </button>
+        `;
+      }).join('');
+
+      document.getElementById('pal-answered-count').innerText = answeredCount;
+      document.getElementById('pal-marked-count').innerText = markedCount;
+      document.getElementById('pal-unattempted-count').innerText = 180 - answeredCount;
+    }
+
+    // Interaction controls
+    window.selectOption = function(qNum, opt) {
+      if (testState.answers[qNum] === opt) {
+        // Deselect if clicked again
+        delete testState.answers[qNum];
+      } else {
+        testState.answers[qNum] = opt;
+      }
+      saveLocalState();
+      renderQuestion();
+      renderPalette();
+    };
+
+    window.toggleMarkForReview = function(qNum) {
+      const idx = testState.markedForReview.indexOf(qNum);
+      if (idx > -1) {
+        testState.markedForReview.splice(idx, 1);
+      } else {
+        testState.markedForReview.push(qNum);
+      }
+      saveLocalState();
+      renderQuestion();
+      renderPalette();
+    };
+
+    window.prevQuestion = function() {
+      if (currentQIdx > 0) {
+        currentQIdx--;
+        renderQuestion();
+        renderPalette();
+      }
+    };
+
+    window.nextQuestion = function() {
+      if (currentQIdx < questions.length - 1) {
+        currentQIdx++;
+        renderQuestion();
+        renderPalette();
+      }
+    };
+
+    window.jumpToQuestion = function(idx) {
+      currentQIdx = idx;
+      renderQuestion();
+      renderPalette();
+    };
+
+    // Submitting operations
+    window.confirmSubmitTest = function() {
+      const totalAnswered = Object.keys(testState.answers).length;
+      const confirmMsg = `You have answered ${totalAnswered} out of 180 questions. Once submitted, you will see your score and correct answers immediately.`;
+      showCustomConfirm("Submit Exam?", confirmMsg, () => {
+        submitTest();
+      });
+    };
+
+    function submitTestAuto() {
+      showCustomAlert("Time Limit Reached", "Time limit reached! Your exam is being automatically submitted.");
+      submitTest();
+    }
+
+    function submitTest() {
+      clearInterval(timerInterval);
+      testState.submitted = true;
+      saveLocalState();
+      
+      // Calculate scores
+      let totalScore = 0;
+      let correctCount = 0;
+      let wrongCount = 0;
+      let unattemptedCount = 0;
+
+      let physScore = 0;
+      let chemScore = 0;
+      let bioScore = 0;
+
+      questions.forEach(q => {
+        const qNum = q.questionNumber;
+        const userAns = testState.answers[qNum];
+        const correctOptions = q.correctOptions || []; // Array
+
+        if (!userAns) {
+          unattemptedCount++;
+        } else if (correctOptions.includes(userAns)) {
+          correctCount++;
+          totalScore += 4;
+          if (qNum <= 45) physScore += 4;
+          else if (qNum <= 90) chemScore += 4;
+          else bioScore += 4;
+        } else {
+          wrongCount++;
+          totalScore -= 1;
+          if (qNum <= 45) physScore -= 1;
+          else if (qNum <= 90) chemScore -= 1;
+          else bioScore -= 1;
+        }
+      });
+
+      // Format time elapsed
+      const secondsElapsed = 12000 - testState.timeRemaining;
+      const hrs = Math.floor(secondsElapsed / 3600);
+      const mins = Math.floor((secondsElapsed % 3600) / 60);
+      const timeTakenStr = `${hrs}h ${mins}m`;
+
+      // Save to main cockpit state (localStorage key 'neetVaultState')
+      const mainStateStored = localStorage.getItem('neetVaultState');
+      const mainState = mainStateStored ? JSON.parse(mainStateStored) : { papersProgress: {}, mistakes: [] };
+      
+      mainState.papersProgress['neet-2025-045'] = {
+        status: 'reviewed',
+        physicsScore: physScore,
+        chemistryScore: chemScore,
+        botanyScore: Math.round(bioScore / 2),
+        zoologyScore: Math.round(bioScore / 2),
+        biologyScore: bioScore,
+        totalScore: totalScore,
+        timeTaken: timeTakenStr,
+        weakChapters: [],
+        retestDate: '',
+        notes: 'Attempted via MVP mock test interface.',
+        duration: secondsElapsed
+      };
+      
+      localStorage.setItem('neetVaultState', JSON.stringify(mainState));
+
+      // Redirect to results view
+      renderResults();
+    }
+
+    // 2. Render Results & Review Mode
+    let reviewFilter = 'all';
+
+    function renderResults() {
+      const app = document.getElementById('test-app');
+      
+      // Calculate scores on the fly for results page rendering
+      let totalScore = 0;
+      let correctCount = 0;
+      let wrongCount = 0;
+      let unattemptedCount = 0;
+
+      let physScore = 0;
+      let chemScore = 0;
+      let bioScore = 0;
+
+      const incorrectQs = [];
+      const markedQs = testState.markedForReview;
+
+      questions.forEach(q => {
+        const qNum = q.questionNumber;
+        const userAns = testState.answers[qNum];
+        const correctOptions = q.correctOptions || [];
+
+        if (!userAns) {
+          unattemptedCount++;
+        } else if (correctOptions.includes(userAns)) {
+          correctCount++;
+          totalScore += 4;
+          if (qNum <= 45) physScore += 4;
+          else if (qNum <= 90) chemScore += 4;
+          else bioScore += 4;
+        } else {
+          wrongCount++;
+          totalScore -= 1;
+          incorrectQs.push(qNum);
+          if (qNum <= 45) physScore -= 1;
+          else if (qNum <= 90) chemScore -= 1;
+          else bioScore -= 1;
+        }
+      });
+
+      app.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <div>
+            <h1>Mock Exam Results</h1>
+            <p class="text-muted">NEET UG 2025 Code 45 | Detailed Feedback</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn btn-outline" onclick="restartTest()">🔁 Retake Exam</button>
+            <a href="papers.html" class="btn btn-primary">📂 All Papers</a>
+          </div>
+        </div>
+
+        <div class="result-summary-grid">
+          <div class="card result-card" style="background-color: var(--primary-light);">
+            <div class="stat-title">Total Score</div>
+            <div class="stat-value" style="font-size: 2.75rem;">${totalScore} <span style="font-size: 1.1rem; color: var(--text-muted)">/ 720</span></div>
+          </div>
+          <div class="card result-card" style="background-color: var(--success-light); border-color: rgba(77, 147, 97, 0.2);">
+            <div class="stat-title" style="color: var(--success);">Correct Answers</div>
+            <div class="stat-value" style="color: var(--success);">${correctCount}</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">+${correctCount * 4} Marks</div>
+          </div>
+          <div class="card result-card" style="background-color: #fee2e2; border-color: rgba(220, 38, 38, 0.15);">
+            <div class="stat-title" style="color: #dc2626;">Wrong Answers</div>
+            <div class="stat-value" style="color: #dc2626;">${wrongCount}</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">-${wrongCount} Marks</div>
+          </div>
+          <div class="card result-card">
+            <div class="stat-title">Unattempted</div>
+            <div class="stat-value" style="color: #4b5563;">${unattemptedCount}</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">0 Marks</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3" style="margin-bottom: 2.5rem;">
+          <div class="card" style="text-align: center;">
+            <h3>Physics Score</h3>
+            <div class="stat-value" style="font-size: 2rem;">${physScore} <span style="font-size: 1rem; color: var(--text-muted)">/ 180</span></div>
+          </div>
+          <div class="card" style="text-align: center;">
+            <h3>Chemistry Score</h3>
+            <div class="stat-value" style="font-size: 2rem;">${chemScore} <span style="font-size: 1rem; color: var(--text-muted)">/ 180</span></div>
+          </div>
+          <div class="card" style="text-align: center;">
+            <h3>Biology Score</h3>
+            <div class="stat-value" style="font-size: 2rem;">${bioScore} <span style="font-size: 1rem; color: var(--text-muted)">/ 360</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Question Paper Review</h2>
+          
+          <div class="review-tabs">
+            <button class="tab-link ${reviewFilter === 'all' ? 'active' : ''}" onclick="setReviewFilter('all')">Show All (180)</button>
+            <button class="tab-link ${reviewFilter === 'incorrect' ? 'active' : ''}" onclick="setReviewFilter('incorrect')" style="color: #dc2626;">Incorrect Only (${wrongCount})</button>
+            <button class="tab-link ${reviewFilter === 'marked' ? 'active' : ''}" onclick="setReviewFilter('marked')" style="color: #8b5cf6;">Marked for Review (${markedQs.length})</button>
+            <button class="tab-link ${reviewFilter === 'unattempted' ? 'active' : ''}" onclick="setReviewFilter('unattempted')">Unattempted (${unattemptedCount})</button>
+          </div>
+
+          <div id="review-questions-list">
+            <!-- Review items injected here -->
+          </div>
+        </div>
+      `;
+
+      renderReviewList(incorrectQs, markedQs);
+    }
+
+    window.setReviewFilter = function(filter) {
+      reviewFilter = filter;
+      renderResults();
+    };
+
+    function renderReviewList(incorrectQs, markedQs) {
+      const container = document.getElementById('review-questions-list');
+      if (!container) return;
+
+      const filteredQs = questions.filter(q => {
+        const qNum = q.questionNumber;
+        const userAns = testState.answers[qNum];
+        const isCorrect = q.correctOptions.includes(userAns);
+
+        if (reviewFilter === 'incorrect') {
+          return userAns && !isCorrect;
+        } else if (reviewFilter === 'marked') {
+          return markedQs.includes(qNum);
+        } else if (reviewFilter === 'unattempted') {
+          return !userAns;
+        }
+        return true; // show all
+      });
+
+      if (filteredQs.length === 0) {
+        container.innerHTML = `<p style="text-align: center; color: var(--text-muted); padding: 2rem;">No questions match this filter.</p>`;
+        return;
+      }
+
+      container.innerHTML = filteredQs.map(q => {
+        const qNum = q.questionNumber;
+        const userAns = testState.answers[qNum];
+        const correctOptions = q.correctOptions;
+        const isCorrect = userAns && correctOptions.includes(userAns);
+        
+        let verdictClass = 'verdict-unattempted';
+        let verdictText = 'Unattempted';
+        if (userAns) {
+          if (isCorrect) {
+            verdictClass = 'verdict-correct';
+            verdictText = 'Correct (+4)';
+          } else {
+            verdictClass = 'verdict-wrong';
+            verdictText = 'Incorrect (-1)';
+          }
+        }
+
+        // Subject
+        let subject = "Physics";
+        if (qNum >= 46 && qNum <= 90) subject = "Chemistry";
+        else if (qNum >= 91) subject = "Biology";
+
+        // Mapped Solution PDF Page (using 1-based index)
+        const solPage = q.solutionPage || 27;
+
+        return `
+          <div class="review-q-item">
+            <div class="review-header">
+              <div>
+                <strong>Q${qNum}</strong>
+                <span class="subject-badge" style="margin-left: 0.5rem;">${subject}</span>
+              </div>
+              <span class="review-verdict ${verdictClass}">${verdictText}</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; flex-wrap: wrap;">
+              <div style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 1rem; text-align: center; display: flex; justify-content: center; align-items: center; min-height: 180px;">
+                <img src="${q.questionImage}" alt="Q${qNum}" style="max-width: 100%; max-height: 250px; object-fit: contain;">
+              </div>
+              
+              <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div style="margin-bottom: 0.75rem; font-size: 0.95rem;">
+                    <strong>Your Response:</strong> ${userAns ? `<span class="badge" style="background-color: var(--primary-light); font-weight: 700;">Option ${userAns}</span>` : '<span style="color: var(--text-muted)">No response</span>'}
+                  </div>
+                  <div style="margin-bottom: 1rem; font-size: 0.95rem;">
+                    <strong>Correct Answer:</strong> <span class="badge badge-reviewed" style="font-weight: 700;">Option ${correctOptions.join(' or ')}</span>
+                  </div>
+                  
+                  ${q.solutionText ? `
+                    <div style="background-color: var(--bg-color); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.85rem; max-height: 150px; overflow-y: auto; border: 1px solid var(--border-color);">
+                      <strong>Solution Preview:</strong>
+                      <p style="white-space: pre-wrap; font-family: monospace; margin-top: 0.25rem; color: #4b5563;">${q.solutionText}</p>
+                    </div>
+                  ` : `
+                    <div style="font-size: 0.85rem; font-style: italic; color: var(--text-muted);">
+                      No text solution extracted. See PDF Solution.
+                    </div>
+                  `}
+                </div>
+
+                <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                  <button class="btn btn-outline btn-sm" onclick="openMistakeModal('${qNum}', '${subject}', '${userAns || 'None'}', '${correctOptions.join(',')}', \`${escapeHtml(q.solutionText || '')}\`)" style="flex: 1; border-color: #fca5a5; color: #dc2626;">
+                    ⚠️ Log Mistake
+                  </button>
+                  <a href="papers/neet-2025-045/source.pdf#page=${solPage}" target="_blank" class="btn btn-outline btn-sm" style="flex: 1;">
+                    📄 View PDF Solution (Page ${solPage})
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;")
+        .replace(/`/g, "\\`")
+        .replace(/\n/g, "\\n");
+    }
+
+    window.restartTest = function() {
+      showCustomConfirm("Reset Mock Exam?", "Are you sure you want to reset the mock exam? This will clear all your answers and start the timer over.", () => {
+        localStorage.removeItem(STATE_STORAGE_KEY);
+        // Reset local variables
+        testState = {
+          answers: {},
+          markedForReview: [],
+          timeRemaining: 12000,
+          submitted: false
+        };
+        saveLocalState();
+        currentQIdx = 0;
+        const params = new URLSearchParams(window.location.search);
+        const paperId = params.get('paper') || 'neet-2025-045';
+        window.location.href = `test.html?paper=${paperId}`;
+      });
+    };
+
+    // Mistake Modal Operations
+    window.openMistakeModal = function(qNum, subject, selectedAns, correctAns, solutionText) {
+      document.getElementById('modal-title').innerText = `Log Mistake for Question ${qNum}`;
+      document.getElementById('modal-q-num').value = qNum;
+      document.getElementById('modal-q-display').value = `Q${qNum}`;
+      document.getElementById('modal-subject').value = subject;
+      document.getElementById('modal-subject-display').value = subject;
+      document.getElementById('modal-selected-display').value = selectedAns;
+      
+      // Suggest a default retest date (3 days from now)
+      const retestDate = new Date();
+      retestDate.setDate(retestDate.getDate() + 3);
+      document.getElementById('modal-retest').value = retestDate.toISOString().split('T')[0];
+
+      // Format concept prefill
+      let conceptPrefill = "";
+      if (solutionText) {
+        conceptPrefill += `Correct Option: ${correctAns}\n\nExplanation:\n${solutionText}`;
+      } else {
+        conceptPrefill += `Correct Option: ${correctAns}\nMy selected Option: ${selectedAns}\n\n`;
+      }
+      document.getElementById('modal-concept').value = conceptPrefill;
+      document.getElementById('modal-chapter').value = ""; // clear chapter input
+
+      document.getElementById('mistake-modal').style.display = 'flex';
+    };
+
+    window.closeMistakeModal = function() {
+      document.getElementById('mistake-modal').style.display = 'none';
+    };
+
+    document.getElementById('modal-mistake-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const qNum = document.getElementById('modal-q-num').value;
+      const subject = document.getElementById('modal-subject').value;
+      const mistakeType = document.getElementById('modal-type').value;
+      const priority = document.getElementById('modal-priority').value;
+      const chapter = document.getElementById('modal-chapter').value;
+      const retestDate = document.getElementById('modal-retest').value;
+      const concept = document.getElementById('modal-concept').value;
+
+      // Save to existing mistakes array in 'neetVaultState'
+      const mainStateStored = localStorage.getItem('neetVaultState');
+      const mainState = mainStateStored ? JSON.parse(mainStateStored) : { papersProgress: {}, mistakes: [] };
+      
+      const newMistake = {
+        id: 'mistake-' + Date.now(),
+        paperId: 'neet-2025-045',
+        questionNumber: qNum,
+        subject: subject,
+        chapter: chapter,
+        mistakeType: mistakeType,
+        priority: priority,
+        correctConcept: concept,
+        retestDate: retestDate,
+        status: 'Open',
+        date: new Date().toISOString().split('T')[0]
+      };
+
+      mainState.mistakes.push(newMistake);
+      localStorage.setItem('neetVaultState', JSON.stringify(mainState));
+
+      closeMistakeModal();
+      showCustomAlert("Mistake Logged", `Successfully logged Q${qNum} mistake in your Mistakes Notebook!`);
+    });
+  </script>
+</body>
+</html>

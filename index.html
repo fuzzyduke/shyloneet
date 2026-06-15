@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEET Vault | Personal NEET Cockpit</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Nav Bar -->
+    <div id="nav-placeholder"></div>
+    
+    <!-- Header Greeting & Motivational Copy -->
+    <div style="margin-bottom: 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1>NEET Practice Cockpit 🚀</h1>
+        <p class="text-muted" style="font-size: 1.1rem;">“One paper. One review. One mistake fixed at a time.”</p>
+      </div>
+      <div>
+        <a href="#" class="btn btn-primary" id="primary-cta-start">Start Latest Paper &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Learning Loop Visualizer -->
+    <div class="learning-loop">
+      <div class="loop-step">
+        🔁
+        <span>Attempt Paper</span>
+      </div>
+      <div class="loop-arrow">&rarr;</div>
+      <div class="loop-step">
+        💯
+        <span>Enter Score</span>
+      </div>
+      <div class="loop-arrow">&rarr;</div>
+      <div class="loop-step">
+        ⚠️
+        <span>Analyze Mistakes</span>
+      </div>
+      <div class="loop-arrow">&rarr;</div>
+      <div class="loop-step">
+        📅
+        <span>Retest Weakness</span>
+      </div>
+    </div>
+
+    <!-- Main Stats Row -->
+    <div class="stats-grid">
+      <div class="card stat-card">
+        <div class="stat-title">Papers Attempted</div>
+        <div class="stat-value" id="stat-attempted">--</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-title">Average Score</div>
+        <div class="stat-value" id="stat-avg-score">--</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-title">Best Score</div>
+        <div class="stat-value" id="stat-best-score">--</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-title">Active Mistakes</div>
+        <div class="stat-value" id="stat-mistakes">--</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-title">Weakest Subject</div>
+        <div class="stat-value" id="stat-weakest-subject" style="font-size: 1.5rem; padding-top: 0.5rem;">--</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-title">Next Retest Due</div>
+        <div class="stat-value" id="stat-retest-due" style="font-size: 1.25rem; padding-top: 0.75rem;">--</div>
+      </div>
+    </div>
+
+    <!-- Analytics & Secondary CTAs Grid -->
+    <div class="grid grid-cols-2" style="margin-bottom: 2.5rem;">
+      
+      <!-- Analytics panel -->
+      <div class="card">
+        <h2>📊 Weak Chapter Analytics</h2>
+        <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 0.95rem;">Calculated directly from your active mistakes notebook.</p>
+        
+        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="card" style="flex: 1; text-align: center; padding: 1rem; background-color: var(--primary-light);">
+            <strong style="font-size: 1.5rem; color: var(--primary);" id="analytics-high-priority">0</strong>
+            <div style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">High Priority</div>
+          </div>
+          <div class="card" style="flex: 1; text-align: center; padding: 1rem; background-color: var(--success-light);">
+            <strong style="font-size: 1.5rem; color: var(--success);" id="analytics-retests-week">0</strong>
+            <div style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Due This Week</div>
+          </div>
+          <div class="card" style="flex: 1; text-align: center; padding: 1rem; background-color: var(--accent-light);">
+            <strong style="font-size: 1.1rem; color: var(--accent); white-space: nowrap;" id="analytics-weakest-subject">N/A</strong>
+            <div style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Weakest Subj</div>
+          </div>
+        </div>
+
+        <h3>Top Weak Chapters</h3>
+        <ul class="analytics-list" id="analytics-weak-chapters">
+          <!-- Injected via JS -->
+        </ul>
+      </div>
+
+      <!-- Quick Actions / CTAs Panel -->
+      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <h2>⚡ Navigation Shortcuts</h2>
+          <p class="text-muted" style="margin-bottom: 1.5rem;">Quick links to work through the practice loop efficiently.</p>
+          
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <a href="papers.html" class="btn btn-outline" style="justify-content: flex-start;">
+              📂 View All Practice Papers
+            </a>
+            <a href="mistakes.html" class="btn btn-outline" style="justify-content: flex-start;">
+              ⚠️ Review Mistakes Notebook
+            </a>
+            <a href="mistakes.html?retest=due-week" class="btn btn-outline" style="justify-content: flex-start;">
+              📅 Open Active Retest List
+            </a>
+            <a href="tracker.html" class="btn btn-outline" style="justify-content: flex-start;">
+              📈 View Score Progression
+            </a>
+          </div>
+        </div>
+        
+        <div style="margin-top: 2rem; padding: 1rem; border-radius: 12px; background-color: var(--success-light); border: 1px solid rgba(77, 147, 97, 0.2); text-align: center;">
+          <p style="color: var(--success); font-weight: 600; font-size: 0.95rem;">
+            “Every wrong answer is a future mark waiting to be recovered.”
+          </p>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Motivation Footer -->
+    <div class="motivation-footer">
+      “Attempt. Analyze. Retest.” — NEET Vault V0.2
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNav();
+      initDashboard();
+    });
+  </script>
+</body>
+</html>

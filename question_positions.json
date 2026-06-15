@@ -1,0 +1,1091 @@
+{
+  "1": {
+    "page": 2,
+    "page_idx": 1,
+    "x0": 31.559999465942383,
+    "y0": 50.9279670715332,
+    "x1": 289.6103210449219,
+    "y1": 152.16461181640625,
+    "text_start": "1. \nConsider a water tank shown in the figure. It "
+  },
+  "2": {
+    "page": 2,
+    "page_idx": 1,
+    "x0": 31.68000030517578,
+    "y0": 387.0533447265625,
+    "x1": 291.7618408203125,
+    "y1": 600.8619995117188,
+    "text_start": "2. \nA microscope has an objective of focal length "
+  },
+  "6": {
+    "page": 2,
+    "page_idx": 1,
+    "x0": 312.07000732421875,
+    "y0": 300.8933410644531,
+    "x1": 569.8703002929688,
+    "y1": 342.99462890625,
+    "text_start": "6. \nThe current passing through the battery in the"
+  },
+  "8": {
+    "page": 3,
+    "page_idx": 2,
+    "x0": 31.68000030517578,
+    "y0": 54.483367919921875,
+    "x1": 289.460205078125,
+    "y1": 82.90460205078125,
+    "text_start": "8. \nThe output (Y) of the given logic implementati"
+  },
+  "9": {
+    "page": 3,
+    "page_idx": 2,
+    "x0": 31.68000030517578,
+    "y0": 269.3333435058594,
+    "x1": 289.4714050292969,
+    "y1": 297.754638671875,
+    "text_start": "9. \nThe electric field in a plane electromagnetic "
+  },
+  "10": {
+    "page": 3,
+    "page_idx": 2,
+    "x0": 31.68000030517578,
+    "y0": 463.2733459472656,
+    "x1": 289.6100158691406,
+    "y1": 524.0946044921875,
+    "text_start": "10. \nA ball of mass 0.5 kg is dropped from a heigh"
+  },
+  "11": {
+    "page": 3,
+    "page_idx": 2,
+    "x0": 31.68000030517578,
+    "y0": 639.1033935546875,
+    "x1": 289.5260314941406,
+    "y1": 699.9246215820312,
+    "text_start": "11. \nAB is a part of an electrical circuit (see fi"
+  },
+  "12": {
+    "page": 3,
+    "page_idx": 2,
+    "x0": 312.07000732421875,
+    "y0": 54.483367919921875,
+    "x1": 569.8592529296875,
+    "y1": 113.40460205078125,
+    "text_start": "12. \nA 2 amp current is flowing through two differ"
+  },
+  "13": {
+    "page": 3,
+    "page_idx": 2,
+    "x0": 312.07000732421875,
+    "y0": 206.42337036132812,
+    "x1": 569.9627075195312,
+    "y1": 296.43463134765625,
+    "text_start": "13. \nIn a certain camera, a combination of four si"
+  },
+  "14": {
+    "page": 3,
+    "page_idx": 2,
+    "x0": 312.07000732421875,
+    "y0": 389.4533386230469,
+    "x1": 569.88134765625,
+    "y1": 479.4546203613281,
+    "text_start": "14. \nAn oxygen cylinder of volume 30 litre has 18."
+  },
+  "15": {
+    "page": 3,
+    "page_idx": 2,
+    "x0": 312.07000732421875,
+    "y0": 622.0633544921875,
+    "x1": 570.0000610351562,
+    "y1": 665.3646240234375,
+    "text_start": "15. \nIn some appropriate units, time (t) and posit"
+  },
+  "16": {
+    "page": 4,
+    "page_idx": 3,
+    "x0": 31.68000030517578,
+    "y0": 54.483367919921875,
+    "x1": 289.5816955566406,
+    "y1": 142.56463623046875,
+    "text_start": "16. \nTo an ac power supply of 220 V at 50 Hz, a re"
+  },
+  "17": {
+    "page": 4,
+    "page_idx": 3,
+    "x0": 31.68000030517578,
+    "y0": 233.42337036132812,
+    "x1": 289.5586853027344,
+    "y1": 306.3946533203125,
+    "text_start": "17. \nThe Sun rotates around its centre once in 27 "
+  },
+  "18": {
+    "page": 4,
+    "page_idx": 3,
+    "x0": 31.68000030517578,
+    "y0": 397.25335693359375,
+    "x1": 289.60809326171875,
+    "y1": 515.8146362304688,
+    "text_start": "18. \nA model for quantized motion of an electron i"
+  },
+  "19": {
+    "page": 4,
+    "page_idx": 3,
+    "x0": 31.68000030517578,
+    "y0": 670.0633544921875,
+    "x1": 289.6109619140625,
+    "y1": 803.8233642578125,
+    "text_start": "19. \nThree identical heat conducting rods are conn"
+  },
+  "20": {
+    "page": 4,
+    "page_idx": 3,
+    "x0": 312.07000732421875,
+    "y0": 202.34335327148438,
+    "x1": 570.0,
+    "y1": 229.76336669921875,
+    "text_start": "20. \nThe plates of a parallel plate capacitor are "
+  },
+  "21": {
+    "page": 4,
+    "page_idx": 3,
+    "x0": 312.07000732421875,
+    "y0": 414.2933349609375,
+    "x1": 597.4786987304688,
+    "y1": 547.974609375,
+    "text_start": "21. \nTwo cities X and Y are connected by a regular"
+  },
+  "22": {
+    "page": 4,
+    "page_idx": 3,
+    "x0": 312.07000732421875,
+    "y0": 638.86328125,
+    "x1": 569.8809204101562,
+    "y1": 711.8046264648438,
+    "text_start": "22. \nA uniform rod of mass 20 kg and length 5 m le"
+  },
+  "23": {
+    "page": 5,
+    "page_idx": 4,
+    "x0": 31.68000030517578,
+    "y0": 54.483367919921875,
+    "x1": 289.6100158691406,
+    "y1": 168.004638671875,
+    "text_start": "23. \nIn an oscillating spring mass system, a sprin"
+  },
+  "24": {
+    "page": 5,
+    "page_idx": 4,
+    "x0": 31.68000030517578,
+    "y0": 537.7933349609375,
+    "x1": 289.6100158691406,
+    "y1": 665.1246337890625,
+    "text_start": "24. \nA balloon is made of a material of surface te"
+  },
+  "25": {
+    "page": 5,
+    "page_idx": 4,
+    "x0": 312.07000732421875,
+    "y0": 54.483367919921875,
+    "x1": 597.4786987304688,
+    "y1": 335.79461669921875,
+    "text_start": "25. \nConsider the diameter of a spherical object b"
+  },
+  "29": {
+    "page": 6,
+    "page_idx": 5,
+    "x0": 31.68000030517578,
+    "y0": 54.483367919921875,
+    "x1": 289.6167297363281,
+    "y1": 157.20465087890625,
+    "text_start": "29. \nA container has two chambers of volumes V1 = "
+  },
+  "30": {
+    "page": 6,
+    "page_idx": 5,
+    "x0": 31.68000030517578,
+    "y0": 247.34335327148438,
+    "x1": 289.6100158691406,
+    "y1": 319.95465087890625,
+    "text_start": "30. \nA particle of mass m is moving around the ori"
+  },
+  "31": {
+    "page": 6,
+    "page_idx": 5,
+    "x0": 31.68000030517578,
+    "y0": 426.5333557128906,
+    "x1": 289.6100158691406,
+    "y1": 499.0146179199219,
+    "text_start": "31. \nThe radius of Martian orbit around the Sun is"
+  },
+  "32": {
+    "page": 6,
+    "page_idx": 5,
+    "x0": 31.68000030517578,
+    "y0": 589.2733154296875,
+    "x1": 289.6076354980469,
+    "y1": 646.7646484375,
+    "text_start": "32. \nA body weight 48 N on the surface of the eart"
+  },
+  "33": {
+    "page": 6,
+    "page_idx": 5,
+    "x0": 31.68000030517578,
+    "y0": 737.019287109375,
+    "x1": 289.6100158691406,
+    "y1": 809.504638671875,
+    "text_start": "33. \nA wire of resistance R is cut into 8 equal pi"
+  },
+  "34": {
+    "page": 6,
+    "page_idx": 5,
+    "x0": 312.07000732421875,
+    "y0": 139.46334838867188,
+    "x1": 570.0,
+    "y1": 181.80462646484375,
+    "text_start": "34. \nDe-Broglie wavelength of an electron orbiting"
+  },
+  "35": {
+    "page": 6,
+    "page_idx": 5,
+    "x0": 312.07000732421875,
+    "y0": 271.64862060546875,
+    "x1": 569.982421875,
+    "y1": 359.55462646484375,
+    "text_start": "35. \nAn electric dipole with dipole moment 5 \u00d7 10\u2013"
+  },
+  "36": {
+    "page": 6,
+    "page_idx": 5,
+    "x0": 312.07000732421875,
+    "y0": 449.8333435058594,
+    "x1": 570.0,
+    "y1": 507.29461669921875,
+    "text_start": "36. \nA constant voltage of 50 V is maintained \n be"
+  },
+  "37": {
+    "page": 6,
+    "page_idx": 5,
+    "x0": 312.07000732421875,
+    "y0": 701.0233154296875,
+    "x1": 569.9581909179688,
+    "y1": 713.24462890625,
+    "text_start": "37. \nA photon and an electron (mass m) have the sa"
+  },
+  "38": {
+    "page": 7,
+    "page_idx": 6,
+    "x0": 31.68000030517578,
+    "y0": 54.483367919921875,
+    "x1": 289.6100158691406,
+    "y1": 92.28460693359375,
+    "text_start": "38. \nWhich of the following options represent the "
+  },
+  "40": {
+    "page": 7,
+    "page_idx": 6,
+    "x0": 31.68000030517578,
+    "y0": 674.9832763671875,
+    "x1": 289.61236572265625,
+    "y1": 728.870361328125,
+    "text_start": "40. \nA full wave rectifier circuit with diodes (D1"
+  },
+  "42": {
+    "page": 7,
+    "page_idx": 6,
+    "x0": 312.07000732421875,
+    "y0": 277.2533264160156,
+    "x1": 572.760009765625,
+    "y1": 469.254638671875,
+    "text_start": "42. \nA physical quantity P is related to four obse"
+  },
+  "44": {
+    "page": 7,
+    "page_idx": 6,
+    "x0": 312.07000732421875,
+    "y0": 527.8333740234375,
+    "x1": 570.0,
+    "y1": 614.5333251953125,
+    "text_start": "44. \nTwo identical point masses P and Q, suspended"
+  },
+  "45": {
+    "page": 7,
+    "page_idx": 6,
+    "x0": 312.07000732421875,
+    "y0": 681.1033935546875,
+    "x1": 570.0,
+    "y1": 755.2406005859375,
+    "text_start": "45. \nA pipe open at both ends has a fundamental \nf"
+  },
+  "46": {
+    "page": 8,
+    "page_idx": 7,
+    "x0": 31.559999465942383,
+    "y0": 50.83484649658203,
+    "x1": 361.0730285644531,
+    "y1": 87.86492919921875,
+    "text_start": "46. \nThe ratio of the wavelengths of the light abs"
+  },
+  "47": {
+    "page": 8,
+    "page_idx": 7,
+    "x0": 31.665119171142578,
+    "y0": 253.54177856445312,
+    "x1": 289.57257080078125,
+    "y1": 414.25628662109375,
+    "text_start": "47. \nWhich of the following statements are true? \n"
+  },
+  "49": {
+    "page": 8,
+    "page_idx": 7,
+    "x0": 311.85308837890625,
+    "y0": 58.652610778808594,
+    "x1": 569.699951171875,
+    "y1": 88.7034912109375,
+    "text_start": "49. \nPredict the major product 'P' in the followin"
+  },
+  "50": {
+    "page": 8,
+    "page_idx": 7,
+    "x0": 311.8309326171875,
+    "y0": 347.01739501953125,
+    "x1": 569.8800048828125,
+    "y1": 377.1940612792969,
+    "text_start": "50. \nEnergy and radius of first Bohr orbit of He+ "
+  },
+  "51": {
+    "page": 8,
+    "page_idx": 7,
+    "x0": 312.00146484375,
+    "y0": 669.4525756835938,
+    "x1": 528.8380737304688,
+    "y1": 684.73193359375,
+    "text_start": "51. \nWhich of the following are paramagnetic?"
+  },
+  "52": {
+    "page": 9,
+    "page_idx": 8,
+    "x0": 31.627700805664062,
+    "y0": 52.661766052246094,
+    "x1": 289.61627197265625,
+    "y1": 795.2557983398438,
+    "text_start": "52. \nGiven below are two statements: \n \nStatement "
+  },
+  "57": {
+    "page": 9,
+    "page_idx": 8,
+    "x0": 312.0009765625,
+    "y0": 52.650169372558594,
+    "x1": 569.8843383789062,
+    "y1": 83.41864013671875,
+    "text_start": "57. \nThe correct order of the wavelength of light "
+  },
+  "58": {
+    "page": 9,
+    "page_idx": 8,
+    "x0": 311.99761962890625,
+    "y0": 208.07669067382812,
+    "x1": 569.849853515625,
+    "y1": 238.7237548828125,
+    "text_start": "58. \nWhich one of the following compounds can exis"
+  },
+  "59": {
+    "page": 9,
+    "page_idx": 8,
+    "x0": 311.9866027832031,
+    "y0": 330.0135192871094,
+    "x1": 569.8446044921875,
+    "y1": 361.4996032714844,
+    "text_start": "59. \nPhosphoric acid ionizes in three steps with t"
+  },
+  "60": {
+    "page": 9,
+    "page_idx": 8,
+    "x0": 311.9769287109375,
+    "y0": 629.1498413085938,
+    "x1": 569.845947265625,
+    "y1": 659.9183349609375,
+    "text_start": "60. \nWhich one of the following reactions does NOT"
+  },
+  "61": {
+    "page": 10,
+    "page_idx": 9,
+    "x0": 31.68000030517578,
+    "y0": 52.363075256347656,
+    "x1": 289.55999755859375,
+    "y1": 71.43631744384766,
+    "text_start": "61. \nIf the molar conductivity (\n)\nm\n\u039b\n of a 0.050"
+  },
+  "64": {
+    "page": 10,
+    "page_idx": 9,
+    "x0": 31.676162719726562,
+    "y0": 560.8578491210938,
+    "x1": 203.03904724121094,
+    "y1": 592.3328857421875,
+    "text_start": "64. \n Match the List-I with List-II."
+  },
+  "65": {
+    "page": 10,
+    "page_idx": 9,
+    "x0": 311.842041015625,
+    "y0": 53.361595153808594,
+    "x1": 569.9029541015625,
+    "y1": 113.2957992553711,
+    "text_start": "65. \nC(s) + 2H2(g) \u2192 CH4(g); \u2206H= \u201374.8 kJ mol\u20131 \nW"
+  },
+  "66": {
+    "page": 10,
+    "page_idx": 9,
+    "x0": 311.9522705078125,
+    "y0": 432.2745056152344,
+    "x1": 508.276611328125,
+    "y1": 474.13818359375,
+    "text_start": "66. \nMatch the List-I with List-II."
+  },
+  "68": {
+    "page": 11,
+    "page_idx": 10,
+    "x0": 31.667522430419922,
+    "y0": 52.661766052246094,
+    "x1": 289.56890869140625,
+    "y1": 275.3106994628906,
+    "text_start": "68. \nAmong the following, choose the ones with equ"
+  },
+  "72": {
+    "page": 11,
+    "page_idx": 10,
+    "x0": 311.9798583984375,
+    "y0": 52.670433044433594,
+    "x1": 483.3316345214844,
+    "y1": 67.94979095458984,
+    "text_start": "72. \nMatch the List-I with List-II."
+  },
+  "76": {
+    "page": 12,
+    "page_idx": 11,
+    "x0": 31.68000030517578,
+    "y0": 52.661766052246094,
+    "x1": 289.54571533203125,
+    "y1": 67.94112396240234,
+    "text_start": "76. \nAmong the given compounds I-III, the correct "
+  },
+  "77": {
+    "page": 12,
+    "page_idx": 11,
+    "x0": 31.680030822753906,
+    "y0": 267.8425598144531,
+    "x1": 289.5523681640625,
+    "y1": 283.1219177246094,
+    "text_start": "77. \nWhich one of the following compounds does not"
+  },
+  "78": {
+    "page": 12,
+    "page_idx": 11,
+    "x0": 31.685272216796875,
+    "y0": 448.43133544921875,
+    "x1": 269.39862060546875,
+    "y1": 463.710693359375,
+    "text_start": "78. \nThe major product of the following reaction i"
+  },
+  "79": {
+    "page": 12,
+    "page_idx": 11,
+    "x0": 31.630096435546875,
+    "y0": 706.425048828125,
+    "x1": 289.513427734375,
+    "y1": 721.7044067382812,
+    "text_start": "79. \nWhich of the following aqueous solution will"
+  },
+  "80": {
+    "page": 12,
+    "page_idx": 11,
+    "x0": 311.99810791015625,
+    "y0": 52.657493591308594,
+    "x1": 458.3995361328125,
+    "y1": 67.93685150146484,
+    "text_start": "80. \nMatch List-I with List-II."
+  },
+  "81": {
+    "page": 12,
+    "page_idx": 11,
+    "x0": 311.96685791015625,
+    "y0": 299.44219970703125,
+    "x1": 569.8931884765625,
+    "y1": 658.2020263671875,
+    "text_start": "81. \n5 moles of liquid X and 10 moles of liquid Y "
+  },
+  "83": {
+    "page": 12,
+    "page_idx": 11,
+    "x0": 312.0,
+    "y0": 659.9615478515625,
+    "x1": 569.8646850585938,
+    "y1": 705.98779296875,
+    "text_start": "83. \nIdentify the suitable reagent for the followi"
+  },
+  "84": {
+    "page": 13,
+    "page_idx": 12,
+    "x0": 31.68000030517578,
+    "y0": 52.661766052246094,
+    "x1": 288.85791015625,
+    "y1": 67.94112396240234,
+    "text_start": "84. \nGiven below are two statement: one is labelle"
+  },
+  "85": {
+    "page": 13,
+    "page_idx": 12,
+    "x0": 31.576385498046875,
+    "y0": 342.05078125,
+    "x1": 285.00048828125,
+    "y1": 357.33013916015625,
+    "text_start": "85. \nThe standard heat of formation, in kcal/mol o"
+  },
+  "86": {
+    "page": 13,
+    "page_idx": 12,
+    "x0": 31.680007934570312,
+    "y0": 529.0386962890625,
+    "x1": 289.5335998535156,
+    "y1": 544.3180541992188,
+    "text_start": "86. \nTotal number of possible isomers (both struct"
+  },
+  "87": {
+    "page": 13,
+    "page_idx": 12,
+    "x0": 31.68431854248047,
+    "y0": 673.638671875,
+    "x1": 289.56329345703125,
+    "y1": 688.9180297851562,
+    "text_start": "87. \nIdentify the correct orders against the prope"
+  },
+  "88": {
+    "page": 13,
+    "page_idx": 12,
+    "x0": 311.9788818359375,
+    "y0": 193.53323364257812,
+    "x1": 440.0097961425781,
+    "y1": 208.81259155273438,
+    "text_start": "88. \nHigher yield of NO in"
+  },
+  "89": {
+    "page": 13,
+    "page_idx": 12,
+    "x0": 311.98992919921875,
+    "y0": 480.57110595703125,
+    "x1": 569.8779296875,
+    "y1": 495.8504638671875,
+    "text_start": "89. \nIf the rate constant of a reaction is 0.03 s\u2013"
+  },
+  "90": {
+    "page": 13,
+    "page_idx": 12,
+    "x0": 311.9615478515625,
+    "y0": 661.7721557617188,
+    "x1": 569.83056640625,
+    "y1": 677.051513671875,
+    "text_start": "90. \nWhich one of the following reactions does NOT"
+  },
+  "91": {
+    "page": 14,
+    "page_idx": 13,
+    "x0": 31.559999465942383,
+    "y0": 50.9279670715332,
+    "x1": 289.4657897949219,
+    "y1": 215.6446533203125,
+    "text_start": "91. \nThe complex II of mitochondrial electron tran"
+  },
+  "94": {
+    "page": 14,
+    "page_idx": 13,
+    "x0": 31.68000030517578,
+    "y0": 513.7933349609375,
+    "x1": 289.44512939453125,
+    "y1": 588.20458984375,
+    "text_start": "94. \nWhat is the name of the blood vessel that car"
+  },
+  "95": {
+    "page": 14,
+    "page_idx": 13,
+    "x0": 31.68000030517578,
+    "y0": 646.183349609375,
+    "x1": 289.3829040527344,
+    "y1": 658.4046630859375,
+    "text_start": "95. \nWhich one of the following statements refers "
+  },
+  "96": {
+    "page": 14,
+    "page_idx": 13,
+    "x0": 312.07000732421875,
+    "y0": 58.443328857421875,
+    "x1": 489.82000732421875,
+    "y1": 70.66461181640625,
+    "text_start": "96. \nGiven below are two statements:"
+  },
+  "99": {
+    "page": 14,
+    "page_idx": 13,
+    "x0": 312.07000732421875,
+    "y0": 700.8163452148438,
+    "x1": 569.991455078125,
+    "y1": 740.24462890625,
+    "text_start": "99. \nWhich one of the following is an example of e"
+  },
+  "100": {
+    "page": 15,
+    "page_idx": 14,
+    "x0": 31.68000030517578,
+    "y0": 54.483367919921875,
+    "x1": 209.4499969482422,
+    "y1": 66.70465087890625,
+    "text_start": "100. Given below are two statements:"
+  },
+  "101": {
+    "page": 15,
+    "page_idx": 14,
+    "x0": 31.68000030517578,
+    "y0": 315.088623046875,
+    "x1": 183.2899932861328,
+    "y1": 338.79461669921875,
+    "text_start": "101. Match List-I with List-II."
+  },
+  "102": {
+    "page": 15,
+    "page_idx": 14,
+    "x0": 312.07000732421875,
+    "y0": 54.483367919921875,
+    "x1": 596.7586669921875,
+    "y1": 66.70465087890625,
+    "text_start": "102. Given below are two statement: One is labelle"
+  },
+  "104": {
+    "page": 15,
+    "page_idx": 14,
+    "x0": 312.07000732421875,
+    "y0": 407.9839782714844,
+    "x1": 489.82000732421875,
+    "y1": 430.3746337890625,
+    "text_start": "104. Given below are two statements:"
+  },
+  "105": {
+    "page": 15,
+    "page_idx": 14,
+    "x0": 312.07000732421875,
+    "y0": 695.1786499023438,
+    "x1": 570.0,
+    "y1": 718.8846435546875,
+    "text_start": "105. Streptokinase produced by bacterium Streptoco"
+  },
+  "106": {
+    "page": 16,
+    "page_idx": 15,
+    "x0": 31.68000030517578,
+    "y0": 54.483367919921875,
+    "x1": 289.47125244140625,
+    "y1": 66.70465087890625,
+    "text_start": "106. Which chromosome in the human genome has the"
+  },
+  "108": {
+    "page": 16,
+    "page_idx": 15,
+    "x0": 31.68000030517578,
+    "y0": 265.6133728027344,
+    "x1": 289.4601745605469,
+    "y1": 294.3946533203125,
+    "text_start": "108. Which one of the following phytohormones"
+  },
+  "109": {
+    "page": 16,
+    "page_idx": 15,
+    "x0": 31.68000030517578,
+    "y0": 410.5933532714844,
+    "x1": 289.6123962402344,
+    "y1": 422.81463623046875,
+    "text_start": "109. While trying to find out the characteristic o"
+  },
+  "110": {
+    "page": 16,
+    "page_idx": 15,
+    "x0": 31.68000030517578,
+    "y0": 598.3033447265625,
+    "x1": 183.2899932861328,
+    "y1": 627.0845947265625,
+    "text_start": "110. Match List-I with List-II."
+  },
+  "111": {
+    "page": 16,
+    "page_idx": 15,
+    "x0": 312.07000732421875,
+    "y0": 170.2186279296875,
+    "x1": 569.7932739257812,
+    "y1": 193.80462646484375,
+    "text_start": "111. Given below are the stages in the life cycle "
+  },
+  "112": {
+    "page": 16,
+    "page_idx": 15,
+    "x0": 312.07000732421875,
+    "y0": 438.2439880371094,
+    "x1": 569.8004760742188,
+    "y1": 493.6146240234375,
+    "text_start": "112. Cardiac activities of the heart are regulated"
+  },
+  "113": {
+    "page": 16,
+    "page_idx": 15,
+    "x0": 312.07000732421875,
+    "y0": 642.6493530273438,
+    "x1": 569.896728515625,
+    "y1": 744.4406127929688,
+    "text_start": "113. Which of following organisms cannot fix nitro"
+  },
+  "114": {
+    "page": 17,
+    "page_idx": 16,
+    "x0": 31.68000030517578,
+    "y0": 54.483367919921875,
+    "x1": 209.4499969482422,
+    "y1": 66.70465087890625,
+    "text_start": "114. Given below are two statements:"
+  },
+  "116": {
+    "page": 17,
+    "page_idx": 16,
+    "x0": 31.68000030517578,
+    "y0": 585.9786376953125,
+    "x1": 289.41595458984375,
+    "y1": 609.6846313476562,
+    "text_start": "116. Which of the following genetically engineered"
+  },
+  "117": {
+    "page": 17,
+    "page_idx": 16,
+    "x0": 31.68000030517578,
+    "y0": 672.7539672851562,
+    "x1": 289.405029296875,
+    "y1": 694.7646484375,
+    "text_start": "117. Name the class of enzyme that usually catalyz"
+  },
+  "118": {
+    "page": 17,
+    "page_idx": 16,
+    "x0": 312.07000732421875,
+    "y0": 54.483367919921875,
+    "x1": 569.9217529296875,
+    "y1": 66.70465087890625,
+    "text_start": "118. Find the statement that is NOT correct with r"
+  },
+  "122": {
+    "page": 18,
+    "page_idx": 17,
+    "x0": 31.68000030517578,
+    "y0": 54.483367919921875,
+    "x1": 178.12998962402344,
+    "y1": 66.70465087890625,
+    "text_start": "122. Match List-I with List-II."
+  },
+  "126": {
+    "page": 18,
+    "page_idx": 17,
+    "x0": 312.07000732421875,
+    "y0": 354.7733459472656,
+    "x1": 569.8524169921875,
+    "y1": 383.55462646484375,
+    "text_start": "126. Identify the part of a bio-reactor which is u"
+  },
+  "127": {
+    "page": 18,
+    "page_idx": 17,
+    "x0": 312.07000732421875,
+    "y0": 582.1033935546875,
+    "x1": 569.7713012695312,
+    "y1": 594.3246459960938,
+    "text_start": "127. Given below are two statements: One is labell"
+  },
+  "128": {
+    "page": 19,
+    "page_idx": 18,
+    "x0": 31.68000030517578,
+    "y0": 54.483367919921875,
+    "x1": 289.47113037109375,
+    "y1": 143.52459716796875,
+    "text_start": "128. A \nspecialized \nmembranous \nstructure \nin \na "
+  },
+  "129": {
+    "page": 19,
+    "page_idx": 18,
+    "x0": 31.68000030517578,
+    "y0": 148.46334838867188,
+    "x1": 289.5782775878906,
+    "y1": 160.68463134765625,
+    "text_start": "129. Which of the following are the post-transcrip"
+  },
+  "130": {
+    "page": 19,
+    "page_idx": 18,
+    "x0": 31.68000030517578,
+    "y0": 380.5733337402344,
+    "x1": 289.37176513671875,
+    "y1": 392.79461669921875,
+    "text_start": "130. What is the pattern of inheritance for polyge"
+  },
+  "131": {
+    "page": 19,
+    "page_idx": 18,
+    "x0": 31.68000030517578,
+    "y0": 499.5133361816406,
+    "x1": 289.58984375,
+    "y1": 511.734619140625,
+    "text_start": "131. Which one of the following enzymes contains"
+  },
+  "132": {
+    "page": 19,
+    "page_idx": 18,
+    "x0": 31.68000030517578,
+    "y0": 613.42333984375,
+    "x1": 289.3938903808594,
+    "y1": 625.6446533203125,
+    "text_start": "132. Each of the following characteristics represe"
+  },
+  "134": {
+    "page": 19,
+    "page_idx": 18,
+    "x0": 312.07000732421875,
+    "y0": 251.09335327148438,
+    "x1": 458.5,
+    "y1": 279.8746337890625,
+    "text_start": "134. Match List-I with List-II."
+  },
+  "135": {
+    "page": 19,
+    "page_idx": 18,
+    "x0": 312.07000732421875,
+    "y0": 593.1763305664062,
+    "x1": 532.6600341796875,
+    "y1": 634.524658203125,
+    "text_start": "135. Neoplastic characteristics of cells refers to"
+  },
+  "136": {
+    "page": 20,
+    "page_idx": 19,
+    "x0": 31.559999465942383,
+    "y0": 50.8079719543457,
+    "x1": 291.0500183105469,
+    "y1": 223.44464111328125,
+    "text_start": "136. Given below are two statements: \n \nStatement "
+  },
+  "140": {
+    "page": 20,
+    "page_idx": 19,
+    "x0": 312.04998779296875,
+    "y0": 58.203338623046875,
+    "x1": 569.930908203125,
+    "y1": 70.42462158203125,
+    "text_start": "140. Given below are two statements : one is label"
+  },
+  "143": {
+    "page": 21,
+    "page_idx": 20,
+    "x0": 31.68000030517578,
+    "y0": 54.123321533203125,
+    "x1": 289.4673767089844,
+    "y1": 82.30462646484375,
+    "text_start": "143. Identify the statement that is NOT correct.  "
+  },
+  "149": {
+    "page": 21,
+    "page_idx": 20,
+    "x0": 312.04998779296875,
+    "y0": 54.123321533203125,
+    "x1": 535.4199829101562,
+    "y1": 66.3446044921875,
+    "text_start": "149. The protein portion of an enzyme is called:"
+  },
+  "150": {
+    "page": 21,
+    "page_idx": 20,
+    "x0": 312.04998779296875,
+    "y0": 162.62332153320312,
+    "x1": 569.826171875,
+    "y1": 174.8446044921875,
+    "text_start": "150. Which of the following is the unit of product"
+  },
+  "151": {
+    "page": 21,
+    "page_idx": 20,
+    "x0": 312.04998779296875,
+    "y0": 287.0933532714844,
+    "x1": 569.7156372070312,
+    "y1": 299.31463623046875,
+    "text_start": "151. Sweet potato and potato represent a certain t"
+  },
+  "152": {
+    "page": 21,
+    "page_idx": 20,
+    "x0": 312.04998779296875,
+    "y0": 427.73333740234375,
+    "x1": 569.8275146484375,
+    "y1": 439.9546203613281,
+    "text_start": "152. With the help of given pedigree, find out the"
+  },
+  "153": {
+    "page": 22,
+    "page_idx": 21,
+    "x0": 31.68000030517578,
+    "y0": 54.123321533203125,
+    "x1": 289.56103515625,
+    "y1": 66.3446044921875,
+    "text_start": "153. Given below are two statements : one is label"
+  },
+  "154": {
+    "page": 22,
+    "page_idx": 21,
+    "x0": 31.68000030517578,
+    "y0": 317.6933288574219,
+    "x1": 289.4252014160156,
+    "y1": 346.234619140625,
+    "text_start": "154. How many meiotic and mitotic divisions need t"
+  },
+  "156": {
+    "page": 22,
+    "page_idx": 21,
+    "x0": 31.68000030517578,
+    "y0": 574.5133056640625,
+    "x1": 289.3700256347656,
+    "y1": 602.9346313476562,
+    "text_start": "156. After maturation, in primary lymphoid organs,"
+  },
+  "157": {
+    "page": 22,
+    "page_idx": 21,
+    "x0": 312.04998779296875,
+    "y0": 54.243316650390625,
+    "x1": 571.4400024414062,
+    "y1": 206.6446533203125,
+    "text_start": "157. Given below are two statements: \n \nStatement "
+  },
+  "162": {
+    "page": 23,
+    "page_idx": 22,
+    "x0": 31.68000030517578,
+    "y0": 54.123321533203125,
+    "x1": 178.09999084472656,
+    "y1": 66.3446044921875,
+    "text_start": "162. Match List-I with List-II."
+  },
+  "163": {
+    "page": 23,
+    "page_idx": 22,
+    "x0": 31.68000030517578,
+    "y0": 292.3733215332031,
+    "x1": 289.46929931640625,
+    "y1": 304.5946044921875,
+    "text_start": "163. Who proposed that the genetic code for amino "
+  },
+  "164": {
+    "page": 23,
+    "page_idx": 22,
+    "x0": 31.68000030517578,
+    "y0": 410.5733337402344,
+    "x1": 178.09999084472656,
+    "y1": 422.79461669921875,
+    "text_start": "164. Match List-I with List-II."
+  },
+  "165": {
+    "page": 23,
+    "page_idx": 22,
+    "x0": 31.68000030517578,
+    "y0": 694.3033447265625,
+    "x1": 289.4252014160156,
+    "y1": 706.524658203125,
+    "text_start": "165. Which of the following hormones released from"
+  },
+  "166": {
+    "page": 23,
+    "page_idx": 22,
+    "x0": 312.04998779296875,
+    "y0": 54.243316650390625,
+    "x1": 569.7599487304688,
+    "y1": 66.464599609375,
+    "text_start": "166. Role of the water vascular system in Echinode"
+  },
+  "171": {
+    "page": 24,
+    "page_idx": 23,
+    "x0": 31.68000030517578,
+    "y0": 54.123321533203125,
+    "x1": 289.42523193359375,
+    "y1": 66.3446044921875,
+    "text_start": "171. Which of the following statements about RuBis"
+  },
+  "172": {
+    "page": 24,
+    "page_idx": 23,
+    "x0": 31.68000030517578,
+    "y0": 202.70333862304688,
+    "x1": 289.6100158691406,
+    "y1": 214.92462158203125,
+    "text_start": "172. Which of the following enzyme(s) are NOT"
+  },
+  "173": {
+    "page": 24,
+    "page_idx": 23,
+    "x0": 31.68000030517578,
+    "y0": 439.2733459472656,
+    "x1": 289.4031066894531,
+    "y1": 451.49462890625,
+    "text_start": "173. Read the following statements on plant growth"
+  },
+  "174": {
+    "page": 24,
+    "page_idx": 23,
+    "x0": 31.68000030517578,
+    "y0": 706.183349609375,
+    "x1": 289.3810119628906,
+    "y1": 718.4046020507812,
+    "text_start": "174. Which factor is important for termination of"
+  },
+  "175": {
+    "page": 24,
+    "page_idx": 23,
+    "x0": 312.04998779296875,
+    "y0": 54.123321533203125,
+    "x1": 569.9380493164062,
+    "y1": 66.3446044921875,
+    "text_start": "175. Frogs respire in water by skin and buccal cav"
+  },
+  "176": {
+    "page": 24,
+    "page_idx": 23,
+    "x0": 312.04998779296875,
+    "y0": 197.30331420898438,
+    "x1": 569.7160034179688,
+    "y1": 225.8446044921875,
+    "text_start": "176. Twins are born to  a family that lives next d"
+  },
+  "178": {
+    "page": 24,
+    "page_idx": 23,
+    "x0": 312.04998779296875,
+    "y0": 534.7933349609375,
+    "x1": 458.5,
+    "y1": 563.3345947265625,
+    "text_start": "178. Match List-I with List-II."
+  },
+  "179": {
+    "page": 25,
+    "page_idx": 24,
+    "x0": 31.68000030517578,
+    "y0": 53.883331298828125,
+    "x1": 289.4941101074219,
+    "y1": 66.1046142578125,
+    "text_start": "179. The blue and white selectable markers have be"
+  },
+  "180": {
+    "page": 25,
+    "page_idx": 24,
+    "x0": 312.04998779296875,
+    "y0": 54.243316650390625,
+    "x1": 569.84814453125,
+    "y1": 66.464599609375,
+    "text_start": "180. Which one of the following equations represen"
+  }
+}

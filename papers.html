@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEET Vault | Previous Papers</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="nav-placeholder"></div>
+    
+    <div style="margin-bottom: 2rem;">
+      <h1>Previous Year Papers</h1>
+      <p class="text-muted">Select a paper to practice, view PDFs, and log your progress.</p>
+    </div>
+
+    <div class="grid grid-cols-3" id="papers-container">
+      <!-- Papers will be injected here via app.js -->
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNav();
+      initPapers();
+    });
+  </script>
+</body>
+</html>
