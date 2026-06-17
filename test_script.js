@@ -1,193 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Review - NEET Vault AI</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .review-card {
-            background: var(--surface);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .options-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .option-box {
-            background: var(--background);
-            padding: 0.75rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-        .meta-info {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .summary-dashboard {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        .summary-card {
-            background: var(--surface);
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            text-align: center;
-        }
-        .summary-card h3 {
-            margin: 0;
-            font-size: 2rem;
-            color: var(--primary-color);
-        }
-        .summary-card p {
-            margin: 0.5rem 0 0 0;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-        
-        .tabs {
-            display: flex;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 2rem;
-            overflow-x: auto;
-        }
-        .tab-btn {
-            background: none;
-            border: none;
-            padding: 1rem 1.5rem;
-            cursor: pointer;
-            color: var(--text-color);
-            border-bottom: 3px solid transparent;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-        .tab-btn:hover {
-            background: var(--surface-hover);
-        }
-        .tab-btn.active {
-            border-bottom-color: var(--primary-color);
-            color: var(--primary-color);
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .tag {
-            display: inline-block;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            background: var(--surface-hover);
-            color: var(--text-color);
-        }
-        .tag.error { background: #fca5a5; color: #991b1b; }
-        .tag.success { background: #bbf7d0; color: #166534; }
-        .tag.warning { background: #fef08a; color: #854d0e; }
-        
-        select[multiple] {
-            height: 100px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo">📚 NEET Vault Admin</a>
-        <nav>
-            <a href="index.html">Dashboard</a>
-            <a href="admin_review.html" class="active">Review Mappings</a>
-        </nav>
-    </header>
-    
-    <main class="container">
-        <h1>Admin Review Dashboard</h1>
-        <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
-            <label style="font-weight: bold;">Select Paper:</label>
-            <select id="global-paper-select" onchange="onPaperChange()" style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border-color); width: 300px;">
-                <option value="">Loading papers...</option>
-            </select>
-        </div>
 
-        
-        <div class="summary-dashboard" id="summary-dashboard">
-            <!-- Populated via JS -->
-            <p>Loading summary...</p>
-        </div>
-
-        <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
-            <input type="text" id="q-search" placeholder="Jump to Question # (e.g. 15)" style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border-color); width: 250px;" onkeyup="filterQuestions()">
-        </div>
-
-        <div class="tabs" id="tabs">
-            <button class="tab-btn active" id="tab-simple_view" onclick="switchTab('simple_view')">Simple View</button>
-            <button class="tab-btn" id="tab-mandatory_review" onclick="switchTab('mandatory_review')">Mandatory Review</button>
-            <button class="tab-btn" id="tab-unmapped" onclick="switchTab('unmapped')">Unmapped</button>
-            <button class="tab-btn" id="tab-review_recommended" onclick="switchTab('review_recommended')">Review Recommended</button>
-            <button class="tab-btn" id="tab-failed_extractions" onclick="switchTab('failed_extractions')">Failed Extractions</button>
-            <button class="tab-btn" id="tab-shiloh_corrections" onclick="switchTab('shiloh_corrections')">Shiloh Corrections</button>
-            <button class="tab-btn" id="tab-auto_approved" onclick="switchTab('auto_approved')">Auto-Approved</button>
-            <button class="tab-btn" id="tab-solutions_scoring" onclick="switchTab('solutions_scoring')">Solutions & Scoring</button>
-        </div>
-        
-        <div id="tab-contents">
-            <div id="content-simple_view" class="tab-content active">Loading simple view...</div>
-            <!-- Populated via JS -->
-        </div>
-
-        <div id="content-solutions_scoring" class="tab-content">
-            <div class="review-card" id="papers-list-container">
-                <h3>Paper Solutions & Scoring Configuration</h3>
-                <p>Loading papers...</p>
-            </div>
-        </div>
-
-    </main>
-
-    <script>
         const API_BASE = 'http://localhost:8000';
         let chapters = [];
         let currentPaperId = null;
         let chapterOptionsHTML = '';
-
-        async function loadPapersForDropdown() {
-            const res = await fetch(`${API_BASE}/api/papers`, { headers: getHeaders() });
-            const papers = await res.json();
-            const select = document.getElementById('global-paper-select');
-            select.innerHTML = '';
-            if (papers.length === 0) {
-                select.innerHTML = '<option value="">No papers available</option>';
-                return;
-            }
-            papers.forEach(p => {
-                const opt = document.createElement('option');
-                opt.value = p.id;
-                opt.textContent = `${p.exam_type} ${p.year} (Code: ${p.paper_code})`;
-                select.appendChild(opt);
-            });
-            currentPaperId = papers[0].id;
-            await refreshUI();
-        }
-
-        async function onPaperChange() {
-            currentPaperId = document.getElementById('global-paper-select').value;
-            await refreshUI();
-        }
 
         async function init() {
             try {
@@ -203,7 +18,7 @@
                 await loadPapers();
             } catch (e) {
                 console.error(e);
-                document.getElementById('summary-dashboard').innerHTML = `<p class="error">Error connecting to backend API. Details: ${e.message}</p>`;
+                document.getElementById('summary-dashboard').innerHTML = `<p class="error">Error connecting to backend API.</p>`;
             }
         }
 
@@ -684,6 +499,4 @@
         }
 
         window.onload = init;
-    </script>
-</body>
-</html>
+    

@@ -670,7 +670,7 @@ async function initTracker() {
 
   const maxScore = 720;
   container.innerHTML = `
-    <h2 style="margin-bottom: 1.5rem;">Mock Trend</h2>
+    <h2 style="margin-bottom: 1.5rem;">Practice Trend</h2>
     ${scores.map(s => {
       const heightPercentage = (s.score / maxScore) * 100;
       let barColor = 'var(--secondary)'; // poor

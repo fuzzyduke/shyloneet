@@ -2,8 +2,9 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-# Use a local SQLite database for MVP
-DATABASE_URL = "sqlite:///./neetvault.db"
+# Use an absolute path to avoid cwd issues
+DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "neetvault.db")
+DATABASE_URL = f"sqlite:///{DB_PATH}"
 
 engine = create_engine(
     DATABASE_URL, connect_args={"check_same_thread": False}

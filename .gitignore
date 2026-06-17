@@ -3,3 +3,6 @@ backend/venv/
 *.db
 backend/backups/
 __pycache__/
+purge_cf.js
+add_dns.js
+backend/venv_fresh/

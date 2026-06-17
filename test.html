@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEET Vault | NEET UG 2025 Code 45 Mock Test</title>
+  <title>NEET Vault | NEET UG 2025 Code 45 Practice Test</title>
   <link rel="stylesheet" href="css/styles.css">
   <style>
     /* Additional custom styles for premium test interface */
@@ -356,7 +356,7 @@
     <!-- Test Dashboard Area -->
     <div id="test-app">
       <div style="text-align: center; padding: 3rem;">
-        <h2>Loading NEET UG 2025 mock test paper...</h2>
+        <h2>Loading NEET UG 2025 Practice Test paper...</h2>
       </div>
     </div>
   </div>
@@ -439,8 +439,38 @@
       </form>
     </div>
   </div>
+  
+  <div id="correction-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;">
+      <div style="background: white; padding: 2rem; border-radius: 12px; max-width: 500px; width: 90%;">
+          <h3>Suggest Correction</h3>
+          
+          <div id="paper-key-warning" style="display: none; background: #fffbeb; color: #b45309; border: 1px solid #fcd34d; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <strong>Warning:</strong> The current answer key came from the uploaded paper itself. Are you sure you want to override the paper answer key?
+          </div>
+          
+          <div style="margin-top: 1rem;">
+              <label>Correct Option:</label>
+              <select id="correction-option" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                  <option value="">Select Option</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+              </select>
+          </div>
+          <div style="margin-top: 1rem;">
+              <label>Reasoning/Note:</label>
+              <textarea id="correction-note" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem; min-height: 80px;"></textarea>
+          </div>
+          
+          <div style="margin-top: 2rem; display: flex; justify-content: flex-end; gap: 1rem;">
+              <button class="btn btn-secondary" onclick="closeCorrectionModal()">Cancel</button>
+              <button class="btn btn-primary" id="submit-correction-btn" onclick="submitCorrection()">Continue and Submit Correction</button>
+          </div>
+      </div>
+  </div>
 
-  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
   <script>
     // State management for the test-taking engine
     let questions = [];
@@ -448,7 +478,8 @@
       answers: {},
       markedForReview: [],
       timeRemaining: 12000, // 3h 20m in seconds
-      submitted: false
+      submitted: false,
+      scoringMode: 'scored'
     };
     
     let currentQIdx = 0;
@@ -470,8 +501,46 @@
 
     async function loadTestPaper() {
       try {
-        const res = await fetch('papers/neet-2025-045/neet-2025-045.json');
-        questions = await res.json();
+        const API_BASE = 'http://localhost:8000';
+        const headers = { 'Content-Type': 'application/json' };
+        if (localStorage.getItem('auth_token')) {
+          headers['Authorization'] = `Bearer ${localStorage.getItem('auth_token')}`;
+        }
+        
+        // Fetch the first paper from DB for MVP
+        const papersRes = await fetch(`${API_BASE}/api/papers`, { headers });
+        const papers = await papersRes.json();
+        const firstPaperId = papers.length > 0 ? papers[0].id : null;
+
+        const reqBody = {
+            subject: "Physics",
+            chapter_ids: [],
+            paper_id: firstPaperId,
+            question_count: 180,
+            role: localStorage.getItem('auth_role') || 'student'
+        };
+
+        const res = await fetch(`${API_BASE}/api/generate_test`, {
+            method: 'POST',
+            headers,
+            body: JSON.stringify(reqBody)
+        });
+        const testData = await res.json();
+        
+        // Map backend format to frontend format
+        questions = testData.questions.map((q, idx) => ({
+            id: q.id,
+            questionNumber: idx + 1,
+            questionText: q.text,
+            questionImage: q.images.length > 0 ? q.images[0] : null,
+            options: q.options,
+            correctOptions: q.answer ? [q.answer] : [],
+            solution: q.solution,
+            answer_status: q.answer_status
+        }));
+        
+        testState.scoringMode = testData.scoring_mode;
+        testState.paperTitle = testData.paper_title || "Practice Paper";
         
         // Recover state
         const stored = localStorage.getItem(STATE_STORAGE_KEY);
@@ -483,7 +552,9 @@
             answers: {},
             markedForReview: [],
             timeRemaining: 12000,
-            submitted: false
+            submitted: false,
+            scoringMode: testData.scoring_mode,
+            paperTitle: testData.paper_title || "Practice Paper"
           };
           saveLocalState();
         }
@@ -501,7 +572,7 @@
           startTestTimer();
         }
       } catch (err) {
-        console.error("Failed to load mock paper", err);
+        console.error("Failed to load practice paper", err);
         document.getElementById('test-app').innerHTML = `
           <div class="card" style="text-align: center; padding: 2rem;">
             <h2>⚠️ Error Loading Paper</h2>
@@ -556,18 +627,32 @@
     // 1. Render Test Mode
     function renderTestMode() {
       const app = document.getElementById('test-app');
+      
+      let unscoredWarning = '';
+      let submitButtonText = 'Submit Exam &rarr;';
+      if (testState.scoringMode === 'unscored') {
+          unscoredWarning = `
+            <div style="background-color: #fef2f2; border: 1px solid #f87171; color: #991b1b; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                <strong style="display: flex; align-items: center; gap: 0.5rem;">⚠️ No Solutions: Unscored Practice Only</strong>
+                <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">This paper does not have verified answers yet. You can still practice, but scoring and result analysis are disabled.</p>
+            </div>
+          `;
+          submitButtonText = 'Finish Practice &rarr;';
+      }
+      
       app.innerHTML = `
+        ${unscoredWarning}
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
           <div>
-            <h1>NEET UG 2025 Code 45 Mock</h1>
-            <p class="text-muted">Single full-length exam loop (180 questions)</p>
+            <h1>${testState.paperTitle}</h1>
+            <p class="text-muted">Total Questions: ${questions.length}</p>
           </div>
           <div style="display: flex; align-items: center; gap: 1.5rem;">
             <div class="card" style="padding: 0.5rem 1.5rem; text-align: center; border-radius: 12px; margin-bottom: 0;">
               <div style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted);">Time Remaining</div>
               <div id="test-timer" style="font-size: 1.75rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--primary);">03:20:00</div>
             </div>
-            <button class="btn btn-primary" onclick="confirmSubmitTest()">Submit Exam &rarr;</button>
+            <button class="btn btn-primary" onclick="confirmSubmitTest()">${submitButtonText}</button>
           </div>
         </div>
 
@@ -585,11 +670,11 @@
               <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
                 <div>Answered: <strong id="pal-answered-count" style="color: var(--success);">0</strong></div>
                 <div>Marked: <strong id="pal-marked-count" style="color: #8b5cf6;">0</strong></div>
-                <div>Remaining: <strong id="pal-unattempted-count">180</strong></div>
+                <div>Remaining: <strong id="pal-unattempted-count">${questions.length}</strong></div>
               </div>
 
               <div class="palette-grid" id="palette-buttons-grid">
-                <!-- 180 Buttons injected here -->
+                <!-- Buttons injected here -->
               </div>
             </div>
 
@@ -629,21 +714,30 @@
           <div>
             <div class="question-meta">
               <span class="subject-badge">${subject}</span>
-              <span style="font-weight: 700;">Question ${qNum} of 180</span>
+              <span style="font-weight: 700;">Question ${qNum} of ${questions.length}</span>
             </div>
             
+            ${q.questionText ? `<p style="font-size: 1.1rem; margin-bottom: 1rem;">${q.questionText.replace(/\\n/g, '<br>')}</p>` : ''}
+            
+            ${q.questionImage ? `
             <div class="question-image-container">
               <img src="${q.questionImage}" alt="Question ${qNum}">
             </div>
+            ` : ''}
 
             <h3 style="margin-bottom: 1rem;">Select Answer:</h3>
             <div class="options-grid">
-              ${[1, 2, 3, 4].map(opt => `
-                <button class="option-btn ${selectedOpt === String(opt) ? 'selected' : ''}" onclick="selectOption('${qNum}', '${opt}')">
-                  <div class="option-number">${opt}</div>
-                  Option ${opt}
+              ${['A', 'B', 'C', 'D'].map((optKey, idx) => {
+                const optNum = idx + 1;
+                const optText = q.options[optKey];
+                if (!optText) return '';
+                return `
+                <button class="option-btn ${selectedOpt === String(optNum) ? 'selected' : ''}" onclick="selectOption('${qNum}', '${optNum}')">
+                  <div class="option-number">${optNum}</div>
+                  ${optText}
                 </button>
-              `).join('')}
+                `;
+              }).join('')}
             </div>
           </div>
 
@@ -665,7 +759,7 @@
       let answeredCount = 0;
       let markedCount = 0;
 
-      grid.innerHTML = Array.from({length: 180}, (_, i) => {
+      grid.innerHTML = Array.from({length: questions.length}, (_, i) => {
         const qNum = i + 1;
         const isAnswered = testState.answers[qNum] !== undefined && testState.answers[qNum] !== null;
         const isMarked = testState.markedForReview.includes(qNum);
@@ -687,7 +781,7 @@
 
       document.getElementById('pal-answered-count').innerText = answeredCount;
       document.getElementById('pal-marked-count').innerText = markedCount;
-      document.getElementById('pal-unattempted-count').innerText = 180 - answeredCount;
+      document.getElementById('pal-unattempted-count').innerText = questions.length - answeredCount;
     }
 
     // Interaction controls
@@ -740,8 +834,11 @@
     // Submitting operations
     window.confirmSubmitTest = function() {
       const totalAnswered = Object.keys(testState.answers).length;
-      const confirmMsg = `You have answered ${totalAnswered} out of 180 questions. Once submitted, you will see your score and correct answers immediately.`;
-      showCustomConfirm("Submit Exam?", confirmMsg, () => {
+      const confirmMsg = testState.scoringMode === 'unscored' 
+          ? `You have answered ${totalAnswered} out of ${questions.length} questions. This is an unscored practice test.` 
+          : `You have answered ${totalAnswered} out of ${questions.length} questions. Once submitted, you will see your score and correct answers immediately.`;
+      
+      showCustomConfirm(testState.scoringMode === 'unscored' ? "Finish Practice?" : "Submit Exam?", confirmMsg, () => {
         submitTest();
       });
     };
@@ -773,7 +870,7 @@
 
         if (!userAns) {
           unattemptedCount++;
-        } else if (correctOptions.includes(userAns)) {
+        } else if (correctOptions.includes(userAns) && testState.scoringMode !== 'unscored') {
           correctCount++;
           totalScore += 4;
           if (qNum <= 45) physScore += 4;
@@ -781,10 +878,12 @@
           else bioScore += 4;
         } else {
           wrongCount++;
-          totalScore -= 1;
-          if (qNum <= 45) physScore -= 1;
-          else if (qNum <= 90) chemScore -= 1;
-          else bioScore -= 1;
+          if (testState.scoringMode !== 'unscored') {
+              totalScore -= 1;
+              if (qNum <= 45) physScore -= 1;
+              else if (qNum <= 90) chemScore -= 1;
+              else bioScore -= 1;
+          }
         }
       });
 
@@ -794,26 +893,28 @@
       const mins = Math.floor((secondsElapsed % 3600) / 60);
       const timeTakenStr = `${hrs}h ${mins}m`;
 
-      // Save to main cockpit state (localStorage key 'neetVaultState')
-      const mainStateStored = localStorage.getItem('neetVaultState');
-      const mainState = mainStateStored ? JSON.parse(mainStateStored) : { papersProgress: {}, mistakes: [] };
-      
-      mainState.papersProgress['neet-2025-045'] = {
-        status: 'reviewed',
-        physicsScore: physScore,
-        chemistryScore: chemScore,
-        botanyScore: Math.round(bioScore / 2),
-        zoologyScore: Math.round(bioScore / 2),
-        biologyScore: bioScore,
-        totalScore: totalScore,
-        timeTaken: timeTakenStr,
-        weakChapters: [],
-        retestDate: '',
-        notes: 'Attempted via MVP mock test interface.',
-        duration: secondsElapsed
-      };
-      
-      localStorage.setItem('neetVaultState', JSON.stringify(mainState));
+      if (testState.scoringMode !== 'unscored') {
+          // Save to main cockpit state (localStorage key 'neetVaultState')
+          const mainStateStored = localStorage.getItem('neetVaultState');
+          const mainState = mainStateStored ? JSON.parse(mainStateStored) : { papersProgress: {}, mistakes: [] };
+          
+          mainState.papersProgress['neet-2025-045'] = {
+            status: 'reviewed',
+            physicsScore: physScore,
+            chemistryScore: chemScore,
+            botanyScore: Math.round(bioScore / 2),
+            zoologyScore: Math.round(bioScore / 2),
+            biologyScore: bioScore,
+            totalScore: totalScore,
+            timeTaken: timeTakenStr,
+            weakChapters: [],
+            retestDate: '',
+            notes: 'Attempted via MVP Practice Test interface.',
+            duration: secondsElapsed
+          };
+          
+          localStorage.setItem('neetVaultState', JSON.stringify(mainState));
+      }
 
       // Redirect to results view
       renderResults();
@@ -861,18 +962,9 @@
         }
       });
 
-      app.innerHTML = `
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-          <div>
-            <h1>Mock Exam Results</h1>
-            <p class="text-muted">NEET UG 2025 Code 45 | Detailed Feedback</p>
-          </div>
-          <div style="display: flex; gap: 0.5rem;">
-            <button class="btn btn-outline" onclick="restartTest()">🔁 Retake Exam</button>
-            <a href="papers.html" class="btn btn-primary">📂 All Papers</a>
-          </div>
-        </div>
-
+      let scoresHtml = '';
+      if (testState.scoringMode !== 'unscored') {
+          scoresHtml = `
         <div class="result-summary-grid">
           <div class="card result-card" style="background-color: var(--primary-light);">
             <div class="stat-title">Total Score</div>
@@ -909,12 +1001,45 @@
             <div class="stat-value" style="font-size: 2rem;">${bioScore} <span style="font-size: 1rem; color: var(--text-muted)">/ 360</span></div>
           </div>
         </div>
+          `;
+      } else {
+          scoresHtml = `
+            <div style="background-color: #fef2f2; border: 1px solid #f87171; color: #991b1b; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; text-align: center;">
+                <h3>⚠️ Unscored Practice Only</h3>
+                <p>This paper does not have verified solutions, so score calculations are disabled. You can review your attempted answers below.</p>
+            </div>
+            <div class="result-summary-grid" style="grid-template-columns: 1fr 1fr; max-width: 600px; margin: 0 auto 2.5rem auto;">
+              <div class="card result-card">
+                <div class="stat-title">Attempted</div>
+                <div class="stat-value" style="color: var(--primary);">${questions.length - unattemptedCount}</div>
+              </div>
+              <div class="card result-card">
+                <div class="stat-title">Unattempted</div>
+                <div class="stat-value" style="color: #4b5563;">${unattemptedCount}</div>
+              </div>
+            </div>
+          `;
+      }
+
+      app.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <div>
+            <h1>Practice Exam Review</h1>
+            <p class="text-muted">${testState.paperTitle}</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn btn-outline" onclick="restartTest()">🔁 Retake Exam</button>
+            <a href="papers.html" class="btn btn-primary">📂 All Papers</a>
+          </div>
+        </div>
+
+        ${scoresHtml}
 
         <div class="card">
           <h2>Question Paper Review</h2>
           
           <div class="review-tabs">
-            <button class="tab-link ${reviewFilter === 'all' ? 'active' : ''}" onclick="setReviewFilter('all')">Show All (180)</button>
+            <button class="tab-link ${reviewFilter === 'all' ? 'active' : ''}" onclick="setReviewFilter('all')">Show All (${questions.length})</button>
             <button class="tab-link ${reviewFilter === 'incorrect' ? 'active' : ''}" onclick="setReviewFilter('incorrect')" style="color: #dc2626;">Incorrect Only (${wrongCount})</button>
             <button class="tab-link ${reviewFilter === 'marked' ? 'active' : ''}" onclick="setReviewFilter('marked')" style="color: #8b5cf6;">Marked for Review (${markedQs.length})</button>
             <button class="tab-link ${reviewFilter === 'unattempted' ? 'active' : ''}" onclick="setReviewFilter('unattempted')">Unattempted (${unattemptedCount})</button>
@@ -1005,7 +1130,8 @@
                     <strong>Your Response:</strong> ${userAns ? `<span class="badge" style="background-color: var(--primary-light); font-weight: 700;">Option ${userAns}</span>` : '<span style="color: var(--text-muted)">No response</span>'}
                   </div>
                   <div style="margin-bottom: 1rem; font-size: 0.95rem;">
-                    <strong>Correct Answer:</strong> <span class="badge badge-reviewed" style="font-weight: 700;">Option ${correctOptions.join(' or ')}</span>
+                    <strong>Correct Answer:</strong> 
+                    ${getAnswerBadgeHTML(correctOptions, q.answer_status)}
                   </div>
                   
                   ${q.solutionText ? `
@@ -1018,6 +1144,12 @@
                       No text solution extracted. See PDF Solution.
                     </div>
                   `}
+
+                  ${localStorage.getItem('auth_role') === 'sub_admin' || localStorage.getItem('auth_role') === 'admin' ? `
+                    <div style="margin-top: 1rem;">
+                        <button class="btn btn-secondary" onclick="openCorrectionModal('${q.id}', '${q.answer_status}')" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Suggest Correction</button>
+                    </div>
+                  ` : ''}
                 </div>
 
                 <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
@@ -1035,6 +1167,87 @@
       }).join('');
     }
 
+    function getAnswerBadgeHTML(correctOptions, status) {
+        if (!correctOptions || correctOptions.length === 0) {
+            return `<span class="badge" style="background-color: #6b7280;">No answer</span>`;
+        }
+        const optText = `Option ${correctOptions.join(' or ')}`;
+        if (status === 'sub_admin' || status === 'needs_review') {
+            return `<span class="badge" style="background-color: #3b82f6;">${optText} (Shiloh)</span>`;
+        } else if (status === 'admin' || status === 'manual_admin') {
+            return `<span class="badge" style="background-color: #d97706;">${optText} (Admin)</span>`;
+        } else if (status === 'ai_model' || status === 'ai_mapped') {
+            return `<span class="badge" style="background-color: #10b981;">${optText} (AI)</span>`;
+        } else if (status === 'paper' || status === 'official_from_paper') {
+            return `<span class="badge" style="background-color: #4b5563;">${optText} (Paper key)</span>`;
+        } else {
+            return `<span class="badge" style="background-color: #6b7280;">${optText}</span>`;
+        }
+    }
+
+    window.openCorrectionModal = function(questionId, currentStatus) {
+        window.currentCorrectionQid = questionId;
+        window.currentCorrectionStatus = currentStatus;
+        
+        if (currentStatus === 'paper' || currentStatus === 'official_from_paper') {
+            document.getElementById('paper-key-warning').style.display = 'block';
+        } else {
+            document.getElementById('paper-key-warning').style.display = 'none';
+        }
+        
+        document.getElementById('correction-modal').style.display = 'flex';
+    };
+
+    window.closeCorrectionModal = function() {
+        document.getElementById('correction-modal').style.display = 'none';
+        document.getElementById('correction-option').value = '';
+        document.getElementById('correction-note').value = '';
+    };
+
+    window.submitCorrection = async function() {
+        const option = document.getElementById('correction-option').value;
+        const note = document.getElementById('correction-note').value;
+        if (!option) return alert("Select an option");
+
+        const btn = document.getElementById('submit-correction-btn');
+        btn.innerText = 'Submitting...';
+        btn.disabled = true;
+
+        try {
+            const token = localStorage.getItem('auth_token');
+            const res = await fetch(`/api/questions/${window.currentCorrectionQid}/submit-answer-correction`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': token ? `Bearer ${token}` : ''
+                },
+                body: JSON.stringify({
+                    correct_option: option,
+                    note: note,
+                    source_context: 'practice_review'
+                })
+            });
+            if (res.ok) {
+                // Update local question array and re-render
+                const q = questions.find(x => x.id === window.currentCorrectionQid);
+                if (q) {
+                    q.correctOptions = [option];
+                    q.answer_status = 'needs_review';
+                }
+                renderResults();
+                closeCorrectionModal();
+            } else {
+                alert("Failed to submit correction");
+            }
+        } catch (e) {
+            console.error(e);
+            alert("Error submitting correction");
+        } finally {
+            btn.innerText = 'Continue and Submit Correction';
+            btn.disabled = false;
+        }
+    };
+
     function escapeHtml(str) {
       return str
         .replace(/&/g, "&amp;")
@@ -1047,7 +1260,7 @@
     }
 
     window.restartTest = function() {
-      showCustomConfirm("Reset Mock Exam?", "Are you sure you want to reset the mock exam? This will clear all your answers and start the timer over.", () => {
+      showCustomConfirm("Reset Practice Exam?", "Are you sure you want to reset the Practice Exam? This will clear all your answers and start the timer over.", () => {
         localStorage.removeItem(STATE_STORAGE_KEY);
         // Reset local variables
         testState = {

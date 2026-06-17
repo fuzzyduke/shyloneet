@@ -9,6 +9,8 @@ Shylo relies on a Grounded Hybrid Architecture for chapter classification: using
 - **Frontend:** Vanilla HTML/CSS/JS deployed via Cloudflare to a VPS.
 - **Backend:** FastAPI (Python 3.11).
 - **Database:** SQLite (`neetvault.db`).
+- **Auth:** JWT-based bearer tokens with passlib/bcrypt hashing (Roles: `admin`, `sub_admin`, `student`).
+- **Provenance Tracking:** `AnswerEvaluation` and `ChapterMappingEvaluation` tables maintain an immutable log of AI, human, and paper-sourced mappings.
 - **External APIs:** Agent Zero `qwen-3-7-plus` for vision parsing and mapping.
 
 ## Architecture Rules & Decisions

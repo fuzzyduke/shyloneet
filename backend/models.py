@@ -74,6 +74,18 @@ class QuestionPaper(Base):
     uploaded_at = Column(DateTime(timezone=True), server_default=func.now())
     processed_at = Column(DateTime(timezone=True))
     
+    # Solution Availability and Scoring Capability
+    solution_status = Column(String, default="unavailable") # official_from_paper, ai_mapped, unavailable, mixed, needs_review
+    scoring_enabled = Column(Boolean, default=False)
+    scoring_source = Column(String, default="none") # official_answer_key, official_solutions, ai_answer_mapping, manual_admin, none, mixed
+    solution_confidence = Column(Float, nullable=True)
+    solution_review_required = Column(Boolean, default=False)
+    solution_notes = Column(Text, nullable=True)
+    answer_key_detected = Column(Boolean, default=False)
+    answer_key_source_page = Column(Integer, nullable=True)
+    solution_extraction_method = Column(String, default="none") # pdf_answer_key, pdf_solutions_section, ai_extracted, manual_admin, none
+    solution_last_verified_at = Column(DateTime(timezone=True), nullable=True)
+    
     questions = relationship("Question", back_populates="paper")
 
 class Question(Base):
@@ -111,6 +123,13 @@ class Question(Base):
     
     # Incompatibility Flags (JSON list of strings or string enum)
     incompatibility_flags = Column(String, nullable=True)
+    
+    # Solution Tracking
+    answer_status = Column(String, default="unavailable") # official_from_paper, ai_mapped, manual_admin, unavailable, needs_review
+    solution_source = Column(String, default="none") # official_answer_key, official_solution, ai_generated, manual_admin, none
+    solution_confidence = Column(Float, nullable=True)
+    solution_needs_review = Column(Boolean, default=False)
+    scoring_eligible = Column(Boolean, default=False)
     
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
@@ -207,4 +226,73 @@ class FailedExtraction(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
 
+class User(Base):
+    __tablename__ = "users"
+    id = Column(String, primary_key=True, default=generate_uuid)
+    username = Column(String, unique=True, index=True)
+    hashed_password = Column(String)
+    role = Column(String) # admin, sub_admin, student
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
 
+class AnswerEvaluation(Base):
+    __tablename__ = "answer_evaluations"
+    id = Column(String, primary_key=True, default=generate_uuid)
+    paper_id = Column(String, ForeignKey("question_papers.id"), index=True)
+    question_id = Column(String, ForeignKey("questions.id"), index=True)
+    evaluator_type = Column(String) # paper, ai_model, sub_admin, admin
+    evaluator_name = Column(String) 
+    evaluator_model_provider = Column(String, nullable=True)
+    correct_option = Column(String, nullable=True)
+    solution_text = Column(Text, nullable=True)
+    confidence = Column(Float, nullable=True)
+    reasoning = Column(Text, nullable=True)
+    source_location = Column(String, nullable=True)
+    status = Column(String, default="proposed") # proposed, active, accepted, reverted, rejected, superseded, needs_review
+    is_active = Column(Boolean, default=False)
+    priority = Column(Integer, default=0)
+    created_by = Column(String, nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    reviewed_by = Column(String, nullable=True)
+    reviewed_at = Column(DateTime(timezone=True), nullable=True)
+    review_note = Column(Text, nullable=True)
+    supersedes_evaluation_id = Column(String, nullable=True)
+    metadata_json = Column(Text, nullable=True)
+    question = relationship("Question")
+
+class ChapterMappingEvaluation(Base):
+    __tablename__ = "chapter_mapping_evaluations"
+    id = Column(String, primary_key=True, default=generate_uuid)
+    paper_id = Column(String, ForeignKey("question_papers.id"), index=True)
+    question_id = Column(String, ForeignKey("questions.id"), index=True)
+    evaluator_type = Column(String)
+    evaluator_name = Column(String)
+    evaluator_model_provider = Column(String, nullable=True)
+    primary_chapter_id = Column(String, nullable=True)
+    secondary_chapter_ids = Column(Text, nullable=True) # JSON
+    confidence = Column(Float, nullable=True)
+    reasoning = Column(Text, nullable=True)
+    evidence_snippets = Column(Text, nullable=True) # JSON
+    status = Column(String, default="proposed")
+    is_active = Column(Boolean, default=False)
+    created_by = Column(String, nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    reviewed_by = Column(String, nullable=True)
+    reviewed_at = Column(DateTime(timezone=True), nullable=True)
+    review_note = Column(Text, nullable=True)
+    question = relationship("Question")
+    metadata_json = Column(Text, nullable=True)
+
+class PaperAIProcessingJob(Base):
+    __tablename__ = "paper_ai_processing_jobs"
+    id = Column(String, primary_key=True, default=generate_uuid)
+    paper_id = Column(String, ForeignKey("question_papers.id"), index=True)
+    job_type = Column(String) # answer_mapping, chapter_mapping, answer_and_chapter_mapping, re_evaluation
+    requested_model = Column(String)
+    requested_provider = Column(String, nullable=True)
+    status = Column(String, default="queued") # queued, running, completed, failed, cancelled
+    requested_by = Column(String, nullable=True)
+    started_at = Column(DateTime(timezone=True), nullable=True)
+    completed_at = Column(DateTime(timezone=True), nullable=True)
+    error_message = Column(Text, nullable=True)
+    result_summary_json = Column(Text, nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
