@@ -43,6 +43,6 @@ Update parent docs when parent-level structure, ownership, workflow, or child in
 ## Top-Level Index
 
 - `./backend/AGENTS.md` - Backend API, models, extraction/classification logic.
-- `./dox/AGENTS.md` - Project documentation and architecture state.
+- `./docs/AGENTS.md` - Project documentation and architecture state.
 - `./js/AGENTS.md` - Frontend JavaScript files.
 - `./css/AGENTS.md` - Frontend CSS stylesheets.
