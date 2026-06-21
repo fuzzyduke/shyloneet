@@ -1,6 +1,7 @@
 node_modules/
 backend/venv/
 *.db
+!backend/neetvault.db
 backend/backups/
 __pycache__/
 purge_cf.js
