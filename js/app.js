@@ -33,8 +33,8 @@ async function fetchPapers() {
 
 async function fetchChapters(subject = 'Physics', source = 'NCERT', classLevel = 12) {
   try {
-    // Port defaults to 8000 for FastAPI locally
-    const url = `http://localhost:8000/api/chapters?subject=${subject}&source=${source}&class_level=${classLevel}`;
+    const apiBase = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8000' : '';
+    const url = `${apiBase}/api/chapters?subject=${subject}&source=${source}&class_level=${classLevel}`;
     const res = await fetch(url);
     if (!res.ok) throw new Error("API response not ok");
     return await res.json();

@@ -61,6 +61,10 @@ class QuestionPaper(Base):
     year = Column(Integer)
     paper_code = Column(String)
     source_file = Column(String)
+    paper_type = Column(String, nullable=True) # questions_only, questions_with_options, etc.
+    expected_question_count = Column(Integer, default=180)
+    subjects_included = Column(String, nullable=True) # comma separated
+    import_status = Column(String, default="draft") # draft, parsed, needs_review, approved, published, failed
     
     # Boundary Layer tracking
     exam_program_id = Column(String, index=True)
@@ -100,13 +104,16 @@ class Question(Base):
     exam_program_id = Column(String, index=True)
     
     subject = Column(String, index=True)
-    question_number = Column(Integer)
+    question_number = Column(Integer) # kept for backward compatibility
+    question_number_global = Column(Integer, nullable=True) # 1-180
+    question_number_subject = Column(Integer, nullable=True) # Subject-local number
     question_text = Column(Text)
     option_a = Column(Text)
     option_b = Column(Text)
     option_c = Column(Text)
     option_d = Column(Text)
-    answer = Column(String)
+    answer = Column(String) # kept for backward compatibility
+    correct_option = Column(String, nullable=True)
     solution_text = Column(Text)
     difficulty = Column(String)
     source_pdf = Column(String)
@@ -114,12 +121,25 @@ class Question(Base):
     extraction_confidence = Column(Float)
     needs_manual_review = Column(Boolean, default=False)
     
+    # --- FUTURE PROVENANCE FIELDS PLANNED ---
+    # answer_source_type: official_key, extracted_key, manual, llm_suggested, reviewed
+    # source_name: NTA, PW PDF, admin, Grok, Qwen, Gemini, etc.
+    # llm_provider: null unless LLM was involved
+    # llm_model: null unless LLM was involved
+    # confidence: float
+    # verified_by_admin: boolean
+    #
+    # RECOMMENDED QUESTION STATUSES FOR V1 LITE (Future):
+    # q_only, q_with_key, q_with_llm, q_verified
+    # ------------------------------------------
+
     # Provenance Tracking
     source_type = Column(String, default="real_pdf_extraction") # real_pdf_extraction, mock, manual_seed
     is_mock = Column(Boolean, default=False)
     extraction_method = Column(String) # heuristic_pdf_text, vision_agentzero, vision_venice, vision_nvidia, vision_gemini, manual
     extraction_model = Column(String) # Actual model name used
     extraction_status = Column(String, default="success") # success, partial, failed, mock_validation_only, needs_review
+    publish_status = Column(String, default="draft") # draft, published
     
     # Incompatibility Flags (JSON list of strings or string enum)
     incompatibility_flags = Column(String, nullable=True)

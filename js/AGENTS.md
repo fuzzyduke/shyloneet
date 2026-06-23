@@ -1,13 +1,14 @@
-# Frontend JS AGENTS.md
+# Frontend JS - DOX Contract
 
-This folder contains the vanilla JavaScript logic for the frontend UI.
+This `AGENTS.md` file defines the local working rules for the `js/` subtree.
 
-## Scope & Ownership
-- Powers the Student UI (`practice.html`, `test.html`, `mistakes.html`) and the Admin UI (`admin_review.html`).
-- Implements API fetching and JWT authorization headers.
-- Handles UI state mapping to the FastAPI backend.
+## Local Purpose
+This directory contains the vanilla JavaScript logic for the frontend UI. It powers the Student UI and the Admin UI, implements API fetching, and handles UI state mapping.
 
-## Architecture Rules
-- We strictly use Vanilla JS. Do not introduce modern JS frameworks (React, Vue) without explicit architectural shift approval.
-- Fetch endpoints must securely include `Authorization: Bearer <token>` fetched from `localStorage`.
-- Hardcoded placeholders (e.g. "180 questions") must be replaced with dynamic data populated from API responses.
+## Local Rules & Constraints
+- **Frameworks:** We strictly use Vanilla JS. Do not introduce modern JS frameworks (React, Vue) without explicit architectural shift approval.
+- **API Fetching:** Fetch endpoints must securely include `Authorization: Bearer <token>` fetched from `localStorage`.
+- **Dynamic Data:** Hardcoded placeholders must be replaced with dynamic data populated from API responses.
+
+## Inheritance
+These rules extend the constraints found in the parent directory's `AGENTS.md`. In case of a direct conflict, these local rules take precedence for files within this directory.

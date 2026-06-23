@@ -1,18 +1,15 @@
-# Backend AGENTS.md
+# Backend - DOX Contract
 
-This folder contains the Python backend for the Shylo platform, including FastAPI routes, SQLAlchemy models, and the paper extraction/classification logic.
+This `AGENTS.md` file defines the local working rules for the `backend/` subtree.
 
-## Scope & Ownership
-- Responsible for `neetvault.db` SQLite interaction.
-- Houses the AI pipelines for PDF parsing (`paper_parser*.py`) and chapter classification (`classifier*.py`).
-- Manages Authentication (JWT), Answer Provenance (`AnswerEvaluation`), and Admin workflows.
+## Local Purpose
+This directory contains the Python backend for the Shylo platform, including FastAPI routes, SQLAlchemy models, and the paper extraction/classification logic.
 
-## Required Operations & Constraints
-- **Database Migrations:** Modifying `models.py` requires either dropping tables (if safe/dev mode) or writing a `migrate_*.py` script since alembic is not currently configured.
-- **Scoring Safety:** Do NOT mutate `QuestionPaper.scoring_enabled` during human or AI answer corrections.
+## Local Rules & Constraints
+- **Frameworks:** Python 3.11, FastAPI, SQLAlchemy, SQLite (`neetvault.db`).
+- **File Structure:** Core application is in `main.py`, models in `models.py`, db logic in `database.py`. Paper parsing scripts are `paper_parser*.py` and `classifier*.py`.
+- **Prohibited Actions:** Modifying `models.py` requires writing a `migrate_*.py` script since alembic is not currently configured. Do NOT mutate `QuestionPaper.scoring_enabled` during human or AI answer corrections.
 - **Curriculum Boundaries:** `exam_program_id` must be strictly enforced on all queries (e.g. NEET questions only map to NEET chapters).
 
-## Local Dependencies
-- Requires Python 3.11 with `requirements.txt`.
-- Activate `venv` before running: `venv\Scripts\activate` (Windows) or `source venv/bin/activate` (Linux/Mac).
-- Run server: `python -m uvicorn main:app --host 0.0.0.0 --port 8000`.
+## Inheritance
+These rules extend the constraints found in the parent directory's `AGENTS.md`. In case of a direct conflict, these local rules take precedence for files within this directory.

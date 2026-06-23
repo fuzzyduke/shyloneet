@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Material DB View - NEET Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        // Early theme initialization to prevent flash
+        (function() {
+            const savedTheme = localStorage.getItem('neetVaultTheme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+
+        // Authenticate before rendering the page contents
+        (function() {
+            const token = localStorage.getItem('auth_token');
+            const role = localStorage.getItem('auth_role');
+            if (!token || (role !== 'admin' && role !== 'sub_admin')) {
+                window.location.replace('/login.html');
+            }
+        })();
+    </script>
+    <style>
+        :root {
+            --glow-physics: rgba(59, 130, 246, 0.15);
+            --glow-physics-hover: rgba(59, 130, 246, 0.3);
+        }
+        .admin-header-desc {
+            margin-bottom: 2rem;
+        }
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .subject-card {
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        .subject-card.physics-active {
+            border-color: #3b82f6;
+            box-shadow: 0 8px 24px var(--glow-physics);
+        }
+        .subject-card.physics-active:hover {
+            box-shadow: 0 12px 30px var(--glow-physics-hover);
+        }
+        .subject-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .subject-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .badge-list {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .badge-ingested {
+            background-color: var(--success-light);
+            color: var(--success);
+            border: 1px solid rgba(77, 147, 97, 0.3);
+        }
+        .badge-not-ingested {
+            background-color: var(--status-reattempt);
+            color: #9f1239;
+            border: 1px solid rgba(159, 18, 57, 0.3);
+        }
+        .badge-placeholder {
+            background-color: var(--status-not-attempted);
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+        }
+        .stat-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .stat-line strong {
+            color: var(--primary);
+        }
+        .subject-card-note {
+            margin-top: 1rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        .detail-panel {
+            display: none;
+            margin-top: 2rem;
+            animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .warning-banner {
+            background-color: var(--accent-light);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .warning-icon {
+            font-size: 1.5rem;
+        }
+        .warning-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .connection-error {
+            background-color: rgba(220, 38, 38, 0.1);
+            border: 1px solid var(--secondary);
+            color: var(--text-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 2rem;
+            display: none;
+        }
+        .chapter-table th {
+            white-space: nowrap;
+        }
+        .vector-badge {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .vector-badge.available {
+            background-color: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+        }
+        .vector-badge.not-available {
+            background-color: rgba(100, 116, 139, 0.15);
+            color: var(--text-muted);
+        }
+        .placeholder-panel {
+            background: var(--card-bg);
+            border: 1px dashed var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .back-nav {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header / Navigation Bar -->
+        <header>
+            <a href="v1.html" class="logo">📚 NEET Vault Lite</a>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <nav>
+                    <a href="v1.html">Home</a>
+                    <a href="v1_admin.html" class="active">Course Material DB</a>
+                    <a href="/admin">Question Mapping Review</a>
+                </nav>
+                <button id="theme-toggle" class="btn btn-outline" style="padding: 0; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; border-color: var(--border-color); background: transparent;">🌙</button>
+            </div>
+        </header>
+
+        <!-- Back Navigation & Title -->
+        <div class="back-nav">
+            <a href="v1.html" class="btn btn-outline btn-sm">&larr; Back to V1 Lite Home</a>
+            <span id="auth-info" style="font-size: 0.9rem; color: var(--text-muted);"></span>
+        </div>
+
+        <div class="admin-header-desc">
+            <h1>Course Material DB View</h1>
+            <p class="text-muted">Read-only view of ingested NCERT/NEET reference material available to the system.</p>
+        </div>
+
+        <!-- Connection Error Display -->
+        <div id="connection-error" class="connection-error">
+            <h3 style="color: var(--secondary); margin-bottom: 0.5rem;">Connection to Backend Failed</h3>
+            <p>Could not connect to the NEET Vault FastAPI backend. Please verify that your local server is running at <strong>http://localhost:8000</strong>.</p>
+        </div>
+
+        <!-- Subject Overview Cards -->
+        <div class="subject-grid" id="subject-grid">
+            <!-- Physics Card -->
+            <div class="card subject-card physics-active" onclick="selectSubject('Physics')">
+                <div class="subject-card-header">
+                    <span class="subject-title">Physics</span>
+                    <div class="badge-list">
+                        <span class="badge badge-ingested">Ingested</span>
+                    </div>
+                </div>
+                <div class="stat-line"><span>Ingested Chapters:</span><span id="phys-chapters-count">Loading...</span></div>
+                <div class="stat-line"><span>Reference Chunks:</span><span id="phys-chunks-count">Loading...</span></div>
+                <div class="stat-line"><span>Ingestion Sources:</span><span id="phys-sources-count">Loading...</span></div>
+                <div class="subject-card-note" id="phys-notes">Physics textbook chapters are fully parsed and embedded.</div>
+            </div>
+
+            <!-- Chemistry Card -->
+            <div class="card subject-card" onclick="selectSubject('Chemistry')">
+                <div class="subject-card-header">
+                    <span class="subject-title">Chemistry</span>
+                    <div class="badge-list">
+                        <span class="badge badge-not-ingested" style="background-color: rgba(159, 18, 57, 0.1);">Not Ingested</span>
+                        <span class="badge badge-placeholder">Placeholder</span>
+                    </div>
+                </div>
+                <div class="stat-line"><span>Ingested Chapters:</span><span>0</span></div>
+                <div class="stat-line"><span>Reference Chunks:</span><span>0</span></div>
+                <div class="stat-line"><span>Ingestion Sources:</span><span>0</span></div>
+                <div class="subject-card-note" id="chem-notes">Chemistry textbook chapters are not yet ingested.</div>
+            </div>
+
+            <!-- Biology Card -->
+            <div class="card subject-card" onclick="selectSubject('Biology')">
+                <div class="subject-card-header">
+                    <span class="subject-title">Biology</span>
+                    <div class="badge-list">
+                        <span class="badge badge-not-ingested" style="background-color: rgba(159, 18, 57, 0.1);">Not Ingested</span>
+                        <span class="badge badge-placeholder">Placeholder</span>
+                    </div>
+                </div>
+                <div class="stat-line"><span>Ingested Chapters:</span><span>0</span></div>
+                <div class="stat-line"><span>Reference Chunks:</span><span>0</span></div>
+                <div class="stat-line"><span>Ingestion Sources:</span><span>0</span></div>
+                <div class="subject-card-note" id="bio-notes">Biology textbook chapters are not yet ingested.</div>
+            </div>
+        </div>
+
+        <!-- Details Panel (Physics) -->
+        <div id="detail-panel-Physics" class="detail-panel">
+            <h2 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                ⚛️ Physics Course Material Details
+            </h2>
+
+            <!-- Incomplete Data Warning Badge/Message -->
+            <div class="warning-banner">
+                <span class="warning-icon">⚠️</span>
+                <span class="warning-text">DB schema/data does not yet expose all expected Physics course material cleanly. (Only 14 chapters covering a mix of Class 11 and 12 are currently ingested).</span>
+            </div>
+
+            <!-- Table of Chapters -->
+            <div class="table-container">
+                <table class="chapter-table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Chapter Name</th>
+                            <th>Class</th>
+                            <th>Filename</th>
+                            <th>Source</th>
+                            <th>Type</th>
+                            <th>Program</th>
+                            <th>Chunks</th>
+                            <th>Pages</th>
+                            <th>Vector Status</th>
+                            <th>Ingested At</th>
+                        </tr>
+                    </thead>
+                    <tbody id="physics-chapters-tbody">
+                        <!-- Populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Details Panel (Chemistry) -->
+        <div id="detail-panel-Chemistry" class="detail-panel">
+            <div class="placeholder-panel">
+                <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🧪</span>
+                <h3>Chemistry course material has not been ingested yet.</h3>
+                <p class="text-muted" style="margin-top: 0.5rem; font-size: 0.95rem;">Reference textbook PDFs for Chemistry will appear here once the ingestion pipeline executes.</p>
+            </div>
+        </div>
+
+        <!-- Details Panel (Biology) -->
+        <div id="detail-panel-Biology" class="detail-panel">
+            <div class="placeholder-panel">
+                <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🧬</span>
+                <h3>Biology course material has not been ingested yet.</h3>
+                <p class="text-muted" style="margin-top: 0.5rem; font-size: 0.95rem;">Reference textbook PDFs for Biology will appear here once the ingestion pipeline executes.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="motivation-footer">
+            Read-only database diagnostics &bull; Shylo NEET V1 Lite Admin
+        </div>
+    </div>
+
+    <script>
+        // API Base configuration
+        const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8000' : '';
+
+        // Render authenticated user details
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = localStorage.getItem('auth_user') || 'Admin';
+            const role = localStorage.getItem('auth_role') || 'Admin';
+            document.getElementById('auth-info').innerText = `Logged in as: ${user} (${role})`;
+
+            // Theme toggle initialization
+            const toggleBtn = document.getElementById('theme-toggle');
+            const updateThemeButtonText = (theme) => {
+                toggleBtn.innerText = theme === 'dark' ? '☀️' : '🌙';
+            };
+
+            const currentTheme = localStorage.getItem('neetVaultTheme') || 'light';
+            updateThemeButtonText(currentTheme);
+
+            toggleBtn.addEventListener('click', () => {
+                const activeTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', nextTheme);
+                localStorage.setItem('neetVaultTheme', nextTheme);
+                updateThemeButtonText(nextTheme);
+            });
+
+            // Run initial load
+            loadDashboard();
+        });
+
+        // Get authentication headers
+        function getAuthHeaders() {
+            const token = localStorage.getItem('auth_token');
+            return token ? {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            } : {
+                'Content-Type': 'application/json'
+            };
+        }
+
+        // Selected Subject state tracker
+        let currentSubject = null;
+
+        // Toggle selected subject panel
+        function selectSubject(subject) {
+            // Remove active visual styling from cards
+            const cards = document.querySelectorAll('.subject-card');
+            cards.forEach(card => card.classList.remove('physics-active'));
+
+            // Find current clicked card
+            const clickedCard = event.currentTarget;
+
+            // Hide all detail panels
+            const panels = document.querySelectorAll('.detail-panel');
+            panels.forEach(panel => panel.style.display = 'none');
+
+            if (currentSubject === subject) {
+                // Clicking the same card collapses it
+                currentSubject = null;
+                return;
+            }
+
+            // Set current active subject
+            currentSubject = subject;
+            clickedCard.classList.add('physics-active');
+
+            // Show corresponding detail panel
+            const targetPanel = document.getElementById(`detail-panel-${subject}`);
+            if (targetPanel) {
+                targetPanel.style.display = 'block';
+            }
+
+            // Fetch detail details if active subject is Physics
+            if (subject === 'Physics') {
+                loadPhysicsChapters();
+            }
+        }
+
+        // Fetch subject summaries on load
+        async function loadDashboard() {
+            try {
+                const res = await fetch(`${API_BASE}/api/v1/admin/course-material/summary`, {
+                    headers: getAuthHeaders()
+                });
+
+                if (!res.ok) {
+                    if (res.status === 401 || res.status === 403) {
+                        window.location.replace('/login.html');
+                        return;
+                    }
+                    throw new Error(`API returned ${res.status}`);
+                }
+
+                const data = await res.json();
+                document.getElementById('connection-error').style.display = 'none';
+
+                // Distribute summaries
+                data.subjects.forEach(sub => {
+                    if (sub.subject === 'Physics') {
+                        document.getElementById('phys-chapters-count').innerText = sub.chapter_count;
+                        document.getElementById('phys-chunks-count').innerText = sub.chunk_count;
+                        document.getElementById('phys-sources-count').innerText = sub.source_count;
+                        document.getElementById('phys-notes').innerText = sub.notes;
+                    } else if (sub.subject === 'Chemistry') {
+                        document.getElementById('chem-notes').innerText = sub.notes;
+                    } else if (sub.subject === 'Biology') {
+                        document.getElementById('bio-notes').innerText = sub.notes;
+                    }
+                });
+
+            } catch (err) {
+                console.error("Dashboard fetch failed:", err);
+                document.getElementById('connection-error').style.display = 'block';
+
+                // Set counts to --
+                document.getElementById('phys-chapters-count').innerText = '--';
+                document.getElementById('phys-chunks-count').innerText = '--';
+                document.getElementById('phys-sources-count').innerText = '--';
+            }
+        }
+
+        // Fetch and render Physics chapters
+        async function loadPhysicsChapters() {
+            const tbody = document.getElementById('physics-chapters-tbody');
+            tbody.innerHTML = '<tr><td colspan="11" style="text-align: center; color: var(--text-muted);">Fetching chapters...</td></tr>';
+
+            try {
+                const res = await fetch(`${API_BASE}/api/v1/admin/course-material/subjects/Physics`, {
+                    headers: getAuthHeaders()
+                });
+
+                if (!res.ok) throw new Error(`API returned ${res.status}`);
+
+                const chapters = await res.json();
+
+                if (chapters.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="11" style="text-align: center; color: var(--text-muted);">No records found in database.</td></tr>';
+                    return;
+                }
+
+                tbody.innerHTML = chapters.map(ch => {
+                    const statusClass = ch.vector_status === 'Available' ? 'available' : 'not-available';
+                    return `
+                        <tr>
+                            <td><strong>${ch.chapter_number}</strong></td>
+                            <td><strong>${ch.chapter_name}</strong></td>
+                            <td>Class ${ch.class_level}</td>
+                            <td><code>${ch.file_name || '--'}</code></td>
+                            <td>${ch.source_name || '--'}</td>
+                            <td><code>${ch.source_type}</code></td>
+                            <td><span class="badge" style="padding: 0.15rem 0.5rem; font-size: 0.75rem; background-color: var(--primary-light); color: var(--primary);">${ch.exam_program_id}</span></td>
+                            <td>${ch.chunk_count}</td>
+                            <td>${ch.page_count}</td>
+                            <td><span class="vector-badge ${statusClass}">${ch.vector_status}</span></td>
+                            <td><small style="color: var(--text-muted)">${ch.created_at || '--'}</small></td>
+                        </tr>
+                    `;
+                }).join('');
+
+            } catch (err) {
+                console.error("Physics chapters fetch failed:", err);
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: #ef4444; font-weight: 600;">Failed to fetch chapter details. Local backend might be offline.</td></tr>`;
+            }
+        }
+    </script>
+</body>
+</html>

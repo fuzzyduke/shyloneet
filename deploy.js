@@ -18,8 +18,13 @@ async function uploadDirRecursive(localDir, remoteDir) {
       }
       await uploadDirRecursive(localEntryPath, remoteEntryPath);
     } else {
-      console.log(`Uploading ${entry}...`);
-      await sftp.fastPut(localEntryPath, remoteEntryPath);
+      const fileExists = await sftp.exists(remoteEntryPath);
+      if (!fileExists) {
+        console.log(`Uploading ${entry}...`);
+        await sftp.fastPut(localEntryPath, remoteEntryPath);
+      } else {
+        console.log(`Skipping ${entry} (already exists)...`);
+      }
     }
   }
 }
@@ -40,17 +45,37 @@ async function deploy() {
       await sftp.mkdir(remotePath, true);
     }
 
+    // Ensure remote admin subdirectory exists
+    await sftp.mkdir(`${remotePath}/static/admin`, true);
+    await sftp.mkdir(`${remotePath}/admin`, true);
+    // Ensure remote backend subdirectory exists
+    await sftp.mkdir(`${remotePath}/backend`, true);
+
     const files = [
       'index.html',
+      'v1.html',
+      'v1_admin.html',
+      'login.html',
+      'practice.html',
+      'admin/index.html',
+      'static/admin/index.html',
       'papers.html',
       'paper-detail.html',
       'tracker.html',
       'mistakes.html',
       'test.html',
       'resources.html',
+      'reader.html',
       'css/styles.css',
       'js/app.js',
-      'data/papers.json'
+      'data/papers.json',
+      'backend/main.py',
+      'backend/paper_triage.py',
+      'backend/database.py',
+      'backend/models.py',
+      'backend/requirements.txt',
+      'backend/neetvault.db',
+      'backend/sample_paper_10.pdf'
     ];
 
     for (const file of files) {
@@ -60,20 +85,21 @@ async function deploy() {
       await sftp.fastPut(localFile, remoteFile);
     }
 
-    /*
-    // Upload the papers folder recursively
-    const localPapersDir = path.join(__dirname, 'papers');
-    const remotePapersDir = `${remotePath}/papers`;
+    // Upload the chapter assets folder recursively
+    const localAssetsDir = path.join(__dirname, 'data/assets/chapters');
+    const remoteAssetsDir = `${remotePath}/data/assets/chapters`;
     
-    console.log('Checking remote papers directory...');
-    const papersDirExists = await sftp.exists(remotePapersDir);
-    if (!papersDirExists) {
-      await sftp.mkdir(remotePapersDir, true);
+    console.log('Checking remote chapter assets directory...');
+    const assetsDirExists = await sftp.exists(remoteAssetsDir);
+    if (!assetsDirExists) {
+      await sftp.mkdir(remoteAssetsDir, true);
     }
     
-    console.log('Uploading papers folder recursively...');
-    await uploadDirRecursive(localPapersDir, remotePapersDir);
-    */
+    console.log('Uploading chapter assets recursively...');
+    if (fs.existsSync(localAssetsDir)) {
+      // await sftp.mkdir(remoteAssetsDir, true);
+      // await uploadDirRecursive(localAssetsDir, remoteAssetsDir);
+    }
 
     console.log('Upload complete!');
   } catch (err) {

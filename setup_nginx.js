@@ -2,13 +2,16 @@ const Client = require('ssh2-sftp-client');
 const { Client: SSHClient } = require('ssh2');
 
 const sftp = new Client();
+
+// NOTE FOR V1 LITE DEPLOYMENT:
+// We use a rewrite block based on the host to ensure shyloneetv1 points to v1.html
 const nginxConfig = `server {
     listen 80;
     listen [::]:80;
     listen 443 ssl;
     listen [::]:443 ssl;
 
-    server_name shylosoneet.valhallala.com;
+    server_name shylosoneet.valhallala.com shyloneetv1.valhallala.com;
 
     ssl_certificate /etc/nginx/ssl/nginx.crt;
     ssl_certificate_key /etc/nginx/ssl/nginx.key;
@@ -19,6 +22,9 @@ const nginxConfig = `server {
     index index.html;
 
     location / {
+        if ($host = 'shyloneetv1.valhallala.com') {
+            rewrite ^/$ /v1.html break;
+        }
         try_files $uri $uri/ =404;
     }
 }`;

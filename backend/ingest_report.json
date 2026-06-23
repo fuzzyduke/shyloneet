@@ -1,0 +1,137 @@
+[
+  {
+    "file": "lebo101.pdf",
+    "class": 11,
+    "chapter": 1,
+    "chapter_name": "The Living World",
+    "pages": 25,
+    "chunks": 114,
+    "images": 62,
+    "status": "ok"
+  },
+  {
+    "file": "lebo102.pdf",
+    "class": 11,
+    "chapter": 2,
+    "chapter_name": "Biological Classification",
+    "pages": 15,
+    "chunks": 85,
+    "images": 110,
+    "status": "ok"
+  },
+  {
+    "file": "lebo103.pdf",
+    "class": 11,
+    "chapter": 3,
+    "chapter_name": "Plant Kingdom",
+    "pages": 10,
+    "chunks": 55,
+    "images": 21,
+    "status": "ok"
+  },
+  {
+    "file": "lebo104.pdf",
+    "class": 11,
+    "chapter": 4,
+    "chapter_name": "Animal Kingdom",
+    "pages": 28,
+    "chunks": 164,
+    "images": 40,
+    "status": "ok"
+  },
+  {
+    "file": "lebo105.pdf",
+    "class": 11,
+    "chapter": 5,
+    "chapter_name": "Morphology of Flowering Plants",
+    "pages": 31,
+    "chunks": 194,
+    "images": 40,
+    "status": "ok"
+  },
+  {
+    "file": "lebo106.pdf",
+    "class": 11,
+    "chapter": 6,
+    "chapter_name": "Anatomy of Flowering Plants",
+    "pages": 17,
+    "chunks": 58,
+    "images": 28,
+    "status": "ok"
+  },
+  {
+    "file": "lebo107.pdf",
+    "class": 11,
+    "chapter": 7,
+    "chapter_name": "Structural Organisation in Animals",
+    "pages": 22,
+    "chunks": 81,
+    "images": 34,
+    "status": "ok"
+  },
+  {
+    "file": "lebo108.pdf",
+    "class": 11,
+    "chapter": 8,
+    "chapter_name": "Cell: The Unit of Life",
+    "pages": 12,
+    "chunks": 65,
+    "images": 28,
+    "status": "ok"
+  },
+  {
+    "file": "lebo109.pdf",
+    "class": 11,
+    "chapter": 9,
+    "chapter_name": "Biomolecules",
+    "pages": 16,
+    "chunks": 67,
+    "images": 28,
+    "status": "ok"
+  },
+  {
+    "file": "lebo110.pdf",
+    "class": 11,
+    "chapter": 10,
+    "chapter_name": "Cell Cycle and Cell Division",
+    "pages": 11,
+    "chunks": 58,
+    "images": 19,
+    "status": "ok"
+  },
+  {
+    "file": "lebo111.pdf",
+    "class": 11,
+    "chapter": 11,
+    "chapter_name": "Photosynthesis in Higher Plants",
+    "pages": 17,
+    "chunks": 55,
+    "images": 28,
+    "status": "ok"
+  },
+  {
+    "file": "lebo112.pdf",
+    "class": 11,
+    "chapter": 12,
+    "chapter_name": "Respiration in Plants",
+    "pages": 11,
+    "chunks": 39,
+    "images": 15,
+    "status": "ok"
+  },
+  {
+    "file": "lebo113.pdf",
+    "class": 11,
+    "chapter": 13,
+    "chapter_name": "Plant Growth and Development",
+    "pages": 13,
+    "chunks": 44,
+    "images": 18,
+    "status": "ok"
+  },
+  {
+    "file": "lebo1ps.pdf",
+    "status": "skipped",
+    "reason": "unrecognised_filename"
+  }
+]

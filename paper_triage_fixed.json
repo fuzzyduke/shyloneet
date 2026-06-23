@@ -1,0 +1,887 @@
+{
+  "metadata": {
+    "title": "NEET Sample Paper Model 10 - Physics",
+    "exam_name": "NEET",
+    "paper_type": "sample/model/practice",
+    "source_name": "Vedantu",
+    "subject": "Physics",
+    "source_type": "question_paper",
+    "question_range": "1-45",
+    "has_solutions": true,
+    "source_filename": "NEET Sample Paper 10 Practice Set PDF with Solutions.pdf",
+    "year": 2024,
+    "paper_code": "VEDANTU-MODEL-10"
+  },
+  "stats": {
+    "total_expected": 45,
+    "total_parsed": 45,
+    "needs_review": 174,
+    "with_diagrams": 174,
+    "with_options": 0,
+    "missing_numbers": [],
+    "duplicate_numbers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "chemistry_ignored": true
+  },
+  "questions": [
+    {
+      "id": "ag-4f14289d-174d-4701-b884-3e376283f929",
+      "question_number": 1,
+      "question_text": "The radius of the orbit corresponding to the 4thexcited state in \ud835\udc3f\ud835\udc56++ion is: \n(where \ud835\udc4e0is the radius of the first orbit in the hydrogen atom)\n25\n3 \ud835\udc4e0\n16\n3 \ud835\udc4e0\n\ud835\udc58\n\ud835\udc4e\n2\ud835\udc5e\n3 \u00d7 10\u22125N\u00b7m\n460\u2009\u03a9\nreducing relative motion between the core and magnet in an electric motor\n3\ud835\udf0b\ud835\udf0e\ud835\udc5f2\n3.125 \u00d7 10\u22123J\n100 Hz\ndoes not follow the ideal gas equation\nsmaller\n5\u2009m/s2\n+\n2\n\ud835\udc3e\n\ud835\udc58\n\ud835\udc4e\n4\u221a2\ud835\udc5e2\n4\n0\u2218\nA \u2013 III, B \u2013 IV, C \u2013 II, D \u2013 I\n6.28 \u00d7 10\u22122\u2009m\n120\u2218 \n2. \n30\u2218 \n3. \n60\u2218 \n4. \n90\u2218\n1: 1\n1\u2009m/s2\n0\u2218\n[\ud835\udc40\ud835\udc3f\ud835\udc47\u22122]\nIncreases\nMaximum\nTesla\nProtons\nFrequency of light\n13.6\u2009eV\nFrequency\nPressure\nInitial quantity\nDistance between plates increases\n3 \u00d7 106\u2009m/s",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q1_img_5.png",
+      "page_number": 1,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-ac15d2ee-079c-4469-b6e9-fac80f4daedb",
+      "question_number": 2,
+      "question_text": "The volume (\ud835\udc49)of a monoatomic gas varies with its temperature (\ud835\udc47), as shown in the \ngraph. The ratio of work done by the gas to the heat absorbed by it when it undergoes a \nchange from state \ud835\udc34to state \ud835\udc35will be:\n\ud835\udc58\n\ud835\udc4e\n30N\u00b7m\n400\u2009\u03a9\nby making the core of thin laminations\n6\ud835\udf0b\ud835\udf0e\ud835\udc5f2\n6.25 \u00d7 10\u22124J\n50 Hz\ndoes not follow the first law of thermodynamics\n5 times greater\n10\u2009m/s2\n\u2212\n2\n\ud835\udc3e\n\ud835\udc58\n\ud835\udc4e\n4\ud835\udc5e2\n2\n1\n2\n1\n4\n45\u2218\nA \u2013 IV, B \u2013 III, C \u2013 I, D \u2013 II\n3.14 \u00d7 10\u22124\u2009m\n1: \ud835\udc50\n2\u2009m/s2\n30\u2218\n[\ud835\udc40\ud835\udc3f2\ud835\udc47\u22122]\nDecreases\nMinimum\nWeber\nNeutrons\nSpeed of light\n\u221213.6\u2009eV\nAmplitude\nVolume\nTemperature\nArea of plates decreases\n3 \u00d7 107\u2009m/s",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q2_img_5.png",
+      "page_number": 1,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-46886fdc-0b96-4858-a450-daa4f1776836",
+      "question_number": 3,
+      "question_text": "25\ud835\udc4e0\nIn the circuit shown, each light bulb has a resistance 2 \u03a9, and the potential source has an \nEMF of 6 V.\n\ud835\udc58\u221a3\ud835\udc5e\n2\ud835\udc4e\n\ud835\udc5e\n3 \u00d7 10\u22123N\u00b7m\n600\u2009\u03a9\nby increasing the conductor cross-sectional area\nPotential energy is minimum at the equilibrium position of a particle performing SHM.\n12\ud835\udf0b\ud835\udf0e\ud835\udc5f2\n1.25 \u00d7 10\u22122J\n200 Hz\n0.01 s)\nhas the same RMS speed (per molecule) for each gas\n10 times greater\n2.5\u2009m/s2\n\u2212\n4\n\ud835\udc3e\n\ud835\udc58\n\ud835\udc4e\u221a2\n90\u2218\nA \u2013 I, B \u2013 II, C \u2013 III, D \u2013 IV\n6.42 \u00d7 10\u22124\u2009m\n3. 18 cm, 2 cm \n4. 11 cm, 9 cm\n1: \ud835\udc502\n3\u2009m/s2\n60\u2218\n[\ud835\udc40\ud835\udc3f\u22121\ud835\udc47\u22122]\n\ud835\udc58\ud835\udc652\nRemains constant\nZero\nHenry\nElectrons\nBoth frequency and medium\n0\u2009eV\nVelocity\nTemperature\nPressure\nDielectric constant increases\n3 \u00d7 108\u2009m/s",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "as a function of time?",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q3_img_5.png",
+      "page_number": 1,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-a6399422-a2b6-4667-a344-aa8261c33543",
+      "question_number": 4,
+      "question_text": "12\ud835\udc4e0\nTwo identical polaroid sheets are held perpendicular to an unpolarised light beam. If \ud835\udc3c0is \nthe intensity of the light between the two polaroids and \ud835\udc3cis the intensity of the emergent \nbeam (see figure), then the intensity ratio,\n\ud835\udc3c\n\ud835\udc3c0\n= 1\nThe angle between the pass axes of the two polaroids is:\n\ud835\udc58\n2\ud835\udc4e\n\ud835\udf0brad\n3 \u00d7 10\u22122N\u00b7m\n1500\u2009\u03a9\nboth\nPotential energy increases linearly with the position as the particle moves away from\nthe equilibrium position.\n24\ud835\udf0b\ud835\udf0e\ud835\udc5f2\n5.0 \u00d7 10\u22124J\n200\ud835\udf0b Hz\nhas the same average translational kinetic energy for each type of gas molecule\nequal\n1.5\u2009m/s2\n+\n4\nzero\n180\u2218\n3.14 \u00d7 10\u22122\u2009m\n\ud835\udc50: 1\n4\u2009m/s2\n90\u2218\n[\ud835\udc400\ud835\udc3f\ud835\udc47\u22122]\n\ud835\udc58\ud835\udc65\nBecomes zero\nInfinite\nOhm\nPhotons\nOnly medium\n27.2\u2009eV\nDisplacement\nInternal energy\nNature of substance\nVoltage increases",
+      "options": {
+        "1": "and",
+        "2": "are correct",
+        "3": "",
+        "4": ""
+      },
+      "answer": "4",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q4_img_5.png",
+      "page_number": 1,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-c2206c72-d85a-42d4-9e69-e443b0c45748",
+      "question_number": 5,
+      "question_text": "Alternating equal and opposite charges, each of magnitude \ud835\udc5e, are placed at the six vertices \nof a regular hexagon of side \ud835\udc4e. If one of the negative charges is now removed, the \nelectrostatic potential at the centre of the hexagon is:\n( \ud835\udc58=\n1\n4\ud835\udf0b\ud835\udf000 )\n\ud835\udc5e",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q5_img_5.png",
+      "page_number": 3,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-197dfb3c-5491-4dc7-a96b-af4f4eed267d",
+      "question_number": 6,
+      "question_text": "The system of blocks, connected by an ideal horizontal string, lies at rest on a smooth \nhorizontal surface. A constant force \ud835\udc39(= 10\u221a2\u2009N)acts on the 2 kg block, at an angle of \n45\u2218above the horizontal. The system undergoes a displacement of 2m. Match the quantities \nmentioned in Column I with their values (SI) in Column II. Take \ud835\udc54= 10\u2009m/s2.",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q6_img_5.png",
+      "page_number": 3,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-ee548b6a-3356-43dc-a3b9-0ee6e8cdf8d6",
+      "question_number": 7,
+      "question_text": "Two waves can be expressed as \n\ud835\udc65= 4sin\u2061(\ud835\udf14\ud835\udc61+ \ud835\udc58\ud835\udc65+\n3)and \ud835\udc65\u2032 = 3cos\u2061(\ud835\udf14\ud835\udc61+ \ud835\udc58\ud835\udc65).\n\ud835\udf0b\nThe phase difference between the two waves is:\n\ud835\udf0b\n3rad\n\ud835\udf0b\n6rad\n\ud835\udf0b\n2rad",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "4",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q7_img_5.png",
+      "page_number": 4,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-941c046a-39e6-41cc-9c78-b7e15341f72b",
+      "question_number": 8,
+      "question_text": "A 100-turn coil of wire of size 2 cm \u00d7 1.5 cmis suspended between the poles of a magnet \nproducing a field of 1 T, inside a galvanometer. Calculate the torque on the coil due to a \ncurrent of 0.1 Apassing through the coil.",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "4",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q8_img_5.png",
+      "page_number": 4,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-e7427184-cd28-4095-bdc0-f1dc079b2fb7",
+      "question_number": 9,
+      "question_text": "The ammeter reading for the silicon diode in the given circuit is:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "1",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q9_img_5.png",
+      "page_number": 5,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-fd411401-fbd0-42d4-8441-84b692750bb8",
+      "question_number": 10,
+      "question_text": "In the circuit shown in the figure, the diodes \ud835\udc371, \ud835\udc372are ideal.\nThe resistance between \ud835\udc34& \ud835\udc35, when \ud835\udc49\ud835\udc34< \ud835\udc49\ud835\udc35, is:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "1",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q10_img_5.png",
+      "page_number": 5,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-531bf50b-56bc-437f-b682-80cdb44da9f0",
+      "question_number": 11,
+      "question_text": "Eddy currents can be minimised by:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "4",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q11_img_5.png",
+      "page_number": 6,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-c93af3d5-7fe4-4541-84f5-0903af3a1929",
+      "question_number": 12,
+      "question_text": "Select the correct statements regarding potential energy (\ud835\udc48)in the simple harmonic motion \nof a particle along the \ud835\udc65-axis:\n\ud835\udc51\ud835\udc48\n\ud835\udc51\ud835\udc65< 0for all positions of a particle performing SHM.\n\ud835\udc51\ud835\udc48\n\ud835\udc51\ud835\udc65> 0for all time.",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "1",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q12_img_5.png",
+      "page_number": 6,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-0336d0c5-914b-46e9-8bca-5483d78f9fd2",
+      "question_number": 13,
+      "question_text": "A soap bubble of radius \ud835\udc5fis blown up to form a bubble of radius 2\ud835\udc5f. If \ud835\udf0eis the surface \ntension of soap solution, the energy spent in doing so is: (Assuming surface tension is \nconstant.)",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q13_img_5.png",
+      "page_number": 7,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-43a17b2b-cdc6-4bbe-8171-ca4f91731076",
+      "question_number": 14,
+      "question_text": "Figure shows a square loop of side 0.5 m and resistance 10 \u03a9. The magnetic field has a \nmagnitude \ud835\udc35= 1.0\u2009\ud835\udc47. The work done in pulling the loop out of the field uniformly in 2.0 s \nis:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q14_img_5.png",
+      "page_number": 7,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-54043b1b-0feb-4d35-8289-e8e3c8267ab5",
+      "question_number": 15,
+      "question_text": "A tuning fork, placed in a room, vibrates according to the equation:\n\ud835\udc4c= (10\u22124 m)sin\u2061 ( 2\ud835\udf0b\ud835\udc61\nwhere \ud835\udc4cis the displacement of the tip of a prong. The speed of sound in air is 330 m/s. The \nfrequency of the tuning fork is:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q15_img_5.png",
+      "page_number": 7,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-62dbcb8d-9830-43c9-9d33-3134dd8759d7",
+      "question_number": 16,
+      "question_text": "A mixture of two or more ideal gases:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q16_img_5.png",
+      "page_number": 8,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-82207d90-1da8-4d70-b2cf-81e5401672ac",
+      "question_number": 17,
+      "question_text": "An electron falls from rest through a vertical distance \u210ein a uniform and vertically \nupward-directed electric field \ud835\udc38. The direction of the electric field is now reversed keeping \nits magnitude the same. A proton is allowed to fall from rest through the same vertical \ndistance \u210e. The fall time of the electron in comparison to the fall time of the proton is:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "4",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q17_img_5.png",
+      "page_number": 8,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-3e5cdcef-21a5-416e-a7e8-ff99f21d71fc",
+      "question_number": 18,
+      "question_text": "The net impedance of the circuit (as shown in the figure) will be:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q18_img_5.png",
+      "page_number": 8,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-32da2a0f-c031-472c-8b6f-d01fc1291afb",
+      "question_number": 19,
+      "question_text": "A force of 60 N is applied vertically to the system, where the pulley and string are ideal. \nThe blocks are on the ground. The upward acceleration of the pulley is:\n( take \ud835\udc54= 10\u2009m/s2 )",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q19_img_5.png",
+      "page_number": 9,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-c8244f66-8ef2-4e73-b787-5dcaf79c586b",
+      "question_number": 20,
+      "question_text": "In a gravitational field, the gravitational potential is given by; \ud835\udc49= \u2212\ud835\udc3e\ud835\udc65\u2009J/kg. The \ngravitational field intensity at the point (2, 0, 3)m is:\n\ud835\udc3e",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "1",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q20_img_5.png",
+      "page_number": 9,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-7b1307be-7f6a-4340-b8fe-836ad7ee8b33",
+      "question_number": 21,
+      "question_text": "In Young's double-slit experiment, if there is no initial phase difference between the light \nfrom the two slits, a point on the screen corresponding to the fifth minimum has a path \ndifference:\n5\ud835\udf06\n2\n10\ud835\udf06\n2\n9\ud835\udf06\n2\n11\ud835\udf06\n2",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "4",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q21_img_5.png",
+      "page_number": 10,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-12ff94c0-4a03-46cd-9bf7-51ab1d052fee",
+      "question_number": 22,
+      "question_text": "Four identical point charges \ud835\udc5e, each are fixed at the corners of a square of side \ud835\udc4e. The \nwork done in bringing a point charge \ud835\udc5e, from infinity and placing it at the centre of the\n1\nsquare is: ( \ud835\udc58=\n4\ud835\udf0b\ud835\udf000 )\n2\ud835\udc5e2",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q22_img_5.png",
+      "page_number": 10,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-074ebffc-0fbb-466c-9051-b252bcb179e6",
+      "question_number": 23,
+      "question_text": "The de-Broglie wavelength of an electron in the ground state of a H-atom is \ud835\udf061and that \non the He\n+ ion is \ud835\udf062. The kinetic energies of the electrons in the H-atom and the He\n+ \nion having the same de-Broglie wavelength \ud835\udf061are \ud835\udc381and \ud835\udc382. The ratio \ud835\udf062: \ud835\udf061is:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q23_img_5.png",
+      "page_number": 10,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-075f4cfa-c4f4-4578-a972-2f69b15618ee",
+      "question_number": 24,
+      "question_text": "The end \u2018B\u2019 of the circuit is earthed ( \ud835\udc49\ud835\udc35= 0 )while a sinusoidal voltage is applied at \u2018A\u2019, \n\ud835\udc49\ud835\udc34= \ud835\udc490sin\u2061 \ud835\udf14\ud835\udc61. The rms voltage across the capacitor \ud835\udc36equals that across the upper resistor \n\ud835\udc45(as shown in the figure). What is the phase difference between the current through the \ncapacitor and the voltage across the capacitor when no current flows out at \ud835\udc4b?",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q24_img_5.png",
+      "page_number": 11,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-70cf3696-37fa-452d-a114-aa92729aa784",
+      "question_number": 25,
+      "question_text": "Match List I with List II.\nList I (Spectral Lines of Hydrogen for transitions from) \nA. \ud835\udc5b2 = 3 to \ud835\udc5b1 = 2 \nB. \ud835\udc5b2 = 4 to \ud835\udc5b1 = 2 \nC. \ud835\udc5b2 = 5 to \ud835\udc5b1 = 2 \nD. \ud835\udc5b2 = 6 to \ud835\udc5b1 = 2\nChoose the correct answer from the options given below:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q25_img_5.png",
+      "page_number": 11,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-4cfd2ad0-da7a-4eb3-99bd-3cc21c61b726",
+      "question_number": 26,
+      "question_text": "A proton is projected with a speed \ud835\udc63into a magnetic field \ud835\udc35of magnitude 1\u2009Twith the \nangle between the proton velocity and the magnetic field being 60\u2218, as shown. The kinetic \nenergy of the proton is 2\u2009eV(with the proton's mass = 1.67 \u00d7 10\u221227\u2009kg, and charge \ud835\udc52=\n1.6 \u00d7 10\u221219\u2009C). The pitch of the path of the proton is:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q26_img_5.png",
+      "page_number": 12,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-336177bb-67d3-44c5-ab51-d856c30310e0",
+      "question_number": 27,
+      "question_text": "The magnifying power of a telescope is 9. When it is adjusted for parallel rays the distance \nbetween the objective and eyepiece is 20 cm. The focal length of the lenses is: \n1. 10 cm, 10 cm \n2. 15 cm, 5 cm",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "1",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q27_img_5.png",
+      "page_number": 13,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-4efc67d6-5167-45a1-a978-e4e189e5c896",
+      "question_number": 28,
+      "question_text": "A light ray falls on a glass surface of refractive index\u221a3, at an angle of 60\u2218. The angle \nbetween the refracted and reflected rays would be:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "4",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q28_img_5.png",
+      "page_number": 13,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-2353cca0-6658-4ed2-aab8-27fecbf5fa8c",
+      "question_number": 29,
+      "question_text": "When a soft-iron core is inserted into a solenoid, themagnetic magnetic field is observed \nto increase by 1500 times near its opening. The turns density is 1000 m-1 and the solenoid \ncarries a current 100 mA. The field at its centre is (nearly):  \n1. 0.2 T \n2. 0.02 T \n3. 0.4 T \n4. 0.04 T",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q29_img_5.png",
+      "page_number": 13,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-4758979e-0fdf-42d0-ac42-f583169d20f3",
+      "question_number": 30,
+      "question_text": "The ratio of contributions made by the electric field and magnetic field components to \nthe intensity of an electromagnetic wave is: ( \ud835\udc50= speed of electromagnetic waves )",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q30_img_5.png",
+      "page_number": 13,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-14181ace-1661-4d70-8f74-6130149618fa",
+      "question_number": 31,
+      "question_text": "A body moves with uniform acceleration. If its velocity changes from 10\u2009m/sto 20\u2009m/sin \n5\u2009s, the acceleration is:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "1",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q31_img_5.png",
+      "page_number": 14,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-6a04993b-091b-4a54-a6f5-a502474e00b3",
+      "question_number": 32,
+      "question_text": "The work done by a force is maximum when the angle between force and displacement \nis:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q32_img_5.png",
+      "page_number": 14,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-fd0d77dc-b589-439c-9a45-385f9c782039",
+      "question_number": 33,
+      "question_text": "The dimensional formula of force is:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q33_img_5.png",
+      "page_number": 14,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-4ff83294-37cd-49bf-a313-816eee2f634d",
+      "question_number": 34,
+      "question_text": "The potential energy of a spring is given by:\n1\n2 \ud835\udc58\ud835\udc65\n1\n2 \ud835\udc58\ud835\udc652",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q34_img_5.png",
+      "page_number": 14,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-e0b01f65-ff29-4849-bb32-de51b7cbb3fd",
+      "question_number": 35,
+      "question_text": "If the frequency of a wave increases, its wavelength:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q35_img_5.png",
+      "page_number": 15,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-8c4cdb67-0aea-43a0-99fb-932664e03977",
+      "question_number": 36,
+      "question_text": "The electric field inside a conductor is:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q36_img_5.png",
+      "page_number": 15,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-1d2a8371-9e3f-4815-8229-fe31df470b19",
+      "question_number": 37,
+      "question_text": "The SI unit of magnetic flux is:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q37_img_5.png",
+      "page_number": 15,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-0aceef5f-a29e-42f5-b506-098b812f2fb3",
+      "question_number": 38,
+      "question_text": "The current in a conductor is due to the flow of:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "1",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q38_img_5.png",
+      "page_number": 15,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-433ecc6e-5fc9-4a0b-b62d-e0187f8f1f80",
+      "question_number": 39,
+      "question_text": "The refractive index of a medium depends on:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q39_img_5.png",
+      "page_number": 16,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-e9507fa3-a01c-4923-9a1d-71b93dc12c26",
+      "question_number": 40,
+      "question_text": "The energy of an electron in the ground state of hydrogen atom is:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q40_img_5.png",
+      "page_number": 16,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-5137992e-67c8-47e8-84d1-f47b03ed8faf",
+      "question_number": 41,
+      "question_text": "The time period of oscillation is inversely proportional to:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q41_img_5.png",
+      "page_number": 16,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-2510d3a8-ee61-4268-8b13-7896b29fc905",
+      "question_number": 42,
+      "question_text": "In an isothermal process, which quantity remains constant?",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q42_img_5.png",
+      "page_number": 17,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-58ae40ab-a430-426c-add9-a6c55f746056",
+      "question_number": 43,
+      "question_text": "The half-life of a radioactive substance depends on:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "3",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q43_img_5.png",
+      "page_number": 17,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-851d4554-0853-460c-85a6-7a845d4d7393",
+      "question_number": 44,
+      "question_text": "The capacitance of a capacitor increases when:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "4",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q44_img_5.png",
+      "page_number": 17,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    },
+    {
+      "id": "ag-bb940384-5409-4b2c-9e3e-3df0338c40e7",
+      "question_number": 45,
+      "question_text": "The speed of light in vacuum is approximately:",
+      "options": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "answer": "2",
+      "has_diagram": true,
+      "diagram_url": "/data/assets/papers/5c63dc27-82b7-42f1-9bce-74c389fbb62e/q45_img_5.png",
+      "page_number": 17,
+      "needs_review": true,
+      "review_reasons": [
+        "Auto-merged from fragments"
+      ]
+    }
+  ]
+}

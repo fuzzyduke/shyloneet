@@ -1,0 +1,109 @@
+/* Preview Test UI Styling */
+
+/* Container for the preview test */
+#preview-test-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#preview-test-modal.show {
+  opacity: 1;
+}
+
+#preview-test-content {
+  background: var(--bg-card);
+  border-radius: 0.8rem;
+  max-width: 800px;
+  width: 90%;
+  padding: 1.5rem;
+  box-shadow: 0 12px 32px var(--glow-physics);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#preview-test-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+#preview-question-number {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+#preview-question-text {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+#preview-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.preview-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  transition: background 0.2s;
+}
+.preview-option:hover {
+  background: var(--glow-physics-hover);
+}
+
+.preview-option input {
+  margin-top: 0.2rem;
+}
+
+.preview-diagram {
+  margin-top: 1rem;
+  max-width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 0.4rem;
+}
+
+.preview-placeholder {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: var(--status-reattempt);
+  color: var(--text-muted);
+  border-radius: 0.4rem;
+  text-align: center;
+  font-style: italic;
+}
+
+#preview-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+#preview-nav button {
+  min-width: 80px;
+}
+
+/* Badges for pending parsers */
+.badge-placeholder {
+  background-color: var(--status-not-attempted);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}

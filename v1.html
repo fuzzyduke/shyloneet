@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shylo NEET V1 Lite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --border-color: #e2e8f0;
+            --badge-bg: #f1f5f9;
+            --badge-text: #475569;
+            --badge-active-bg: #dbeafe;
+            --badge-active-text: #1d4ed8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: #cbd5e1;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-right: 1rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background-color: var(--badge-bg);
+            color: var(--badge-text);
+            white-space: nowrap;
+        }
+
+        .badge.active {
+            background-color: var(--badge-active-bg);
+            color: var(--badge-active-text);
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+            text-decoration: none;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: #f1f5f9;
+            color: #475569;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e2e8f0;
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shylo NEET V1 Lite</h1>
+            <p class="subtitle">A simplified practice and learning surface for NEET aspirants.</p>
+        </header>
+
+        <div class="grid">
+            <!-- Block 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Questions With Options Only</h2>
+                    <span class="badge">Placeholder</span>
+                </div>
+                <p class="card-desc">Practice questions where only the question and options are available. No answer key or scoring required.</p>
+                <button class="btn btn-secondary" onclick="alert('Coming soon: Unscored practice mode (q_only)')">Coming Soon</button>
+            </div>
+
+            <!-- Block 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Questions + Answer Key</h2>
+                    <span class="badge active">Active</span>
+                </div>
+                <p class="card-desc">Attempt questions first, then view the official or verified answer key after completion.</p>
+                <a href="/static/v1_papers.html" class="btn btn-primary">Select Test</a>
+            </div>
+
+            <!-- Block 3 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">AI-Created Questions & Answers</h2>
+                    <span class="badge">Placeholder</span>
+                </div>
+                <p class="card-desc">AI-generated or AI-assisted questions and answers. Provider and model provenance will be tracked.</p>
+                <button class="btn btn-secondary" onclick="alert('Coming soon: AI-assisted learning (q_with_llm)')">Coming Soon</button>
+            </div>
+
+            <!-- Block 4 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Admin Review</h2>
+                    <span class="badge active">Active</span>
+                </div>
+                <p class="card-desc">Admin tools for reviewing questions, answer keys, mappings, and future ingestion workflows.</p>
+                <a href="/static/v1_admin.html" class="btn btn-primary">Open Admin</a>
+            </div>
+
+            <!-- Block 5 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Progress & Reports</h2>
+                    <span class="badge">Placeholder</span>
+                </div>
+                <p class="card-desc">Reserved for future scorecards, student progress tracking, chapter analytics, and learning modes.</p>
+                <button class="btn btn-secondary" onclick="alert('Coming soon: Analytics and Progress tracking')">Coming Soon</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
