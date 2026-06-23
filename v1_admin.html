@@ -459,6 +459,7 @@
             <div style="display: flex; align-items: center; gap: 1rem;">
                 <nav>
                     <a href="v1.html">Home</a>
+                    <a href="v1_papers.html">Take a Test</a>
                     <a href="v1_admin.html" class="active">Admin Dashboard</a>
                     <a href="/admin">Question Mapping Review</a>
                 </nav>
@@ -1292,6 +1293,7 @@
                                     <td>
                                         <button class="btn btn-outline btn-sm" onclick="fetchPaperQuestions('${p.id}')">Review</button>
                                         <button class="btn btn-outline btn-sm" onclick="deletePaperFromTable('${p.id}')" style="border-color: #ef4444; color: #ef4444; margin-left: 0.3rem;">Delete</button>
+                                        <a class="btn btn-primary btn-sm" href="test.html?paper=${p.id}" target="_blank" style="margin-left: 0.3rem; padding: 0.3rem 0.6rem; text-decoration: none;">Take Test</a>
                                     </td>
                                 </tr>
                             `).join('');
