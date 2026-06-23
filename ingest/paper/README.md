@@ -33,10 +33,10 @@ Form fields:
 
 ## Authentication
 
-The upload endpoint requires a Bearer JWT token. Generate one using the backend venv:
+The upload endpoint requires a Bearer JWT token. Generate one using the backend venv. Use the backend's configured `SECRET_KEY` from the local environment:
 
 ```powershell
-backend\venv\Scripts\python.exe -c "from jose import jwt; print(jwt.encode({'sub':'admin','role':'admin'}, 'mvp-secret-key-shiloh', algorithm='HS256'))"
+backend\venv\Scripts\python.exe -c "import sys, os; sys.path.append('backend'); import main; from jose import jwt; secret = getattr(main, 'SECRET_KEY', os.environ.get('SECRET_KEY')); print(jwt.encode({'sub':'admin','role':'admin'}, secret, algorithm='HS256'))"
 ```
 
 Pass via: `--token` flag on the upload script, or `AUTH_TOKEN` env var.
