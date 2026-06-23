@@ -356,7 +356,7 @@
     <!-- Test Dashboard Area -->
     <div id="test-app">
       <div style="text-align: center; padding: 3rem;">
-        <h2>Loading NEET UG 2025 Practice Test paper...</h2>
+        <h2>Loading Practice Test paper...</h2>
       </div>
     </div>
   </div>
@@ -484,7 +484,13 @@
     
     let currentQIdx = 0;
     timerInterval = null;
-    const STATE_STORAGE_KEY = 'shylo_neet_2025_045_attempt';
+    
+    // Read the selected paper id from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedPaperId = urlParams.get("paper");
+    
+    // We will set STATE_STORAGE_KEY dynamically based on the paper_id once resolved
+    let STATE_STORAGE_KEY = 'shylo_neet_attempt_default';
 
     // NEET Grading rules
     const Q_COUNT = 180;
@@ -511,11 +517,17 @@
         const papersRes = await fetch(`${API_BASE}/api/papers`, { headers });
         const papers = await papersRes.json();
         const firstPaperId = papers.length > 0 ? papers[0].id : null;
+        
+        // Use selectedPaperId if present, else fallback to firstPaperId
+        const activePaperId = selectedPaperId || firstPaperId;
+        
+        // Update the storage key dynamically based on the active paper
+        STATE_STORAGE_KEY = `shylo_neet_attempt_${activePaperId || "default"}`;
 
         const reqBody = {
             subject: "Physics",
             chapter_ids: [],
-            paper_id: firstPaperId,
+            paper_id: activePaperId,
             question_count: 180,
             role: localStorage.getItem('auth_role') || 'student'
         };
