@@ -7,3 +7,5 @@ __pycache__/
 purge_cf.js
 add_dns.js
 backend/venv_fresh/
+.aider*
+.env
